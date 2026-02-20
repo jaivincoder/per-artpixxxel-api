@@ -1,0 +1,3610 @@
+
+///// PAYLOAD ////////
+
+
+
+
+{
+    "deliveryInformation": {
+        "deliveryMethod": "Door Delivery",
+        "pickupDate": null,
+        "pickupStation": {
+            "id": null,
+            "address": null,
+            "checked": false
+        }
+    },
+    "paymentInformation": {
+        "paymentMethod": "Cards",
+        "voucher": null
+    },
+    "shippingInformation": {
+        "firstName": "Jaivin",
+        "lastName": "Movaliya",
+        "username": null,
+        "emailAddress": "deepdoga@gmail.com",
+        "mobilePhoneNumber": "2268995182",
+        "additionalPhoneNumber": null,
+        "shippingAddress": "47 W 13th St, New York, NY 10011, USA\n",
+        "state": "59FE9C1E-DF7F-44A9-AB61-A6C8234C409E",
+        "city": "0371a03f-8599-41be-a731-b4d93e1b8210",
+        "country": "E343EB4D-4CAC-464F-A56F-CC15CC7FB67D",
+        "userAccount": false,
+        "zipcode": "1111111",
+        "password": null
+    },
+    {
+  "cart": {
+    "items": [
+      {
+        "categoryId": 1,
+        "totalAmountPerCategory": 180,
+		"croppedItemImage": "",
+		"originalItemImage": "",
+        "frames": [
+          {
+            "frameId": 1,
+            "templateConfigId": null,
+            "previewImage": "File. base64 or url",
+            "uniqueItemId": "sdsdsdsds",
+            "frameClass": "slick or something else", 
+            "lineColor": null || "#000000000",
+            "images": {
+              "croppedImages": [
+                { "image": "File. base64 or url" }
+              ],
+              "originalImages": [
+                { "image": "File. base64 or url" }
+              ]
+            },
+            "amount": 45,
+            "quantity": 10,
+            "frameSize": "something"
+          },
+          {
+            "frameId": 2,
+            "templateConfigId": null,
+            "frameClass": "slick or something else",
+             "lineColor": null || "#000000000",
+            "previewImage": "File. base64 or url",
+            "uniqueItemId": "sdsdsdsds",
+            "images": {
+              "croppedImages": [
+                { "image": "File. base64 or url" }
+              ],
+              "originalImages": [
+                { "image": "File. base64 or url" }
+              ]
+            },
+            "quantity": 10,
+            "amount": 45,
+            "frameSize": "something"
+          },
+          {
+            "frameId": null,
+            "templateConfigId": 223,
+            "previewImage": "File. base64 or url",
+            "frameClass": "slick or something else",
+             "lineColor": null || "#000000000",
+            "uniqueItemId": "sdsdsdsds",
+            "images": {
+              "croppedImages": [
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" }
+              ],
+              "originalImages": [
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" }
+              ]
+            },
+            "amount": 90,
+            "quantity": 10,
+            "frameSize": "something"
+          }
+        ]
+      },
+      {
+        "categoryId": 2,
+        "totalAmountPerCategory": 30,
+        "frames": [
+          {
+            "frameId": 12,
+            "frameClass": "slick or something else",
+             "lineColor": null || "#000000000"
+            "uniqueItemId": "sdsdsdsds",
+            "templateConfigId": null,
+            "previewImage": "File. base64 or url",
+            "images": {
+              "croppedImages": [
+                { "image": "File. base64 or url" }
+              ],
+              "originalImages": [
+                { "image": "File. base64 or url" }
+              ]
+            },
+            "amount": 10,
+            "quantity": 10,
+            "frameSize": "something"
+          },
+          {
+            "frameId": null,
+            "templateConfigId": 223,
+            "uniqueItemId": "sdsdsdsds",
+            "previewImage": "File. base64 or url",
+            "frameClass": "slick or something else",
+            "lineColor": null || "#000000000",
+            "images": {
+              "croppedImages": [
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" }
+              ],
+              "originalImages": [
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" }
+              ]
+            },
+            "amount": 20,
+            "quantity": 10,
+            "frameSize": "something",            
+          }
+        ]
+      }
+    ],
+    "totalAmountForCart": 210
+  }
+},
+
+    
+    "deliveryFee": 12,
+    "vat": 12,
+    "leadTime": {
+        "timeLimit": "Day",
+        "lowerBandQuantifier": 3,
+        "upperBandQuantifier": 5
+    },
+    "paymentIntentId": "pi_3SQRmXLNosAxfgPF1Nd9JVNG",
+    "upperLimit": "11/11/2025 17:25:13",
+    "lowerLimit": "09/11/2025 17:25:13"
+}
+
+
+
+
+///////. //// the old RESPONSE  for the orders only ///////////////
+
+{
+    "orders": [
+        {
+            "id": "289CCA94-E8B7-4709-8269-C99C9D4DC75E",
+            "fullName": "Jaivin Movaliya",
+            "customerId": "8E24F708-3927-4F42-9297-48799CD2E8CB",
+            "shippingAddress": "47 W 13th St, New York, NY 10011, USA\n",
+            "subTotal": 200,
+            "state": {
+                "name": "Colorado",
+                "id": "59FE9C1E-DF7F-44A9-AB61-A6C8234C409E"
+            },
+            "invoiceNumber": "TAQDH44LJ8XBGD3",
+            "mobilePhoneNumber": "2268995182",
+            "additionalMobileNumber": null,
+            "emailAddress": "deepdoga@gmail.com",
+            "deliveryDate": "Tuesday, 11th November 2025",
+            "name": "1 UploadedImage",
+            "specDeliveryDate": "Sunday, 9th November 2025",
+            "zipCode": "1111111",
+            "city": {
+                "name": "0371a03f-8599-41be-a731-b4d93e1b8210",
+                "id": ""
+            },
+            "status": {
+                "id": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                "label": "In-Progress",
+                "isDefault": false,
+                "colorCode": "#2e71e7",
+                "icon": "pixxel pixxel-circle"
+            },
+            "country": {
+                "flag": "us flag",
+                "name": "United States",
+                "id": "E343EB4D-4CAC-464F-A56F-CC15CC7FB67D"
+            },
+            "paymentStatus": {
+                "name": "Paid",
+                "id": ""
+            },
+            "orderState": {
+                "name": "Open",
+                "id": ""
+            },
+            "items": [
+                {
+                    "id": "C27BD9CB-79DA-442C-9C84-715ED5E15F54",
+                    "itemName": "download (3).jpeg",
+                    "quantity": 8,
+                    "frameClass": "slick",
+                    "imageURL": "https://api.artpixxel.com/images/UploadedImage/289CCA94-E8B7-4709-8269-C99C9D4DC75E_122575293896200017310.299999952316_8392b6f3381c45e380f3d0af3b01b4c4.jpg",
+                    "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/289CCA94-E8B7-4709-8269-C99C9D4DC75E_preview_122575293896200017310.299999952316_b51a27a36aac4c95afe613e6b6e69075.png",
+                    "size": {
+                        "name": "New Art Frame 8x8 Mini",
+                        "id": ""
+                    },
+                    "heading": "Uploaded Image_7599182399220000586777.7999999523",
+                    "description": "Uploaded image",
+                    "category": {
+                        "name": "UploadedImage",
+                        "id": ""
+                    },
+                    "amount": 200,
+                    "downloadingOriginal": false,
+                    "downloadingCropped": false,
+                    "images": []
+                }
+            ],
+            "histories": [
+                {
+                    "date": "06/11/2025 11:55:35 AM",
+                    "fullDate": "Thursday, 6th November 2025",
+                    "statusId": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                    "orderId": "289CCA94-E8B7-4709-8269-C99C9D4DC75E",
+                    "notificationOption": "EmailAndMessage",
+                    "comment": "Default",
+                    "id": "6D32A12F-C753-4951-BC99-F82060B1E491",
+                    "label": "In-Progress",
+                    "isDefault": false,
+                    "colorCode": "#2e71e7",
+                    "icon": "pixxel pixxel-circle"
+                }
+            ],
+            "vat": 12,
+            "grandTotal": 224,
+            "deliveryFee": 12,
+            "date": "06/11/2025",
+            "fullDate": "Thursday, 6th November 2025"
+        },
+        {
+            "id": "FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD",
+            "fullName": "Jaivin Movaliya",
+            "customerId": "",
+            "shippingAddress": "5, Pamela Crt",
+            "subTotal": 112,
+            "state": {
+                "name": "Alabama",
+                "id": "12103054-9AA4-4C24-85F1-0F1BD597E4E5"
+            },
+            "invoiceNumber": "XJJYKSXPPS6JBCC",
+            "mobilePhoneNumber": "2268995182",
+            "additionalMobileNumber": null,
+            "emailAddress": "jaivinmovaliya1999@gmail.com",
+            "deliveryDate": "Tuesday, 11th November 2025",
+            "name": "5 UploadedImagees",
+            "specDeliveryDate": "Sunday, 9th November 2025",
+            "zipCode": "M9V 2C2",
+            "city": {
+                "name": "Etobicoke",
+                "id": ""
+            },
+            "status": {
+                "id": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                "label": "In-Progress",
+                "isDefault": false,
+                "colorCode": "#2e71e7",
+                "icon": "pixxel pixxel-circle"
+            },
+            "country": {
+                "flag": "us flag",
+                "name": "United States",
+                "id": "E343EB4D-4CAC-464F-A56F-CC15CC7FB67D"
+            },
+            "paymentStatus": {
+                "name": "Paid",
+                "id": ""
+            },
+            "orderState": {
+                "name": "Open",
+                "id": ""
+            },
+            "items": [
+                {
+                    "id": "126C7BC2-221D-415A-BC9C-97158243AEFB",
+                    "itemName": "download (2).jpeg",
+                    "quantity": 1,
+                    "frameClass": "chick",
+                    "imageURL": "https://api.artpixxel.com/images/UploadedImage/FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD_47363403801100005244.5_9c5487fdfc484180b3a9577026fdb310.jpg",
+                    "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD_preview_47363403801100005244.5_6b97dd6b94624548992f1bac63572afd.png",
+                    "size": {
+                        "name": "8x8",
+                        "id": ""
+                    },
+                    "heading": "Uploaded KidsTemplate47363403801100005244.5",
+                    "description": "Kids space uploaded image",
+                    "category": {
+                        "name": "UploadedImage",
+                        "id": ""
+                    },
+                    "amount": 19.5,
+                    "downloadingOriginal": false,
+                    "downloadingCropped": false,
+                    "images": []
+                },
+                {
+                    "id": "16AD782A-8902-4E9A-B7A5-6330AB470771",
+                    "itemName": "download (3).jpeg",
+                    "quantity": 1,
+                    "frameClass": "slick",
+                    "imageURL": "https://api.artpixxel.com/images/UploadedImage/FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD_799799515738000017814.700000047684_25df3fd9c023466cb190e237480ccac1.jpg",
+                    "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD_preview_799799515738000017814.700000047684_60a1aecca40d40ebba6fc7474353cb06.png",
+                    "size": {
+                        "name": "12x12",
+                        "id": ""
+                    },
+                    "heading": "Uploaded Image_657730519251000033996.799999952316",
+                    "description": "Uploaded image",
+                    "category": {
+                        "name": "UploadedImage",
+                        "id": ""
+                    },
+                    "amount": 25,
+                    "downloadingOriginal": false,
+                    "downloadingCropped": false,
+                    "images": []
+                },
+                {
+                    "id": "3725E69B-D088-4D81-BF59-873081DD6DA7",
+                    "itemName": "download (3).jpeg",
+                    "quantity": 1,
+                    "frameClass": "slick",
+                    "imageURL": "https://api.artpixxel.com/images/UploadedImage/FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD_111358346792700047845_e2aaadf656ac4f7cb7b4c793a79df9ab.jpg",
+                    "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD_preview_111358346792700047845_7c57a316887b474f989c70196d2e890e.png",
+                    "size": {
+                        "name": "8x8",
+                        "id": ""
+                    },
+                    "heading": "FloralLiner_Uploaded Image_149593129882300060405.89999985695",
+                    "description": "floral liner uploaded image",
+                    "category": {
+                        "name": "UploadedImage",
+                        "id": ""
+                    },
+                    "amount": 23,
+                    "downloadingOriginal": false,
+                    "downloadingCropped": false,
+                    "images": []
+                },
+                {
+                    "id": "6F449AE1-B4CA-48B9-8B21-7CD7C1EE8D9D",
+                    "itemName": "download (2).jpeg",
+                    "quantity": 1,
+                    "frameClass": "chick",
+                    "imageURL": "https://api.artpixxel.com/images/UploadedImage/FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD_86104792683500004079.5_3750cb106efb4389b52d1ceebad16bcd.jpg",
+                    "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD_preview_86104792683500004079.5_6b097bb7a9db490c861472d1a5766df4.png",
+                    "size": {
+                        "name": "8x8",
+                        "id": ""
+                    },
+                    "heading": "Uploaded christmas image 86104792683500004079.5",
+                    "description": "Uploaded christmas image",
+                    "category": {
+                        "name": "UploadedImage",
+                        "id": ""
+                    },
+                    "amount": 25,
+                    "downloadingOriginal": false,
+                    "downloadingCropped": false,
+                    "images": []
+                },
+                {
+                    "id": "BC5D5886-E2F1-495A-9F49-11D8102775C3",
+                    "itemName": "COMIC CH 1",
+                    "quantity": 1,
+                    "frameClass": "chick",
+                    "imageURL": "",
+                    "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD_preview_53000AC0-0F91-4E48-ACA0-C24CA6DDA3B3_b7071ba44a3d48deaab7cd53d052d65d.png",
+                    "size": {
+                        "name": "8x8",
+                        "id": ""
+                    },
+                    "heading": "Kids space character162061235187700021454.799999952316",
+                    "description": "Kids space character",
+                    "category": {
+                        "name": "UploadedImage",
+                        "id": ""
+                    },
+                    "amount": 19.5,
+                    "downloadingOriginal": false,
+                    "downloadingCropped": false,
+                    "images": []
+                }
+            ],
+            "histories": [
+                {
+                    "date": "06/11/2025 08:40:50 AM",
+                    "fullDate": "Thursday, 6th November 2025",
+                    "statusId": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                    "orderId": "FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD",
+                    "notificationOption": "EmailAndMessage",
+                    "comment": "Default",
+                    "id": "D56B9D48-0699-40BD-8D37-E1B7785FA740",
+                    "label": "In-Progress",
+                    "isDefault": false,
+                    "colorCode": "#2e71e7",
+                    "icon": "pixxel pixxel-circle"
+                }
+            ],
+            "vat": 6.72,
+            "grandTotal": 128.72,
+            "deliveryFee": 10,
+            "date": "06/11/2025",
+            "fullDate": "Thursday, 6th November 2025"
+        },
+       
+    ],
+    "totalOrder": 147,
+    "vat": 438.99,
+    "delivery": 1435,
+    "subTotal": 8560.5,
+    "grandTotal": 10434.49
+}
+
+
+
+/////// the new Response  for the orders only ///////////
+//admin side // 
+https://api.artpixxel.com/Order/Init
+
+
+
+{
+  "orders": [
+    {
+      "id": "289CCA94-E8B7-4709-8269-C99C9D4DC75E",
+      "fullName": "Jaivin Movaliya",
+      "customerId": "8E24F708-3927-4F42-9297-48799CD2E8CB",
+      "shippingAddress": "47 W 13th St, New York, NY 10011, USA\n",
+      "subTotal": 200,
+      "state": {
+        "name": "Colorado",
+        "id": "59FE9C1E-DF7F-44A9-AB61-A6C8234C409E"
+      },
+      "invoiceNumber": "TAQDH44LJ8XBGD3",
+      "mobilePhoneNumber": "2268995182",
+      "additionalMobileNumber": null,
+      "emailAddress": "deepdoga@gmail.com",
+      "deliveryDate": "Tuesday, 11th November 2025",
+      "name": "1 UploadedImage",
+      "specDeliveryDate": "Sunday, 9th November 2025",
+      "zipCode": "1111111",
+      "city": {
+        "name": "0371a03f-8599-41be-a731-b4d93e1b8210",
+        "id": ""
+      },
+      "status": {
+        "id": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+        "label": "In-Progress",
+        "isDefault": false,
+        "colorCode": "#2e71e7",
+        "icon": "pixxel pixxel-circle"
+      },
+      "country": {
+        "flag": "us flag",
+        "name": "United States",
+        "id": "E343EB4D-4CAC-464F-A56F-CC15CC7FB67D"
+      },
+      "paymentStatus": {
+        "name": "Paid",
+        "id": ""
+      },
+      "orderState": {
+        "name": "Open",
+        "id": ""
+      },
+      "items": [
+      {
+        "categoryId": 1,
+        "totalAmountPerCategory": 180,
+        "frames": [
+          {
+            "frameId": 1,
+            "templateConfigId": null,
+            "previewImage": "File. base64 or url",
+            "uniqueItemId": "sdsdsdsds",
+            "frameClass": "slick or something else",
+             "lineColor": null || "#000000000"
+            "images": {
+              "croppedImages": [
+                { "image": "File. base64 or url" }
+              ],
+              "originalImages": [
+                { "image": "File. base64 or url" }
+              ]
+            },
+            "amount": 45,
+            "quantity": 10,
+            "frameSize": "something",       "//": "need to check in the database for this"
+          },
+          {
+            "frameId": 2,
+            "templateConfigId": null,
+            "frameClass": "slick or something else",
+             "lineColor": null || "#000000000"
+            "previewImage": "File. base64 or url",
+            "uniqueItemId": "sdsdsdsds",
+            "images": {
+              "croppedImages": [
+                { "image": "File. base64 or url" }
+              ],
+              "originalImages": [
+                { "image": "File. base64 or url" }
+              ]
+            },
+            "quantity": 10,
+            "amount": 45,
+            "frameSize": "something",          "//": "need to check in the database for this"
+          },
+          {
+            "frameId": null,
+            "templateConfigId": 223,
+            "previewImage": "File. base64 or url",
+            "frameClass": "slick or something else",
+             "lineColor": null || "#000000000"
+            "uniqueItemId": "sdsdsdsds",
+            "images": {
+              "croppedImages": [
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" }
+              ],
+              "originalImages": [
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" }
+              ]
+            },
+            "amount": 90,
+            "quantity": 10,
+            "frameSize": "something",          "//": "need to check in the database for this"
+          }
+        ]
+      },
+      {
+        "categoryId": 2,
+        "totalAmountPerCategory": 30,
+        "frames": [
+          {
+            "frameId": 12,
+            "frameClass": "slick or something else",
+             "lineColor": null || "#000000000"
+            "uniqueItemId": "sdsdsdsds",
+            "templateConfigId": null,
+            "previewImage": "File. base64 or url",
+            "images": {
+              "croppedImages": [
+                { "image": "File. base64 or url" }
+              ],
+              "originalImages": [
+                { "image": "File. base64 or url" }
+              ]
+            },
+            "amount": 10,
+            "quantity": 10,
+            "frameSize": "something",         "//": "need to check in the database for this"
+          },
+          {
+            "frameId": null,
+            "templateConfigId": 223,
+            "uniqueItemId": "sdsdsdsds",
+            "previewImage": "File. base64 or url",
+            "frameClass": "slick or something else",
+             "lineColor": null || "#000000000"
+            "images": {
+              "croppedImages": [
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" }
+              ],
+              "originalImages": [
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" }
+              ]
+            },
+            "amount": 20,
+            "quantity": 10,
+            "frameSize": "something",              "//": "need to check in the database for this"
+          }
+        ]
+      }
+    ],
+      "histories": [
+        {
+          "date": "06/11/2025 11:55:35 AM",
+          "fullDate": "Thursday, 6th November 2025",
+          "statusId": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+          "orderId": "289CCA94-E8B7-4709-8269-C99C9D4DC75E",
+          "notificationOption": "EmailAndMessage",
+          "comment": "Default",
+          "id": "6D32A12F-C753-4951-BC99-F82060B1E491",
+          "label": "In-Progress",
+          "isDefault": false,
+          "colorCode": "#2e71e7",
+          "icon": "pixxel pixxel-circle"
+        }
+      ],
+      "vat": 12,
+      "grandTotal": 224,
+      "deliveryFee": 12,
+      "date": "06/11/2025",
+      "fullDate": "Thursday, 6th November 2025"
+    },
+    {
+      "id": "FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD",
+      "fullName": "Jaivin Movaliya",
+      "customerId": "",
+      "shippingAddress": "5, Pamela Crt",
+      "subTotal": 112,
+      "state": {
+        "name": "Alabama",
+        "id": "12103054-9AA4-4C24-85F1-0F1BD597E4E5"
+      },
+      "invoiceNumber": "XJJYKSXPPS6JBCC",
+      "mobilePhoneNumber": "2268995182",
+      "additionalMobileNumber": null,
+      "emailAddress": "jaivinmovaliya1999@gmail.com",
+      "deliveryDate": "Tuesday, 11th November 2025",
+      "name": "5 UploadedImagees",
+      "specDeliveryDate": "Sunday, 9th November 2025",
+      "zipCode": "M9V 2C2",
+      "city": {
+        "name": "Etobicoke",
+        "id": ""
+      },
+      "status": {
+        "id": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+        "label": "In-Progress",
+        "isDefault": false,
+        "colorCode": "#2e71e7",
+        "icon": "pixxel pixxel-circle"
+      },
+      "country": {
+        "flag": "us flag",
+        "name": "United States",
+        "id": "E343EB4D-4CAC-464F-A56F-CC15CC7FB67D"
+      },
+      "paymentStatus": {
+        "name": "Paid",
+        "id": ""
+      },
+      "orderState": {
+        "name": "Open",
+        "id": ""
+      },
+      "items": [
+      {
+        "categoryId": 1,
+        "totalAmountPerCategory": 180,
+        "frames": [
+          {
+            "frameId": 1,
+            "templateConfigId": null,
+            "previewImage": "File. base64 or url",
+            "uniqueItemId": "sdsdsdsds",
+            "frameClass": "slick or something else",
+             "lineColor": null || "#000000000"
+            "images": {
+              "croppedImages": [
+                { "image": "File. base64 or url" }
+              ],
+              "originalImages": [
+                { "image": "File. base64 or url" }
+              ]
+            },
+            "amount": 45,
+            "quantity": 10,
+            "frameSize": "something",       "//": "need to check in the database for this"
+          },
+          {
+            "frameId": 2,
+            "templateConfigId": null,
+            "frameClass": "slick or something else",
+             "lineColor": null || "#000000000"
+            "previewImage": "File. base64 or url",
+            "uniqueItemId": "sdsdsdsds",
+            "images": {
+              "croppedImages": [
+                { "image": "File. base64 or url" }
+              ],
+              "originalImages": [
+                { "image": "File. base64 or url" }
+              ]
+            },
+            "quantity": 10,
+            "amount": 45,
+            "frameSize": "something",          "//": "need to check in the database for this"
+          },
+          {
+            "frameId": null,
+            "templateConfigId": 223,
+            "previewImage": "File. base64 or url",
+            "frameClass": "slick or something else",
+             "lineColor": null || "#000000000"
+            "uniqueItemId": "sdsdsdsds",
+            "images": {
+              "croppedImages": [
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" }
+              ],
+              "originalImages": [
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" }
+              ]
+            },
+            "amount": 90,
+            "quantity": 10,
+            "frameSize": "something",          "//": "need to check in the database for this"
+          }
+        ]
+      },
+      {
+        "categoryId": 2,
+        "totalAmountPerCategory": 30,
+        "frames": [
+          {
+            "frameId": 12,
+            "frameClass": "slick or something else",
+             "lineColor": null || "#000000000"
+            "uniqueItemId": "sdsdsdsds",
+            "templateConfigId": null,
+            "previewImage": "File. base64 or url",
+            "images": {
+              "croppedImages": [
+                { "image": "File. base64 or url" }
+              ],
+              "originalImages": [
+                { "image": "File. base64 or url" }
+              ]
+            },
+            "amount": 10,
+            "quantity": 10,
+            "frameSize": "something",         "//": "need to check in the database for this"
+          },
+          {
+            "frameId": null,
+            "templateConfigId": 223,
+            "uniqueItemId": "sdsdsdsds",
+            "previewImage": "File. base64 or url",
+            "frameClass": "slick or something else",
+             "lineColor": null || "#000000000"
+            "images": {
+              "croppedImages": [
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" }
+              ],
+              "originalImages": [
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" },
+                { "image": "File. base64 or url" }
+              ]
+            },
+            "amount": 20,
+            "quantity": 10,
+            "frameSize": "something",              "//": "need to check in the database for this"
+          }
+        ]
+      }
+    ],
+      "histories": [
+        {
+          "date": "06/11/2025 08:40:50 AM",
+          "fullDate": "Thursday, 6th November 2025",
+          "statusId": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+          "orderId": "FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD",
+          "notificationOption": "EmailAndMessage",
+          "comment": "Default",
+          "id": "D56B9D48-0699-40BD-8D37-E1B7785FA740",
+          "label": "In-Progress",
+          "isDefault": false,
+          "colorCode": "#2e71e7",
+          "icon": "pixxel pixxel-circle"
+        }
+      ],
+      "vat": 6.72,
+      "grandTotal": 128.72,
+      "deliveryFee": 10,
+      "date": "06/11/2025",
+      "fullDate": "Thursday, 6th November 2025"
+    },
+  ],
+  "totalOrder": 147,
+  "vat": 438.99,
+  "delivery": 1435,
+  "subTotal": 8560.5,
+  "grandTotal": 10434.49
+}
+
+
+
+
+
+///// The full response the old one //////
+
+https://docs.google.com/document/d/1-jnN4b7N0qYJmRG89DJ7mHS0lmek9TDdbLSJpduPtos/edit?usp=sharing
+
+
+
+{
+    "order": {
+        "orders": [
+            {
+                "id": "289CCA94-E8B7-4709-8269-C99C9D4DC75E",
+                "fullName": "Jaivin Movaliya",
+                "customerId": "8E24F708-3927-4F42-9297-48799CD2E8CB",
+                "shippingAddress": "47 W 13th St, New York, NY 10011, USA\n",
+                "subTotal": 200,
+                "state": {
+                    "name": "Colorado",
+                    "id": "59FE9C1E-DF7F-44A9-AB61-A6C8234C409E"
+                },
+                "invoiceNumber": "TAQDH44LJ8XBGD3",
+                "mobilePhoneNumber": "2268995182",
+                "additionalMobileNumber": null,
+                "emailAddress": "deepdoga@gmail.com",
+                "deliveryDate": "Tuesday, 11th November 2025",
+                "name": "1 UploadedImage",
+                "specDeliveryDate": "Sunday, 9th November 2025",
+                "zipCode": "1111111",
+                "city": {
+                    "name": "0371a03f-8599-41be-a731-b4d93e1b8210",
+                    "id": ""
+                },
+                "status": {
+                    "id": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                    "label": "In-Progress",
+                    "isDefault": false,
+                    "colorCode": "#2e71e7",
+                    "icon": "pixxel pixxel-circle"
+                },
+                "country": {
+                    "flag": "us flag",
+                    "name": "United States",
+                    "id": "E343EB4D-4CAC-464F-A56F-CC15CC7FB67D"
+                },
+                "paymentStatus": {
+                    "name": "Paid",
+                    "id": ""
+                },
+                "orderState": {
+                    "name": "Open",
+                    "id": ""
+                },
+                "items": [
+                    {
+                        "id": "C27BD9CB-79DA-442C-9C84-715ED5E15F54",
+                        "itemName": "download (3).jpeg",
+                        "quantity": 8,
+                        "frameClass": "slick",
+                        "imageURL": "https://api.artpixxel.com/images/UploadedImage/289CCA94-E8B7-4709-8269-C99C9D4DC75E_122575293896200017310.299999952316_8392b6f3381c45e380f3d0af3b01b4c4.jpg",
+                        "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/289CCA94-E8B7-4709-8269-C99C9D4DC75E_preview_122575293896200017310.299999952316_b51a27a36aac4c95afe613e6b6e69075.png",
+                        "size": {
+                            "name": "New Art Frame 8x8 Mini",
+                            "id": ""
+                        },
+                        "heading": "Uploaded Image_7599182399220000586777.7999999523",
+                        "description": "Uploaded image",
+                        "category": {
+                            "name": "UploadedImage",
+                            "id": ""
+                        },
+                        "amount": 200,
+                        "downloadingOriginal": false,
+                        "downloadingCropped": false,
+                        "images": []
+                    }
+                ],
+                "histories": [
+                    {
+                        "date": "06/11/2025 11:55:35 AM",
+                        "fullDate": "Thursday, 6th November 2025",
+                        "statusId": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                        "orderId": "289CCA94-E8B7-4709-8269-C99C9D4DC75E",
+                        "notificationOption": "EmailAndMessage",
+                        "comment": "Default",
+                        "id": "6D32A12F-C753-4951-BC99-F82060B1E491",
+                        "label": "In-Progress",
+                        "isDefault": false,
+                        "colorCode": "#2e71e7",
+                        "icon": "pixxel pixxel-circle"
+                    }
+                ],
+                "vat": 12,
+                "grandTotal": 224,
+                "deliveryFee": 12,
+                "date": "06/11/2025",
+                "fullDate": "Thursday, 6th November 2025"
+            },
+            {
+                "id": "FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD",
+                "fullName": "Jaivin Movaliya",
+                "customerId": "",
+                "shippingAddress": "5, Pamela Crt",
+                "subTotal": 112,
+                "state": {
+                    "name": "Alabama",
+                    "id": "12103054-9AA4-4C24-85F1-0F1BD597E4E5"
+                },
+                "invoiceNumber": "XJJYKSXPPS6JBCC",
+                "mobilePhoneNumber": "2268995182",
+                "additionalMobileNumber": null,
+                "emailAddress": "jaivinmovaliya1999@gmail.com",
+                "deliveryDate": "Tuesday, 11th November 2025",
+                "name": "5 UploadedImagees",
+                "specDeliveryDate": "Sunday, 9th November 2025",
+                "zipCode": "M9V 2C2",
+                "city": {
+                    "name": "Etobicoke",
+                    "id": ""
+                },
+                "status": {
+                    "id": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                    "label": "In-Progress",
+                    "isDefault": false,
+                    "colorCode": "#2e71e7",
+                    "icon": "pixxel pixxel-circle"
+                },
+                "country": {
+                    "flag": "us flag",
+                    "name": "United States",
+                    "id": "E343EB4D-4CAC-464F-A56F-CC15CC7FB67D"
+                },
+                "paymentStatus": {
+                    "name": "Paid",
+                    "id": ""
+                },
+                "orderState": {
+                    "name": "Open",
+                    "id": ""
+                },
+                "items": [
+                    {
+                        "id": "126C7BC2-221D-415A-BC9C-97158243AEFB",
+                        "itemName": "download (2).jpeg",
+                        "quantity": 1,
+                        "frameClass": "chick",
+                        "imageURL": "https://api.artpixxel.com/images/UploadedImage/FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD_47363403801100005244.5_9c5487fdfc484180b3a9577026fdb310.jpg",
+                        "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD_preview_47363403801100005244.5_6b97dd6b94624548992f1bac63572afd.png",
+                        "size": {
+                            "name": "8x8",
+                            "id": ""
+                        },
+                        "heading": "Uploaded KidsTemplate47363403801100005244.5",
+                        "description": "Kids space uploaded image",
+                        "category": {
+                            "name": "UploadedImage",
+                            "id": ""
+                        },
+                        "amount": 19.5,
+                        "downloadingOriginal": false,
+                        "downloadingCropped": false,
+                        "images": []
+                    },
+                    {
+                        "id": "16AD782A-8902-4E9A-B7A5-6330AB470771",
+                        "itemName": "download (3).jpeg",
+                        "quantity": 1,
+                        "frameClass": "slick",
+                        "imageURL": "https://api.artpixxel.com/images/UploadedImage/FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD_799799515738000017814.700000047684_25df3fd9c023466cb190e237480ccac1.jpg",
+                        "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD_preview_799799515738000017814.700000047684_60a1aecca40d40ebba6fc7474353cb06.png",
+                        "size": {
+                            "name": "12x12",
+                            "id": ""
+                        },
+                        "heading": "Uploaded Image_657730519251000033996.799999952316",
+                        "description": "Uploaded image",
+                        "category": {
+                            "name": "UploadedImage",
+                            "id": ""
+                        },
+                        "amount": 25,
+                        "downloadingOriginal": false,
+                        "downloadingCropped": false,
+                        "images": []
+                    },
+                    {
+                        "id": "3725E69B-D088-4D81-BF59-873081DD6DA7",
+                        "itemName": "download (3).jpeg",
+                        "quantity": 1,
+                        "frameClass": "slick",
+                        "imageURL": "https://api.artpixxel.com/images/UploadedImage/FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD_111358346792700047845_e2aaadf656ac4f7cb7b4c793a79df9ab.jpg",
+                        "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD_preview_111358346792700047845_7c57a316887b474f989c70196d2e890e.png",
+                        "size": {
+                            "name": "8x8",
+                            "id": ""
+                        },
+                        "heading": "FloralLiner_Uploaded Image_149593129882300060405.89999985695",
+                        "description": "floral liner uploaded image",
+                        "category": {
+                            "name": "UploadedImage",
+                            "id": ""
+                        },
+                        "amount": 23,
+                        "downloadingOriginal": false,
+                        "downloadingCropped": false,
+                        "images": []
+                    },
+                    {
+                        "id": "6F449AE1-B4CA-48B9-8B21-7CD7C1EE8D9D",
+                        "itemName": "download (2).jpeg",
+                        "quantity": 1,
+                        "frameClass": "chick",
+                        "imageURL": "https://api.artpixxel.com/images/UploadedImage/FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD_86104792683500004079.5_3750cb106efb4389b52d1ceebad16bcd.jpg",
+                        "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD_preview_86104792683500004079.5_6b097bb7a9db490c861472d1a5766df4.png",
+                        "size": {
+                            "name": "8x8",
+                            "id": ""
+                        },
+                        "heading": "Uploaded christmas image 86104792683500004079.5",
+                        "description": "Uploaded christmas image",
+                        "category": {
+                            "name": "UploadedImage",
+                            "id": ""
+                        },
+                        "amount": 25,
+                        "downloadingOriginal": false,
+                        "downloadingCropped": false,
+                        "images": []
+                    },
+                    {
+                        "id": "BC5D5886-E2F1-495A-9F49-11D8102775C3",
+                        "itemName": "COMIC CH 1",
+                        "quantity": 1,
+                        "frameClass": "chick",
+                        "imageURL": "",
+                        "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD_preview_53000AC0-0F91-4E48-ACA0-C24CA6DDA3B3_b7071ba44a3d48deaab7cd53d052d65d.png",
+                        "size": {
+                            "name": "8x8",
+                            "id": ""
+                        },
+                        "heading": "Kids space character162061235187700021454.799999952316",
+                        "description": "Kids space character",
+                        "category": {
+                            "name": "UploadedImage",
+                            "id": ""
+                        },
+                        "amount": 19.5,
+                        "downloadingOriginal": false,
+                        "downloadingCropped": false,
+                        "images": []
+                    }
+                ],
+                "histories": [
+                    {
+                        "date": "06/11/2025 08:40:50 AM",
+                        "fullDate": "Thursday, 6th November 2025",
+                        "statusId": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                        "orderId": "FA3A5305-835D-4E4C-BD4B-BCE727D3BCDD",
+                        "notificationOption": "EmailAndMessage",
+                        "comment": "Default",
+                        "id": "D56B9D48-0699-40BD-8D37-E1B7785FA740",
+                        "label": "In-Progress",
+                        "isDefault": false,
+                        "colorCode": "#2e71e7",
+                        "icon": "pixxel pixxel-circle"
+                    }
+                ],
+                "vat": 6.72,
+                "grandTotal": 128.72,
+                "deliveryFee": 10,
+                "date": "06/11/2025",
+                "fullDate": "Thursday, 6th November 2025"
+            },
+            {
+                "id": "2F91C5FD-0565-4E1D-B2B2-6B484BF2127C",
+                "fullName": "Jaivin Movaliya",
+                "customerId": "",
+                "shippingAddress": "5, Pamela Crt",
+                "subTotal": 25,
+                "state": {
+                    "name": "Alaska",
+                    "id": "319CCD0C-55EE-4B9D-A094-F35FEB73C537"
+                },
+                "invoiceNumber": "IN9BEVXFTEGA9LP",
+                "mobilePhoneNumber": "2268995182",
+                "additionalMobileNumber": null,
+                "emailAddress": "jaivinmovaliya1999@gmail.com",
+                "deliveryDate": "Tuesday, 11th November 2025",
+                "name": "1 UploadedImage",
+                "specDeliveryDate": "Sunday, 9th November 2025",
+                "zipCode": "11211221",
+                "city": {
+                    "name": "Etobicoke",
+                    "id": ""
+                },
+                "status": {
+                    "id": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                    "label": "In-Progress",
+                    "isDefault": false,
+                    "colorCode": "#2e71e7",
+                    "icon": "pixxel pixxel-circle"
+                },
+                "country": {
+                    "flag": "us flag",
+                    "name": "United States",
+                    "id": "E343EB4D-4CAC-464F-A56F-CC15CC7FB67D"
+                },
+                "paymentStatus": {
+                    "name": "Paid",
+                    "id": ""
+                },
+                "orderState": {
+                    "name": "Open",
+                    "id": ""
+                },
+                "items": [
+                    {
+                        "id": "9B481EF5-5B7B-4AAC-B1BD-2A6F8E1DCEAE",
+                        "itemName": "082728BE-AD99-483A-B0D7-16FEBB5A0F9B_123829866952600034879.199999809265_1aa05392acbc4a00a8499f6e78b02d8c.jpg",
+                        "quantity": 1,
+                        "frameClass": "chick",
+                        "imageURL": "https://api.artpixxel.com/images/UploadedImage/2F91C5FD-0565-4E1D-B2B2-6B484BF2127C_415428757710000022417.200000047684_a16e2c7f84534d6b84fd4f0204d1b4e8.jpg",
+                        "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/2F91C5FD-0565-4E1D-B2B2-6B484BF2127C_preview_415428757710000022417.200000047684_f63e2bfeb8ab4e3992547a4d74b8865b.png",
+                        "size": {
+                            "name": "12x12",
+                            "id": ""
+                        },
+                        "heading": "Uploaded Image_151726835373800034452.90000009537",
+                        "description": "Uploaded image",
+                        "category": {
+                            "name": "UploadedImage",
+                            "id": ""
+                        },
+                        "amount": 25,
+                        "downloadingOriginal": false,
+                        "downloadingCropped": false,
+                        "images": []
+                    }
+                ],
+                "histories": [
+                    {
+                        "date": "06/11/2025 05:45:07 AM",
+                        "fullDate": "Thursday, 6th November 2025",
+                        "statusId": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                        "orderId": "2F91C5FD-0565-4E1D-B2B2-6B484BF2127C",
+                        "notificationOption": "EmailAndMessage",
+                        "comment": "Default",
+                        "id": "A9E77043-E75D-4803-8ABB-06E3E53A2B46",
+                        "label": "In-Progress",
+                        "isDefault": false,
+                        "colorCode": "#2e71e7",
+                        "icon": "pixxel pixxel-circle"
+                    }
+                ],
+                "vat": 1.5,
+                "grandTotal": 41.5,
+                "deliveryFee": 15,
+                "date": "06/11/2025",
+                "fullDate": "Thursday, 6th November 2025"
+            },
+            {
+                "id": "9916699F-33A8-4685-8A29-C8611AFFE41C",
+                "fullName": "Jaivin Movaliya",
+                "customerId": "8E24F708-3927-4F42-9297-48799CD2E8CB",
+                "shippingAddress": "47 W 13th St, New York, NY 10011, USA\n",
+                "subTotal": 75,
+                "state": {
+                    "name": "Colorado",
+                    "id": "59FE9C1E-DF7F-44A9-AB61-A6C8234C409E"
+                },
+                "invoiceNumber": "UQPRKM8JZAK8GYZ",
+                "mobilePhoneNumber": "2268995182",
+                "additionalMobileNumber": null,
+                "emailAddress": "deepdoga@gmail.com",
+                "deliveryDate": "Monday, 10th November 2025",
+                "name": "3 UploadedImagees",
+                "specDeliveryDate": "Saturday, 8th November 2025",
+                "zipCode": "1111111",
+                "city": {
+                    "name": "Town",
+                    "id": ""
+                },
+                "status": {
+                    "id": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                    "label": "In-Progress",
+                    "isDefault": false,
+                    "colorCode": "#2e71e7",
+                    "icon": "pixxel pixxel-circle"
+                },
+                "country": {
+                    "flag": "us flag",
+                    "name": "United States",
+                    "id": "E343EB4D-4CAC-464F-A56F-CC15CC7FB67D"
+                },
+                "paymentStatus": {
+                    "name": "Paid",
+                    "id": ""
+                },
+                "orderState": {
+                    "name": "Open",
+                    "id": ""
+                },
+                "items": [
+                    {
+                        "id": "06F9E4A0-4A71-45A8-8CAF-C6CD56CAF2DB",
+                        "itemName": "082728BE-AD99-483A-B0D7-16FEBB5A0F9B_123829866952600034879.199999809265_1aa05392acbc4a00a8499f6e78b02d8c.jpg",
+                        "quantity": 1,
+                        "frameClass": "slick",
+                        "imageURL": "https://api.artpixxel.com/images/UploadedImage/9916699F-33A8-4685-8A29-C8611AFFE41C_5719893503780000144542.89999985695_6870107f5e664eda9229d929c1033e73.jpg",
+                        "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/9916699F-33A8-4685-8A29-C8611AFFE41C_preview_5719893503780000144542.89999985695_0d4123ab8b654e1d8f36352f06b4eb66.png",
+                        "size": {
+                            "name": "12x12",
+                            "id": ""
+                        },
+                        "heading": "Uploaded Image_1483801971320000185174.69999980927",
+                        "description": "Uploaded image",
+                        "category": {
+                            "name": "UploadedImage",
+                            "id": ""
+                        },
+                        "amount": 25,
+                        "downloadingOriginal": false,
+                        "downloadingCropped": false,
+                        "images": []
+                    },
+                    {
+                        "id": "3073420A-7E79-46DE-A0DA-C9BCD09D6524",
+                        "itemName": "082728BE-AD99-483A-B0D7-16FEBB5A0F9B_123829866952600034879.199999809265_1aa05392acbc4a00a8499f6e78b02d8c.jpg",
+                        "quantity": 1,
+                        "frameClass": "slick",
+                        "imageURL": "https://api.artpixxel.com/images/UploadedImage/9916699F-33A8-4685-8A29-C8611AFFE41C_6400461756200000204752.39999985695_d34df439762c4807b66ae345e918ec88.jpg",
+                        "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/9916699F-33A8-4685-8A29-C8611AFFE41C_preview_6400461756200000204752.39999985695_bcc19d6d0c934f22af0be2148e64af0a.png",
+                        "size": {
+                            "name": "12x12",
+                            "id": ""
+                        },
+                        "heading": "Uploaded Image_1124776365085000214651",
+                        "description": "Uploaded image",
+                        "category": {
+                            "name": "UploadedImage",
+                            "id": ""
+                        },
+                        "amount": 25,
+                        "downloadingOriginal": false,
+                        "downloadingCropped": false,
+                        "images": []
+                    },
+                    {
+                        "id": "AD4E8B94-FE1E-4CFC-BB9F-763C115C83F7",
+                        "itemName": "Setof3Set1",
+                        "quantity": 1,
+                        "frameClass": "slick",
+                        "imageURL": "./assets/images/placeholder.svg",
+                        "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/9916699F-33A8-4685-8A29-C8611AFFE41C_preview_1615291228461000310478.39999985695_90d8cd457e1a4e93b6661aa57ec49ce0.png",
+                        "size": {
+                            "name": "",
+                            "id": ""
+                        },
+                        "heading": "1615291228461000310478.39999985695",
+                        "description": "1615291228461000310478.39999985695 description",
+                        "category": {
+                            "name": "UploadedImage",
+                            "id": ""
+                        },
+                        "amount": 25,
+                        "downloadingOriginal": false,
+                        "downloadingCropped": false,
+                        "images": [
+                            {
+                                "id": "24670743-FC09-45F0-B22D-E2620C772F6A",
+                                "imageURL": "https://api.artpixxel.com/images/UploadedImage/9916699F-33A8-4685-8A29-C8611AFFE41C_item_1615291228461000310478.39999985695_c6207b1cbfcd4f76a10041479ce3b0d9.jpg",
+                                "name": "Setof3Set1",
+                                "description": "1615291228461000310478.39999985695 description",
+                                "quantity": 1,
+                                "downloading": false,
+                                "frameClass": "slick",
+                                "size": "",
+                                "amount": 8.33,
+                                "category": "Kids Template Image"
+                            },
+                            {
+                                "id": "5DD2BD47-21B3-4069-A5DA-59DF0A648D1B",
+                                "imageURL": "https://api.artpixxel.com/images/UploadedImage/9916699F-33A8-4685-8A29-C8611AFFE41C_item_1615291228461000310478.39999985695_d43fc46d9dd441e28d289ee922ac8f2b.jpg",
+                                "name": "Setof3Set1",
+                                "description": "1615291228461000310478.39999985695 description",
+                                "quantity": 1,
+                                "downloading": false,
+                                "frameClass": "slick",
+                                "size": "",
+                                "amount": 8.33,
+                                "category": "Kids Template Image"
+                            },
+                            {
+                                "id": "EFA4E641-2E8A-4835-BF89-B04FDC233B38",
+                                "imageURL": "https://api.artpixxel.com/images/UploadedImage/9916699F-33A8-4685-8A29-C8611AFFE41C_item_1615291228461000310478.39999985695_91bb62b3d83c4b36b6b9064d26830792.jpg",
+                                "name": "Setof3Set1",
+                                "description": "1615291228461000310478.39999985695 description",
+                                "quantity": 1,
+                                "downloading": false,
+                                "frameClass": "slick",
+                                "size": "",
+                                "amount": 8.33,
+                                "category": "Kids Template Image"
+                            }
+                        ]
+                    }
+                ],
+                "histories": [
+                    {
+                        "date": "05/11/2025 05:55:33 AM",
+                        "fullDate": "Wednesday, 5th November 2025",
+                        "statusId": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                        "orderId": "9916699F-33A8-4685-8A29-C8611AFFE41C",
+                        "notificationOption": "EmailAndMessage",
+                        "comment": "Default",
+                        "id": "B751BCFA-E396-4C02-8EA1-69EB129DF018",
+                        "label": "In-Progress",
+                        "isDefault": false,
+                        "colorCode": "#2e71e7",
+                        "icon": "pixxel pixxel-circle"
+                    }
+                ],
+                "vat": 4.5,
+                "grandTotal": 91.5,
+                "deliveryFee": 12,
+                "date": "05/11/2025",
+                "fullDate": "Wednesday, 5th November 2025"
+            },
+            {
+                "id": "EF7BD54A-5F1A-4A51-A41D-236C8EC5002B",
+                "fullName": "Jaivin Movaliya",
+                "customerId": "8E24F708-3927-4F42-9297-48799CD2E8CB",
+                "shippingAddress": "47 W 13th St, New York, NY 10011, USA\n",
+                "subTotal": 50,
+                "state": {
+                    "name": "Colorado",
+                    "id": "59FE9C1E-DF7F-44A9-AB61-A6C8234C409E"
+                },
+                "invoiceNumber": "GYGGUIM3VCBTG6X",
+                "mobilePhoneNumber": "2268995182",
+                "additionalMobileNumber": null,
+                "emailAddress": "deepdoga@gmail.com",
+                "deliveryDate": "Wednesday, 5th November 2025",
+                "name": "2 UploadedImagees",
+                "specDeliveryDate": "Monday, 3rd November 2025",
+                "zipCode": "1111111",
+                "city": {
+                    "name": "Town",
+                    "id": ""
+                },
+                "status": {
+                    "id": "22AB892A-4EAE-4EB5-80FD-5E344FF5ED27",
+                    "label": "Done",
+                    "isDefault": false,
+                    "colorCode": "#06b914",
+                    "icon": "pixxel pixxel-ok-circle"
+                },
+                "country": {
+                    "flag": "us flag",
+                    "name": "United States",
+                    "id": "E343EB4D-4CAC-464F-A56F-CC15CC7FB67D"
+                },
+                "paymentStatus": {
+                    "name": "Paid",
+                    "id": ""
+                },
+                "orderState": {
+                    "name": "Open",
+                    "id": ""
+                },
+                "items": [
+                    {
+                        "id": "2AAA8F90-6921-4EB2-8208-1AEA8F5FE083",
+                        "itemName": "download (2).jpeg",
+                        "quantity": 1,
+                        "frameClass": "slick",
+                        "imageURL": "https://api.artpixxel.com/images/UploadedImage/EF7BD54A-5F1A-4A51-A41D-236C8EC5002B_9955020473320000296910.2000000477_e5ed3b77a14845ea9e968d0ff1d47178.jpg",
+                        "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/EF7BD54A-5F1A-4A51-A41D-236C8EC5002B_preview_9955020473320000296910.2000000477_c34e6816d0de44e5a2bd97896e0b7195.png",
+                        "size": {
+                            "name": "12x12",
+                            "id": ""
+                        },
+                        "heading": "Uploaded Image_2407742873240000334964",
+                        "description": "Uploaded image",
+                        "category": {
+                            "name": "UploadedImage",
+                            "id": ""
+                        },
+                        "amount": 25,
+                        "downloadingOriginal": false,
+                        "downloadingCropped": false,
+                        "images": []
+                    },
+                    {
+                        "id": "6A45D610-2765-4F8C-8C4B-E5A9A1271929",
+                        "itemName": "download (2).jpeg",
+                        "quantity": 1,
+                        "frameClass": "slick",
+                        "imageURL": "https://api.artpixxel.com/images/UploadedImage/EF7BD54A-5F1A-4A51-A41D-236C8EC5002B_4045690170210000315806.90000009537_471cd84ce5334aa181147abab95e937e.jpg",
+                        "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/EF7BD54A-5F1A-4A51-A41D-236C8EC5002B_preview_4045690170210000315806.90000009537_8b32e83551544f74ac5a00cb2d22fc9e.png",
+                        "size": {
+                            "name": "12x12",
+                            "id": ""
+                        },
+                        "heading": "Uploaded Image_6416351875050000335777.40000009537",
+                        "description": "Uploaded image",
+                        "category": {
+                            "name": "UploadedImage",
+                            "id": ""
+                        },
+                        "amount": 25,
+                        "downloadingOriginal": false,
+                        "downloadingCropped": false,
+                        "images": []
+                    }
+                ],
+                "histories": [
+                    {
+                        "date": "31/10/2025 11:08:32 AM",
+                        "fullDate": "Friday, 31st October 2025",
+                        "statusId": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                        "orderId": "EF7BD54A-5F1A-4A51-A41D-236C8EC5002B",
+                        "notificationOption": "EmailAndMessage",
+                        "comment": "Default",
+                        "id": "B6174E69-5B6C-4498-AD01-3BA7FAEC707B",
+                        "label": "In-Progress",
+                        "isDefault": false,
+                        "colorCode": "#2e71e7",
+                        "icon": "pixxel pixxel-circle"
+                    },
+                    {
+                        "date": "06/11/2025 12:35:17 PM",
+                        "fullDate": "Friday, 31st October 2025",
+                        "statusId": "22AB892A-4EAE-4EB5-80FD-5E344FF5ED27",
+                        "orderId": "EF7BD54A-5F1A-4A51-A41D-236C8EC5002B",
+                        "notificationOption": "DoNotNotify",
+                        "comment": "",
+                        "id": "AB20ADA8-5501-4F7F-9EA2-6EEC24E70A60",
+                        "label": "Done",
+                        "isDefault": false,
+                        "colorCode": "#06b914",
+                        "icon": "pixxel pixxel-ok-circle"
+                    }
+                ],
+                "vat": 3,
+                "grandTotal": 65,
+                "deliveryFee": 12,
+                "date": "31/10/2025",
+                "fullDate": "Friday, 31st October 2025"
+            },
+            {
+                "id": "BCDB9C92-ADA0-4FD7-A797-05C6C159AAEE",
+                "fullName": "Jaivin Movaliya",
+                "customerId": "8E24F708-3927-4F42-9297-48799CD2E8CB",
+                "shippingAddress": "47 W 13th St, New York, NY 10011, USA\n",
+                "subTotal": 15,
+                "state": {
+                    "name": "Colorado",
+                    "id": "59FE9C1E-DF7F-44A9-AB61-A6C8234C409E"
+                },
+                "invoiceNumber": "AKRJ9N1RMQDHR8C",
+                "mobilePhoneNumber": "2268995182",
+                "additionalMobileNumber": null,
+                "emailAddress": "deepdoga@gmail.com",
+                "deliveryDate": "Monday, 3rd November 2025",
+                "name": "1 UploadedImage",
+                "specDeliveryDate": "Saturday, 1st November 2025",
+                "zipCode": "123444",
+                "city": {
+                    "name": "sdsdsdTown",
+                    "id": ""
+                },
+                "status": {
+                    "id": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                    "label": "In-Progress",
+                    "isDefault": false,
+                    "colorCode": "#2e71e7",
+                    "icon": "pixxel pixxel-circle"
+                },
+                "country": {
+                    "flag": "us flag",
+                    "name": "United States",
+                    "id": "E343EB4D-4CAC-464F-A56F-CC15CC7FB67D"
+                },
+                "paymentStatus": {
+                    "name": "Paid",
+                    "id": ""
+                },
+                "orderState": {
+                    "name": "Open",
+                    "id": ""
+                },
+                "items": [
+                    {
+                        "id": "87A314EA-277C-4529-AFAF-9A166126D627",
+                        "itemName": "Setof4Set1",
+                        "quantity": 1,
+                        "frameClass": "slick",
+                        "imageURL": "./assets/images/placeholder.svg",
+                        "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/BCDB9C92-ADA0-4FD7-A797-05C6C159AAEE_preview_26434297733900003030704.5999999046_3984e136133a4558bb0efb3ae894ada5.png",
+                        "size": {
+                            "name": "Mini Tiles",
+                            "id": "FAC393F0-6671-420B-BE95-6FB08AC814B5"
+                        },
+                        "heading": "26434297733900003030704.5999999046",
+                        "description": "26434297733900003030704.5999999046 description",
+                        "category": {
+                            "name": "UploadedImage",
+                            "id": ""
+                        },
+                        "amount": 15,
+                        "downloadingOriginal": false,
+                        "downloadingCropped": false,
+                        "images": [
+                            {
+                                "id": "102F6B53-FAC1-4BA7-9954-F8160E1FF66B",
+                                "imageURL": "https://api.artpixxel.com/images/UploadedImage/BCDB9C92-ADA0-4FD7-A797-05C6C159AAEE_item_26434297733900003030704.5999999046_c23ec94d38814df3b309b9b98cbc8dec.jpg",
+                                "name": "Setof4Set1",
+                                "description": "26434297733900003030704.5999999046 description",
+                                "quantity": 1,
+                                "downloading": false,
+                                "frameClass": "slick",
+                                "size": "Mini Tiles",
+                                "amount": 3.75,
+                                "category": "Kids Template Image"
+                            },
+                            {
+                                "id": "3A2F2A7F-530C-45D2-8B4D-43942FC29378",
+                                "imageURL": "https://api.artpixxel.com/images/UploadedImage/BCDB9C92-ADA0-4FD7-A797-05C6C159AAEE_item_26434297733900003030704.5999999046_4d6579066ad4404b83cd16f976e3de33.jpg",
+                                "name": "Setof4Set1",
+                                "description": "26434297733900003030704.5999999046 description",
+                                "quantity": 1,
+                                "downloading": false,
+                                "frameClass": "slick",
+                                "size": "Mini Tiles",
+                                "amount": 3.75,
+                                "category": "Kids Template Image"
+                            },
+                            {
+                                "id": "979CEE6D-7773-4067-8A31-9FBB339FF012",
+                                "imageURL": "https://api.artpixxel.com/images/UploadedImage/BCDB9C92-ADA0-4FD7-A797-05C6C159AAEE_item_26434297733900003030704.5999999046_08d57ab011b942d5af9516c1d27ba78a.jpg",
+                                "name": "Setof4Set1",
+                                "description": "26434297733900003030704.5999999046 description",
+                                "quantity": 1,
+                                "downloading": false,
+                                "frameClass": "slick",
+                                "size": "Mini Tiles",
+                                "amount": 3.75,
+                                "category": "Kids Template Image"
+                            },
+                            {
+                                "id": "D55B84E4-C20E-4201-A926-5287A743D26F",
+                                "imageURL": "https://api.artpixxel.com/images/UploadedImage/BCDB9C92-ADA0-4FD7-A797-05C6C159AAEE_item_26434297733900003030704.5999999046_c4058ec8671d41deb40ecbb7d8e2712d.jpg",
+                                "name": "Setof4Set1",
+                                "description": "26434297733900003030704.5999999046 description",
+                                "quantity": 1,
+                                "downloading": false,
+                                "frameClass": "slick",
+                                "size": "Mini Tiles",
+                                "amount": 3.75,
+                                "category": "Kids Template Image"
+                            }
+                        ]
+                    }
+                ],
+                "histories": [
+                    {
+                        "date": "29/10/2025 06:22:54 PM",
+                        "fullDate": "Wednesday, 29th October 2025",
+                        "statusId": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                        "orderId": "BCDB9C92-ADA0-4FD7-A797-05C6C159AAEE",
+                        "notificationOption": "EmailAndMessage",
+                        "comment": "Default",
+                        "id": "135509A0-E3AF-48B4-AEE0-2E7425DBA8AE",
+                        "label": "In-Progress",
+                        "isDefault": false,
+                        "colorCode": "#2e71e7",
+                        "icon": "pixxel pixxel-circle"
+                    }
+                ],
+                "vat": 0.9,
+                "grandTotal": 27.9,
+                "deliveryFee": 12,
+                "date": "29/10/2025",
+                "fullDate": "Wednesday, 29th October 2025"
+            },
+            {
+                "id": "12E86336-A70E-43EB-8962-FE9FAAC28CA4",
+                "fullName": "Jaivin Movaliya",
+                "customerId": "8E24F708-3927-4F42-9297-48799CD2E8CB",
+                "shippingAddress": "47 W 13th St, New York, NY 10011, USA\n",
+                "subTotal": 25,
+                "state": {
+                    "name": "Colorado",
+                    "id": "59FE9C1E-DF7F-44A9-AB61-A6C8234C409E"
+                },
+                "invoiceNumber": "HXAE9L1PLSVIYWW",
+                "mobilePhoneNumber": "2268995182",
+                "additionalMobileNumber": null,
+                "emailAddress": "deepdoga@gmail.com",
+                "deliveryDate": "Monday, 3rd November 2025",
+                "name": "1 UploadedImage",
+                "specDeliveryDate": "Saturday, 1st November 2025",
+                "zipCode": "111111111111111111",
+                "city": {
+                    "name": "wewewe",
+                    "id": ""
+                },
+                "status": {
+                    "id": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                    "label": "In-Progress",
+                    "isDefault": false,
+                    "colorCode": "#2e71e7",
+                    "icon": "pixxel pixxel-circle"
+                },
+                "country": {
+                    "flag": "us flag",
+                    "name": "United States",
+                    "id": "E343EB4D-4CAC-464F-A56F-CC15CC7FB67D"
+                },
+                "paymentStatus": {
+                    "name": "Paid",
+                    "id": ""
+                },
+                "orderState": {
+                    "name": "Open",
+                    "id": ""
+                },
+                "items": [
+                    {
+                        "id": "17BC0518-FB0E-4E42-9C8E-71F319179829",
+                        "itemName": "download (3).jpeg",
+                        "quantity": 1,
+                        "frameClass": "slick",
+                        "imageURL": "https://api.artpixxel.com/images/UploadedImage/12E86336-A70E-43EB-8962-FE9FAAC28CA4_41847025492000001327480.2999999523_44510e66e8294c2eb6a6a14557ccd498.jpg",
+                        "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/12E86336-A70E-43EB-8962-FE9FAAC28CA4_preview_41847025492000001327480.2999999523_79534484edc144628bd2cd3982ced900.png",
+                        "size": {
+                            "name": "12x12",
+                            "id": ""
+                        },
+                        "heading": "Uploaded Image_23895279000600002795228.7000000477",
+                        "description": "Uploaded image",
+                        "category": {
+                            "name": "UploadedImage",
+                            "id": ""
+                        },
+                        "amount": 25,
+                        "downloadingOriginal": false,
+                        "downloadingCropped": false,
+                        "images": []
+                    }
+                ],
+                "histories": [
+                    {
+                        "date": "29/10/2025 06:18:59 PM",
+                        "fullDate": "Wednesday, 29th October 2025",
+                        "statusId": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                        "orderId": "12E86336-A70E-43EB-8962-FE9FAAC28CA4",
+                        "notificationOption": "EmailAndMessage",
+                        "comment": "Default",
+                        "id": "9B709EB6-769A-4F11-8A32-33AE90401143",
+                        "label": "In-Progress",
+                        "isDefault": false,
+                        "colorCode": "#2e71e7",
+                        "icon": "pixxel pixxel-circle"
+                    }
+                ],
+                "vat": 1.5,
+                "grandTotal": 38.5,
+                "deliveryFee": 12,
+                "date": "29/10/2025",
+                "fullDate": "Wednesday, 29th October 2025"
+            },
+            {
+                "id": "6F9D13A2-C9A2-4770-9653-7CA48116668E",
+                "fullName": "Jaivin Movaliya",
+                "customerId": "8E24F708-3927-4F42-9297-48799CD2E8CB",
+                "shippingAddress": "47 W 13th St, New York, NY 10011, USA\n",
+                "subTotal": 25,
+                "state": {
+                    "name": "Colorado",
+                    "id": "59FE9C1E-DF7F-44A9-AB61-A6C8234C409E"
+                },
+                "invoiceNumber": "RL551SFY4CTEES7",
+                "mobilePhoneNumber": "2268995182",
+                "additionalMobileNumber": null,
+                "emailAddress": "deepdoga@gmail.com",
+                "deliveryDate": "Monday, 3rd November 2025",
+                "name": "1 UploadedImage",
+                "specDeliveryDate": "Saturday, 1st November 2025",
+                "zipCode": "1111111",
+                "city": {
+                    "name": "ee860b40-b8f6-47ae-98a5-d454520e99fe",
+                    "id": ""
+                },
+                "status": {
+                    "id": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                    "label": "In-Progress",
+                    "isDefault": false,
+                    "colorCode": "#2e71e7",
+                    "icon": "pixxel pixxel-circle"
+                },
+                "country": {
+                    "flag": "us flag",
+                    "name": "United States",
+                    "id": "E343EB4D-4CAC-464F-A56F-CC15CC7FB67D"
+                },
+                "paymentStatus": {
+                    "name": "Paid",
+                    "id": ""
+                },
+                "orderState": {
+                    "name": "Open",
+                    "id": ""
+                },
+                "items": [
+                    {
+                        "id": "273D7A8C-84DB-4EF6-A46C-8EDC79DDA1D2",
+                        "itemName": "download (3).jpeg",
+                        "quantity": 1,
+                        "frameClass": "slick",
+                        "imageURL": "https://api.artpixxel.com/images/UploadedImage/6F9D13A2-C9A2-4770-9653-7CA48116668E_140201393986400053862.299999952316_dcc839c4c41145298f8edee3e7dc993c.jpg",
+                        "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/6F9D13A2-C9A2-4770-9653-7CA48116668E_preview_140201393986400053862.299999952316_dfa4e01a176243b79f50129336fef84e.png",
+                        "size": {
+                            "name": "12x12",
+                            "id": ""
+                        },
+                        "heading": "Uploaded Image_649872469860000060539.799999952316",
+                        "description": "Uploaded image",
+                        "category": {
+                            "name": "UploadedImage",
+                            "id": ""
+                        },
+                        "amount": 25,
+                        "downloadingOriginal": false,
+                        "downloadingCropped": false,
+                        "images": []
+                    }
+                ],
+                "histories": [
+                    {
+                        "date": "29/10/2025 01:18:55 PM",
+                        "fullDate": "Wednesday, 29th October 2025",
+                        "statusId": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                        "orderId": "6F9D13A2-C9A2-4770-9653-7CA48116668E",
+                        "notificationOption": "EmailAndMessage",
+                        "comment": "Default",
+                        "id": "879F102E-36C8-4B3E-B862-93F9FDCCDF6B",
+                        "label": "In-Progress",
+                        "isDefault": false,
+                        "colorCode": "#2e71e7",
+                        "icon": "pixxel pixxel-circle"
+                    }
+                ],
+                "vat": 1.5,
+                "grandTotal": 38.5,
+                "deliveryFee": 12,
+                "date": "29/10/2025",
+                "fullDate": "Wednesday, 29th October 2025"
+            },
+            {
+                "id": "20B44351-8495-45F0-8913-DEC95C72B52F",
+                "fullName": "Jaivin Movaliya",
+                "customerId": "8E24F708-3927-4F42-9297-48799CD2E8CB",
+                "shippingAddress": "5, Pamela Crt",
+                "subTotal": 220,
+                "state": {
+                    "name": "Alabama",
+                    "id": "12103054-9AA4-4C24-85F1-0F1BD597E4E5"
+                },
+                "invoiceNumber": "QQKFBL07M7XCPDE",
+                "mobilePhoneNumber": "2268995182",
+                "additionalMobileNumber": null,
+                "emailAddress": "jaivinmovaliya1999@gmail.com",
+                "deliveryDate": "Monday, 3rd November 2025",
+                "name": "2 UploadedImagees",
+                "specDeliveryDate": "Saturday, 1st November 2025",
+                "zipCode": "M9V 2C2",
+                "city": {
+                    "name": "Etobicoke",
+                    "id": ""
+                },
+                "status": {
+                    "id": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                    "label": "In-Progress",
+                    "isDefault": false,
+                    "colorCode": "#2e71e7",
+                    "icon": "pixxel pixxel-circle"
+                },
+                "country": {
+                    "flag": "us flag",
+                    "name": "United States",
+                    "id": "E343EB4D-4CAC-464F-A56F-CC15CC7FB67D"
+                },
+                "paymentStatus": {
+                    "name": "Paid",
+                    "id": ""
+                },
+                "orderState": {
+                    "name": "Open",
+                    "id": ""
+                },
+                "items": [
+                    {
+                        "id": "037E6CB5-66C5-4207-B288-2C767A8E9F9A",
+                        "itemName": "Setof4Set4",
+                        "quantity": 1,
+                        "frameClass": "chick",
+                        "imageURL": "./assets/images/placeholder.svg",
+                        "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/20B44351-8495-45F0-8913-DEC95C72B52F_preview_1583672327996000417968_14dae4a38f5940b1be8b24946f0af068.png",
+                        "size": {
+                            "name": "New 2",
+                            "id": "4902B9A3-61E2-4F0A-9CA5-898531D0F4F1"
+                        },
+                        "heading": "1583672327996000417968",
+                        "description": "1583672327996000417968 description",
+                        "category": {
+                            "name": "UploadedImage",
+                            "id": ""
+                        },
+                        "amount": 200,
+                        "downloadingOriginal": false,
+                        "downloadingCropped": false,
+                        "images": [
+                            {
+                                "id": "126D6828-5761-4EEE-9CBD-EA9AD9C5B599",
+                                "imageURL": "https://api.artpixxel.com/images/UploadedImage/20B44351-8495-45F0-8913-DEC95C72B52F_item_1583672327996000417968_959d52d6d9db4809a7822cc9c7b8931c.jpg",
+                                "name": "Setof4Set4",
+                                "description": "1583672327996000417968 description",
+                                "quantity": 1,
+                                "downloading": false,
+                                "frameClass": "chick",
+                                "size": "New 2",
+                                "amount": 50,
+                                "category": "Kids Template Image"
+                            },
+                            {
+                                "id": "A0ED3B97-4796-4ED8-809A-5FF8E323CE67",
+                                "imageURL": "https://api.artpixxel.com/images/UploadedImage/20B44351-8495-45F0-8913-DEC95C72B52F_item_1583672327996000417968_c3e2d9d3205949849d4fbdc3603da0d4.jpg",
+                                "name": "Setof4Set4",
+                                "description": "1583672327996000417968 description",
+                                "quantity": 1,
+                                "downloading": false,
+                                "frameClass": "chick",
+                                "size": "New 2",
+                                "amount": 50,
+                                "category": "Kids Template Image"
+                            },
+                            {
+                                "id": "A13AA7B8-3B65-4C06-88AC-1B6D567311CC",
+                                "imageURL": "https://api.artpixxel.com/images/UploadedImage/20B44351-8495-45F0-8913-DEC95C72B52F_item_1583672327996000417968_0a1f4f2f88a841cba75783cf9dd268c7.jpg",
+                                "name": "Setof4Set4",
+                                "description": "1583672327996000417968 description",
+                                "quantity": 1,
+                                "downloading": false,
+                                "frameClass": "chick",
+                                "size": "New 2",
+                                "amount": 50,
+                                "category": "Kids Template Image"
+                            },
+                            {
+                                "id": "CA46CA0B-D5E7-443A-AA81-D0B3FAB659DD",
+                                "imageURL": "https://api.artpixxel.com/images/UploadedImage/20B44351-8495-45F0-8913-DEC95C72B52F_item_1583672327996000417968_6d09260ac0e24d88b0656a77836a9717.jpg",
+                                "name": "Setof4Set4",
+                                "description": "1583672327996000417968 description",
+                                "quantity": 1,
+                                "downloading": false,
+                                "frameClass": "chick",
+                                "size": "New 2",
+                                "amount": 50,
+                                "category": "Kids Template Image"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "A92AA1E4-CB8B-4B60-9396-707D47488793",
+                        "itemName": "Setof3Set4",
+                        "quantity": 1,
+                        "frameClass": "chick",
+                        "imageURL": "./assets/images/placeholder.svg",
+                        "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/20B44351-8495-45F0-8913-DEC95C72B52F_preview_9884691283420000345237.19999980927_01551df9eef44d6fb16cf4a9cc810b95.png",
+                        "size": {
+                            "name": "Mini 1",
+                            "id": "375FC2D6-C59F-4A69-8E44-0BBCB48327BB"
+                        },
+                        "heading": "9884691283420000345237.19999980927",
+                        "description": "9884691283420000345237.19999980927 description",
+                        "category": {
+                            "name": "UploadedImage",
+                            "id": ""
+                        },
+                        "amount": 20,
+                        "downloadingOriginal": false,
+                        "downloadingCropped": false,
+                        "images": [
+                            {
+                                "id": "4DC7BD45-1520-465D-8F0F-ABC13A7CAF17",
+                                "imageURL": "https://api.artpixxel.com/images/UploadedImage/20B44351-8495-45F0-8913-DEC95C72B52F_item_9884691283420000345237.19999980927_db86490a36fa44bc87dbee214ea78150.jpg",
+                                "name": "Setof3Set4",
+                                "description": "9884691283420000345237.19999980927 description",
+                                "quantity": 1,
+                                "downloading": false,
+                                "frameClass": "chick",
+                                "size": "Mini 1",
+                                "amount": 6.67,
+                                "category": "Kids Template Image"
+                            },
+                            {
+                                "id": "9F8F3616-05C5-4E9B-A97C-BD1CBBD5AE87",
+                                "imageURL": "https://api.artpixxel.com/images/UploadedImage/20B44351-8495-45F0-8913-DEC95C72B52F_item_9884691283420000345237.19999980927_4e186c12157d4aca8929f7d502daa751.jpg",
+                                "name": "Setof3Set4",
+                                "description": "9884691283420000345237.19999980927 description",
+                                "quantity": 1,
+                                "downloading": false,
+                                "frameClass": "chick",
+                                "size": "Mini 1",
+                                "amount": 6.67,
+                                "category": "Kids Template Image"
+                            },
+                            {
+                                "id": "C48B5892-A655-44B8-ABC4-BEA3131C79DC",
+                                "imageURL": "https://api.artpixxel.com/images/UploadedImage/20B44351-8495-45F0-8913-DEC95C72B52F_item_9884691283420000345237.19999980927_61b46ba9e12e48c5b6a443e47c8727dd.jpg",
+                                "name": "Setof3Set4",
+                                "description": "9884691283420000345237.19999980927 description",
+                                "quantity": 1,
+                                "downloading": false,
+                                "frameClass": "chick",
+                                "size": "Mini 1",
+                                "amount": 6.67,
+                                "category": "Kids Template Image"
+                            }
+                        ]
+                    }
+                ],
+                "histories": [
+                    {
+                        "date": "29/10/2025 01:06:16 PM",
+                        "fullDate": "Wednesday, 29th October 2025",
+                        "statusId": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                        "orderId": "20B44351-8495-45F0-8913-DEC95C72B52F",
+                        "notificationOption": "EmailAndMessage",
+                        "comment": "Default",
+                        "id": "316B463E-53D8-457D-8251-2F3FDFC8C200",
+                        "label": "In-Progress",
+                        "isDefault": false,
+                        "colorCode": "#2e71e7",
+                        "icon": "pixxel pixxel-circle"
+                    }
+                ],
+                "vat": 13.2,
+                "grandTotal": 243.2,
+                "deliveryFee": 10,
+                "date": "29/10/2025",
+                "fullDate": "Wednesday, 29th October 2025"
+            },
+            {
+                "id": "56EC4F4D-FF26-44A6-B02D-480EF6AF5B0D",
+                "fullName": "Jaivin Movaliya",
+                "customerId": "8E24F708-3927-4F42-9297-48799CD2E8CB",
+                "shippingAddress": "47 W 13th St, New York, NY 10011, USA\n",
+                "subTotal": 50,
+                "state": {
+                    "name": "Colorado",
+                    "id": "59FE9C1E-DF7F-44A9-AB61-A6C8234C409E"
+                },
+                "invoiceNumber": "KCPU9XJSTJUTF2W",
+                "mobilePhoneNumber": "2268995182",
+                "additionalMobileNumber": null,
+                "emailAddress": "deepdoga@gmail.com",
+                "deliveryDate": "Monday, 3rd November 2025",
+                "name": "2 UploadedImagees",
+                "specDeliveryDate": "Saturday, 1st November 2025",
+                "zipCode": "1111111",
+                "city": {
+                    "name": "ee860b40-b8f6-47ae-98a5-d454520e99fe",
+                    "id": ""
+                },
+                "status": {
+                    "id": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                    "label": "In-Progress",
+                    "isDefault": false,
+                    "colorCode": "#2e71e7",
+                    "icon": "pixxel pixxel-circle"
+                },
+                "country": {
+                    "flag": "us flag",
+                    "name": "United States",
+                    "id": "E343EB4D-4CAC-464F-A56F-CC15CC7FB67D"
+                },
+                "paymentStatus": {
+                    "name": "Paid",
+                    "id": ""
+                },
+                "orderState": {
+                    "name": "Open",
+                    "id": ""
+                },
+                "items": [
+                    {
+                        "id": "3E4D3A4F-BFA8-4CB6-B3ED-B3D5A4DE0B75",
+                        "itemName": "download (3).jpeg",
+                        "quantity": 1,
+                        "frameClass": "slick",
+                        "imageURL": "https://api.artpixxel.com/images/UploadedImage/56EC4F4D-FF26-44A6-B02D-480EF6AF5B0D_1231074755556000107937.5_21922f91d7f54ab2bb8c5f18eda152a4.jpg",
+                        "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/56EC4F4D-FF26-44A6-B02D-480EF6AF5B0D_preview_1231074755556000107937.5_2a649db9528840c7a658d94ff45c42e7.png",
+                        "size": {
+                            "name": "12x12",
+                            "id": ""
+                        },
+                        "heading": "Uploaded Image_9031086924790000115414.79999995232",
+                        "description": "Uploaded image",
+                        "category": {
+                            "name": "UploadedImage",
+                            "id": ""
+                        },
+                        "amount": 25,
+                        "downloadingOriginal": false,
+                        "downloadingCropped": false,
+                        "images": []
+                    },
+                    {
+                        "id": "4CD68BAA-C0C9-41CB-BA59-64CEC9C7A3A1",
+                        "itemName": "082728BE-AD99-483A-B0D7-16FEBB5A0F9B_123829866952600034879.199999809265_1aa05392acbc4a00a8499f6e78b02d8c.jpg",
+                        "quantity": 1,
+                        "frameClass": "slick",
+                        "imageURL": "https://api.artpixxel.com/images/UploadedImage/56EC4F4D-FF26-44A6-B02D-480EF6AF5B0D_75895320992000006528175.900000095_9eeb86fc35bb4e6b942f58a7222bd88b.jpg",
+                        "croppedImageURL": "https://api.artpixxel.com/images/UploadedImage/56EC4F4D-FF26-44A6-B02D-480EF6AF5B0D_preview_75895320992000006528175.900000095_e3d71823a0f94f67be1ccb5e63af3864.png",
+                        "size": {
+                            "name": "12x12",
+                            "id": ""
+                        },
+                        "heading": "Uploaded Image_17911623677200008481249.5",
+                        "description": "Uploaded image",
+                        "category": {
+                            "name": "UploadedImage",
+                            "id": ""
+                        },
+                        "amount": 25,
+                        "downloadingOriginal": false,
+                        "downloadingCropped": false,
+                        "images": []
+                    }
+                ],
+                "histories": [
+                    {
+                        "date": "29/10/2025 12:55:01 PM",
+                        "fullDate": "Wednesday, 29th October 2025",
+                        "statusId": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+                        "orderId": "56EC4F4D-FF26-44A6-B02D-480EF6AF5B0D",
+                        "notificationOption": "EmailAndMessage",
+                        "comment": "Default",
+                        "id": "74E5E586-E13E-4F56-A5C1-9F317B45E96B",
+                        "label": "In-Progress",
+                        "isDefault": false,
+                        "colorCode": "#2e71e7",
+                        "icon": "pixxel pixxel-circle"
+                    }
+                ],
+                "vat": 3,
+                "grandTotal": 65,
+                "deliveryFee": 12,
+                "date": "29/10/2025",
+                "fullDate": "Wednesday, 29th October 2025"
+            }
+        ],
+        "totalOrder": 147,
+        "vat": 438.99,
+        "delivery": 1435,
+        "subTotal": 8560.5,
+        "grandTotal": 10434.49
+    },
+    "cities": [
+        {
+            "name": "Ajo",
+            "id": "69E41D1F-BAC6-4AC3-8DCB-B70386941C2D"
+        },
+        {
+            "name": "Alameda",
+            "id": "88FBD9C8-31A5-4CF9-86CA-AB49DD7BBADD"
+        },
+        {
+            "name": "Albany",
+            "id": "73E13757-8DC7-4C84-AF6D-74022797108E"
+        },
+        {
+            "name": "Alhambra",
+            "id": "E7226ED8-F9A0-4EAD-89B7-6B28E1DFDA18"
+        },
+        {
+            "name": "Anaheim",
+            "id": "401AF40D-7C21-4832-ABDB-2D3DC4B72C85"
+        },
+        {
+            "name": "Anchorage",
+            "id": "2455DDDE-0742-4271-8A84-E746B7426905"
+        },
+        {
+            "name": "Annapolis",
+            "id": "04E3E04B-858B-4423-9BA0-AFBB02A90638"
+        },
+        {
+            "name": "Antioch",
+            "id": "E3653C5F-EFC3-4F83-9BD9-3541F91174E4"
+        },
+        {
+            "name": "Arcadia",
+            "id": "754F5250-DAF8-4850-8E0C-7D6A9B81EDB1"
+        },
+        {
+            "name": "Arkadelphia",
+            "id": "A9407B43-8440-4C30-BC6C-3D46F6A45D40"
+        },
+        {
+            "name": "Arkansas Post",
+            "id": "157D5DA9-53B3-4752-9A66-CF075753BEE3"
+        },
+        {
+            "name": "Atlanta",
+            "id": "8ADB1179-3531-4150-8725-0C58DD8BFE89"
+        },
+        {
+            "name": "Atmore",
+            "id": "43B7B4C4-DBC9-4BFF-AE38-594FE2422046"
+        },
+        {
+            "name": "Auburn",
+            "id": "0CE7AC94-270E-4A21-B45D-EC87947311DE"
+        },
+        {
+            "name": "Augusta",
+            "id": "334F6837-AD84-441E-A302-23E910FE8224"
+        },
+        {
+            "name": "Austin",
+            "id": "3444FC95-3FB3-4443-93F0-E1E03798443B"
+        },
+        {
+            "name": "Avondale",
+            "id": "CC854307-EAD4-4769-97E9-C553CD3BAB1D"
+        },
+        {
+            "name": "Bakersfield",
+            "id": "82664FDF-E872-42B2-A739-5AE0330F4798"
+        },
+        {
+            "name": "Barstow",
+            "id": "12B03892-D196-447A-B02E-56EA44998A0F"
+        },
+        {
+            "name": "Batesville",
+            "id": "6714DD32-747D-4975-A4F2-D815ABB3561A"
+        },
+        {
+            "name": "Baton Rouge",
+            "id": "9685A815-D01A-4D4A-8B93-E4FC19E6BF33"
+        },
+        {
+            "name": "Belmont",
+            "id": "6072DC77-BE44-4160-ACA6-455D426831CC"
+        },
+        {
+            "name": "Benton",
+            "id": "3A748C24-C42C-477F-BA67-4B37B14A33C3"
+        },
+        {
+            "name": "Berkeley",
+            "id": "CB21472D-C2DF-47E9-82AA-DDBEE90EEDD0"
+        },
+        {
+            "name": "Bessemer",
+            "id": "BA7A1E6C-9D4E-4C2E-8EE7-1E46A61E855F"
+        },
+        {
+            "name": "Beverly Hills",
+            "id": "383C0B11-2D32-4503-ADCB-0B3E8C35C116"
+        },
+        {
+            "name": "Birmingham",
+            "id": "691716CF-63F0-4306-8837-A3E95117FE0F"
+        },
+        {
+            "name": "Bisbee",
+            "id": "1DABECD7-5389-4381-B096-FEEAEF18E5D3"
+        },
+        {
+            "name": "Bismarck",
+            "id": "A7F475CF-C414-472A-B431-E1F2258A851F"
+        },
+        {
+            "name": "Blytheville",
+            "id": "E7644971-7B8B-41EE-8A31-D7C2FB65307F"
+        },
+        {
+            "name": "Boise",
+            "id": "BF32DDB2-8706-4A8E-B3A9-96907589CEE9"
+        },
+        {
+            "name": "Boston",
+            "id": "7C2F9FC5-2756-4225-A98C-BB52417987CF"
+        },
+        {
+            "name": "Brea",
+            "id": "4764C60D-361E-40FC-8C48-AE4E38449CE2"
+        },
+        {
+            "name": "Buena Park",
+            "id": "2EFA5A17-B2D5-467A-87E5-039EAA61DEEA"
+        },
+        {
+            "name": "Burbank",
+            "id": "FDD0EA47-EB35-4949-908E-41AB78A259DC"
+        },
+        {
+            "name": "Calexico",
+            "id": "42E691FB-7423-4567-B5FB-9245B6B0C5B6"
+        },
+        {
+            "name": "Calistoga",
+            "id": "7DFB1E82-D1B8-49FA-9747-247A5CF7CB0C"
+        },
+        {
+            "name": "Camden",
+            "id": "1C5415B3-842C-45D4-898B-7744985B41EA"
+        },
+        {
+            "name": "Carlsbad",
+            "id": "6C04C74C-E5A6-45A3-A2F6-6C2D6318FF5E"
+        },
+        {
+            "name": "Carmel",
+            "id": "F38D376A-D026-4153-941F-95FC595FCF20"
+        },
+        {
+            "name": "Carson City",
+            "id": "DF3AC3B0-0E30-4952-84AE-E7C7DF421131"
+        },
+        {
+            "name": "Casa Grande",
+            "id": "068F617F-0179-4D1E-9CFB-BFD7308BE7C6"
+        },
+        {
+            "name": "Chandler",
+            "id": "E42F3229-3252-45E4-9DC6-05629AD8F2C9"
+        },
+        {
+            "name": "Charleston",
+            "id": "4D0D7037-4806-4B13-BD79-2A896D9781C2"
+        },
+        {
+            "name": "Cheyenne",
+            "id": "B0CD9FEB-FFC0-4AD6-B571-FDDD56C497FE"
+        },
+        {
+            "name": "Chickasaw",
+            "id": "5F5955C8-84CE-4F71-BBD4-CE2CDCCE8A9D"
+        },
+        {
+            "name": "Chico",
+            "id": "361CA271-737F-4C2D-B3C8-65E1DD6BBBFB"
+        },
+        {
+            "name": "Chula Vista",
+            "id": "7D0219C7-5D27-4BAA-9CD7-B8F36729D55D"
+        },
+        {
+            "name": "Clanton",
+            "id": "D0EFAC15-B7A3-4C77-ACF3-544723BBA81D"
+        },
+        {
+            "name": "Claremont",
+            "id": "E5DD6A54-F3C2-4EBB-B821-B6A9A3868743"
+        },
+        {
+            "name": "Clifton",
+            "id": "BD52CB15-EC36-49F8-998C-01B84B3485D0"
+        },
+        {
+            "name": "Columbia",
+            "id": "D671DA2A-50E9-46C3-A465-EDA4D96B2B99"
+        },
+        {
+            "name": "Columbus",
+            "id": "2DD7DBAA-F876-46A3-B8A7-98A1DBE8D1A5"
+        },
+        {
+            "name": "Compton",
+            "id": "066D279D-C7AD-45E6-AD9E-A0B4DB15391D"
+        },
+        {
+            "name": "Concord",
+            "id": "B06065D5-B12F-478D-825D-09C17B45FAC7"
+        },
+        {
+            "name": "Concord",
+            "id": "77D470B2-907B-43C2-BE58-84966006AF81"
+        },
+        {
+            "name": "Conway",
+            "id": "7F6517DF-EE98-41CD-816B-64898B483510"
+        },
+        {
+            "name": "Cordova",
+            "id": "8386931F-3E02-48BF-8076-DB2ABB438C73"
+        },
+        {
+            "name": "Corona",
+            "id": "91FDE875-FD61-4C47-9179-5B56DA1248F9"
+        },
+        {
+            "name": "Coronado",
+            "id": "BBB89C53-1EF9-44EE-8036-6FDCC25DD3D2"
+        },
+        {
+            "name": "Costa Mesa",
+            "id": "5E30BE37-0B90-4D27-A2E4-1886DA617B8F"
+        },
+        {
+            "name": "Crossett",
+            "id": "5296ADA5-40BE-4686-B59E-31C36C66BD92"
+        },
+        {
+            "name": "Cullman",
+            "id": "FF79CE69-F7E5-4883-86E8-AC6A3B02453B"
+        },
+        {
+            "name": "Culver City",
+            "id": "5DBECB5D-935B-4A89-AF49-12AF5DBC013C"
+        },
+        {
+            "name": "Daly City",
+            "id": "28987E33-6C79-44C9-9515-46EE6507CB5E"
+        },
+        {
+            "name": "Davis",
+            "id": "A7AADAD9-9A92-49A7-945E-888875891636"
+        },
+        {
+            "name": "Decatur",
+            "id": "A5F35977-D9BF-473B-B354-FD445D3B2C80"
+        },
+        {
+            "name": "Demopolis",
+            "id": "775F4166-401A-4A65-B168-3E0E22106CB3"
+        },
+        {
+            "name": "Denver",
+            "id": "62293C88-FCD1-4EC6-B768-1629906FDA6B"
+        },
+        {
+            "name": "Des Moines",
+            "id": "087A92D8-D46D-460C-9E61-1ED984812ABF"
+        },
+        {
+            "name": "Dothan",
+            "id": "10E9318E-3EDF-47CF-9520-8C7431C24D74"
+        },
+        {
+            "name": "Douglas",
+            "id": "F93E21B8-B2FD-43AC-A2A5-FD4C11AA5719"
+        },
+        {
+            "name": "Dover",
+            "id": "0648EA21-4D13-439B-ADA8-0E7A14D49ACD"
+        },
+        {
+            "name": "Downey",
+            "id": "DC2F249B-BEA1-4A9C-97BE-E7E584978973"
+        },
+        {
+            "name": "El Centro",
+            "id": "FEB3188B-4142-4F7A-8C28-191FDF8C4613"
+        },
+        {
+            "name": "El Cerrito",
+            "id": "3DEF2841-FB55-482E-B391-D7254A5163BF"
+        },
+        {
+            "name": "El Dorado",
+            "id": "BC39AAF6-2A58-4092-B6D6-3EEE30262874"
+        },
+        {
+            "name": "El Monte",
+            "id": "9BAD8E76-4D23-4F4C-8A51-1E99E64B701E"
+        },
+        {
+            "name": "Enterprise",
+            "id": "9E8BD137-9F6E-4D41-B6A4-45DA6BDE0E70"
+        },
+        {
+            "name": "Escondido",
+            "id": "97876B41-6B43-4312-B99B-AD2E7FD7BD59"
+        },
+        {
+            "name": "Eufaula",
+            "id": "B87665DD-4F10-4399-A943-2FE2172981A5"
+        },
+        {
+            "name": "Eureka",
+            "id": "ABF409AB-35F2-47DA-BF17-15E0930AFE0E"
+        },
+        {
+            "name": "Fairbanks",
+            "id": "714DDF8B-3033-44E4-818A-A3C27E736144"
+        },
+        {
+            "name": "Fairfield",
+            "id": "57B9BB58-0CB9-4970-BDEE-4FD7D2271BEF"
+        },
+        {
+            "name": "Fayetteville",
+            "id": "4EFB97ED-5A6F-46F8-9FD9-9C2F0445ACD6"
+        },
+        {
+            "name": "Flagstaff",
+            "id": "FC2C3859-CD58-4530-A33D-F158AF42E224"
+        },
+        {
+            "name": "Florence",
+            "id": "53E66A0E-81C4-442E-AC04-60393EC8AA87"
+        },
+        {
+            "name": "Florence",
+            "id": "70385D28-9379-40C4-9C4C-DA1114AA51BC"
+        },
+        {
+            "name": "Fontana",
+            "id": "6A3D85E1-C06D-40FD-A8C9-AD2063DBDF7D"
+        },
+        {
+            "name": "Forrest City",
+            "id": "6888D935-58DE-47C9-9BC9-CBB4FD66A303"
+        },
+        {
+            "name": "Fort Payne",
+            "id": "E86B2E94-4EE8-435C-9590-BC827C8E3978"
+        },
+        {
+            "name": "Fort Smith",
+            "id": "781917C6-0993-4270-9E40-92D3FE0C8DBF"
+        },
+        {
+            "name": "Frankfort",
+            "id": "AD17C6E8-61BA-4693-B1E6-3940125FBF58"
+        },
+        {
+            "name": "Fremont",
+            "id": "61C408BC-8344-4923-9B4E-64359D87599C"
+        },
+        {
+            "name": "Fresno",
+            "id": "C98EAE0E-4B79-470E-AED8-141860F5D298"
+        },
+        {
+            "name": "Fullerton",
+            "id": "71F93BA7-DE3C-4342-8945-D173D8A866F5"
+        },
+        {
+            "name": "Gadsden",
+            "id": "1A17F0A3-183A-44BC-8950-D9BCEDC79719"
+        },
+        {
+            "name": "Garden Grove",
+            "id": "E2EC3443-3ADD-451A-8996-73F0AF011503"
+        },
+        {
+            "name": "Gila Bend",
+            "id": "BA4899FA-2276-4BE8-9398-E9375F135E46"
+        },
+        {
+            "name": "Glendale",
+            "id": "A859C793-0943-4569-8009-F4DA1725905C"
+        },
+        {
+            "name": "Glendale",
+            "id": "3ADD256B-CF13-4804-9CE4-C865D4E61031"
+        },
+        {
+            "name": "Globe",
+            "id": "B4366019-66B1-40AB-840F-44B8D8056263"
+        },
+        {
+            "name": "Greenville",
+            "id": "7A3E80DA-2113-4DF4-A918-53A8AFBD5B99"
+        },
+        {
+            "name": "Guntersville",
+            "id": "BBA73FFF-1656-42D6-A729-7E8295ACC631"
+        },
+        {
+            "name": "Haines",
+            "id": "4985C197-2CAC-406F-9E7E-0BEC08AADE00"
+        },
+        {
+            "name": "Harrison",
+            "id": "15E7F8F8-70B2-44C6-BE0D-478FE0CC5E29"
+        },
+        {
+            "name": "Hartford",
+            "id": "6B074C77-9059-405E-BB54-0DB0F5E0F3B0"
+        },
+        {
+            "name": "Hayward",
+            "id": "47D9478C-8D29-4193-9EB3-0408FEC09597"
+        },
+        {
+            "name": "Helena",
+            "id": "6FF1231B-6788-4521-BB34-20744C2A54D8"
+        },
+        {
+            "name": "Hollywood",
+            "id": "93FEF4C8-1716-4330-AA75-838D325995DA"
+        },
+        {
+            "name": "Homer",
+            "id": "61F26ED5-F209-430E-B216-E968D3568D5D"
+        },
+        {
+            "name": "Honolulu",
+            "id": "3FB20EE8-6915-41F3-8C3C-0C20CB880621"
+        },
+        {
+            "name": "Hope",
+            "id": "926BAA80-06FA-4993-A466-445CC14DAB38"
+        },
+        {
+            "name": "Hot Springs",
+            "id": "2445CE66-63C9-4F5A-BF4E-6F29B084E73C"
+        },
+        {
+            "name": "Huntington Beach",
+            "id": "9CBAD369-FD0F-4C57-B8D0-4CC8088439E9"
+        },
+        {
+            "name": "Huntsville",
+            "id": "52FB2A91-6689-4F7B-AD17-16752A58425A"
+        },
+        {
+            "name": "Indianapolis",
+            "id": "16446766-B44B-4AC7-8D8F-0F53E3380B86"
+        },
+        {
+            "name": "Indio",
+            "id": "9938667D-9F7F-43E0-A3D6-3CC5D72AEA59"
+        },
+        {
+            "name": "Inglewood",
+            "id": "8083E1B9-66B0-45E4-87DF-FE3F72625118"
+        },
+        {
+            "name": "Irvine",
+            "id": "A9C34242-2D87-427A-92A4-A70D320CACF0"
+        },
+        {
+            "name": "Jackson",
+            "id": "95CD7666-9A02-4D48-BF94-B6C45AA052FC"
+        },
+        {
+            "name": "Jacksonville",
+            "id": "E9C73899-8F12-4E83-B9BB-13C4CAADA1E6"
+        },
+        {
+            "name": "Jasper",
+            "id": "7C279BFC-0238-453A-8DC1-D2F81425227E"
+        },
+        {
+            "name": "Jefferson City",
+            "id": "01E06BD5-770F-46A6-ABA6-61442BDF9FED"
+        },
+        {
+            "name": "Jonesboro",
+            "id": "29387566-E24B-438E-AC73-EBB0F935EF7D"
+        },
+        {
+            "name": "Juneau",
+            "id": "6D34D44B-E082-4249-B7A9-CF767F6D3203"
+        },
+        {
+            "name": "Juneau",
+            "id": "CCC0459B-EE01-4BFC-B035-417BA1167B6F"
+        },
+        {
+            "name": "Ketchikan",
+            "id": "EDC7A489-BD83-4DAB-955C-BB28312E8A41"
+        },
+        {
+            "name": "Kingman",
+            "id": "FB2679B7-6335-4384-A6AE-0CCE4A53493F"
+        },
+        {
+            "name": "Kodiak",
+            "id": "1FBECF8D-A53F-42EC-B418-8AAFC875C7D0"
+        },
+        {
+            "name": "Kotzebue",
+            "id": "3857F366-A3C0-4D58-B6D2-87EB09CA5265"
+        },
+        {
+            "name": "La Habra",
+            "id": "658B6717-2CDB-429C-A818-D497BA6AA8CC"
+        },
+        {
+            "name": "Laguna Beach",
+            "id": "9FC6B4DD-B3A3-4740-9A5D-B432BE00FFCD"
+        },
+        {
+            "name": "Lake Havasu City",
+            "id": "F385FA5B-FD05-4F12-A09D-30E7C9A37C4B"
+        },
+        {
+            "name": "Lancaster",
+            "id": "2ADFE12D-3C55-4DC3-BE72-7D99616E39D7"
+        },
+        {
+            "name": "Lanham",
+            "id": "F944687B-C883-4E56-AC3E-D452F1C31B3C"
+        },
+        {
+            "name": "Lansing",
+            "id": "ED2289AB-E9EE-42B3-8524-B8F1DFC44FEC"
+        },
+        {
+            "name": "Lincoln",
+            "id": "527F7645-2396-4FD7-A0AF-0C23411F8381"
+        },
+        {
+            "name": "Little Rock",
+            "id": "2F421E0A-03BD-4C14-BC81-88EB83C19728"
+        },
+        {
+            "name": "Little Rock",
+            "id": "E364C599-316C-4B0B-AF62-E772673A7908"
+        },
+        {
+            "name": "Livermore",
+            "id": "2857532C-9E9A-4038-BFCB-D613C86AF011"
+        },
+        {
+            "name": "Lodi",
+            "id": "58AB12DD-D8CD-40B9-8BA7-FAF74508CEC4"
+        },
+        {
+            "name": "Lompoc",
+            "id": "378CEDE8-C571-41D4-A3DB-5AB723182E4E"
+        },
+        {
+            "name": "Long Beach",
+            "id": "ACE392F6-75DF-4851-89F2-7F063079539F"
+        },
+        {
+            "name": "Los Angeles",
+            "id": "9EFC3DF0-9206-492D-BD51-1C1DEC98FF69"
+        },
+        {
+            "name": "Madison",
+            "id": "4C7D5356-C9C3-401E-A1A3-0E64779D837F"
+        },
+        {
+            "name": "Magnolia",
+            "id": "0CD26366-729B-473B-A697-B387CDA9462F"
+        },
+        {
+            "name": "Malibu",
+            "id": "4C9F9145-7287-46A8-ADBF-774E5A3B9B81"
+        },
+        {
+            "name": "Marion",
+            "id": "0F43A1E7-A1A8-46E0-9DF9-D5580D963CA6"
+        },
+        {
+            "name": "Martinez",
+            "id": "4C171F74-2C15-47BA-AFF8-26125CF256B6"
+        },
+        {
+            "name": "Marysville",
+            "id": "B5B0F687-6E69-477E-996E-6AFE5C3D13E2"
+        },
+        {
+            "name": "Menlo Park",
+            "id": "BDB869D0-B49F-4AF8-8DD5-D89756FD8317"
+        },
+        {
+            "name": "Merced",
+            "id": "4A2EDF40-3076-4D4F-87D3-32673C334B76"
+        },
+        {
+            "name": "Mesa",
+            "id": "171A3882-FC70-40C3-ABFF-BBE24C764FFF"
+        },
+        {
+            "name": "Mobile",
+            "id": "F1009D71-DAEF-4017-BC0E-75BD907B0775"
+        },
+        {
+            "name": "Modesto",
+            "id": "2CB0EC13-AD62-49B9-A788-7A7E2788844B"
+        },
+        {
+            "name": "Monterey",
+            "id": "5C67DBC9-3023-4664-BF81-E9A2CE89C15A"
+        },
+        {
+            "name": "Montgomery",
+            "id": "D39D89E0-2A3C-45B0-952D-91004F89F851"
+        },
+        {
+            "name": "Montgomery",
+            "id": "7C6D1358-2B07-44E2-8556-969149F11E4B"
+        },
+        {
+            "name": "Montpelier",
+            "id": "C29D7017-59FC-417F-BA28-C4F7117ED650"
+        },
+        {
+            "name": "Morrilton",
+            "id": "80D91EEF-79A5-4C02-88ED-019D04BBC7C2"
+        },
+        {
+            "name": "Mountain View",
+            "id": "31F2E1D7-4D15-44E8-B4BF-FFF9C2FA8B56"
+        },
+        {
+            "name": "Napa",
+            "id": "EDA97F5C-D382-4EE8-A059-DEBAFDEB1BEB"
+        },
+        {
+            "name": "Nashville",
+            "id": "86229C67-A1E2-42CC-A7BE-816F6D4028F5"
+        },
+        {
+            "name": "Needles",
+            "id": "40699248-216B-4D44-A422-9D600744061F"
+        },
+        {
+            "name": "Newport",
+            "id": "5C459C2F-5917-409E-B63F-4516660FE899"
+        },
+        {
+            "name": "Newport Beach",
+            "id": "35AF883A-A2D3-4893-A82F-0BBCA1DF1A59"
+        },
+        {
+            "name": "Nogales",
+            "id": "E45C3E5A-5ECA-4A4F-97FD-EA9D9064915F"
+        },
+        {
+            "name": "Nome",
+            "id": "D5B856A0-6706-4448-8BD1-3144C18455AA"
+        },
+        {
+            "name": "North Little Rock",
+            "id": "11955EF1-92C7-496E-A2DE-0CFD7C4DA284"
+        },
+        {
+            "name": "Norwalk",
+            "id": "2451965B-C32A-400C-A050-674BD646394E"
+        },
+        {
+            "name": "Novato",
+            "id": "B6C30DE7-0AFF-4158-A655-6B9F20B19CE4"
+        },
+        {
+            "name": "Oakland",
+            "id": "9A488BB9-B6CC-4ABC-B95C-7966ACA58AC6"
+        },
+        {
+            "name": "Oceanside",
+            "id": "5D5DB4EB-CD0E-4E3F-9121-F111C081A633"
+        },
+        {
+            "name": "Ojai",
+            "id": "A522A703-AE98-4941-B54A-DE404351BD40"
+        },
+        {
+            "name": "Oklahoma City",
+            "id": "301A0B64-3E95-48A1-840E-7BAD55D29C3C"
+        },
+        {
+            "name": "Olympia",
+            "id": "75CED048-5EDC-42A2-B9B2-7B48E0BA5038"
+        },
+        {
+            "name": "Ontario",
+            "id": "6260ED0E-27A4-4847-BB9B-EC986039C6ED"
+        },
+        {
+            "name": "Opelika",
+            "id": "8F1B2BED-79C3-4095-8BC5-993841EBEA30"
+        },
+        {
+            "name": "Oraibi",
+            "id": "0CF7F6DA-2729-46D3-B145-78D076AAEE2E"
+        },
+        {
+            "name": "Orange",
+            "id": "47E4B84F-E5A2-4229-A6E0-6D80D72E6AED"
+        },
+        {
+            "name": "Oroville",
+            "id": "7B6EC094-E926-4BD3-8E01-578D00A0E7D3"
+        },
+        {
+            "name": "Osceola",
+            "id": "BB594C95-1DBD-41AA-B044-DA8B09765DAE"
+        },
+        {
+            "name": "Oxnard",
+            "id": "41CBB462-556D-4617-9E65-A81FF8790C1D"
+        },
+        {
+            "name": "Ozark",
+            "id": "23A111A7-2C00-4F5C-9BB6-E6394747C308"
+        },
+        {
+            "name": "Pacific Grove",
+            "id": "83A028F1-6297-4D0D-B9E9-A31D33EADCF7"
+        },
+        {
+            "name": "Palm Springs",
+            "id": "E0A74755-B775-4E35-B072-798938D73A2C"
+        },
+        {
+            "name": "Palmdale",
+            "id": "F39F2012-68EF-448D-B3A6-E19728ECA14D"
+        },
+        {
+            "name": "Palmer",
+            "id": "B04DAF84-57FE-4894-B4B1-BBC2CBEA48E7"
+        },
+        {
+            "name": "Palo Alto",
+            "id": "726B1001-A098-461F-8E70-12CB9601DF8C"
+        },
+        {
+            "name": "Pasadena",
+            "id": "7B545722-4713-4470-A198-897FABC17324"
+        },
+        {
+            "name": "Petaluma",
+            "id": "24E715B9-153F-4FF3-BDA9-BDD69D9099D3"
+        },
+        {
+            "name": "Phenix City",
+            "id": "DCDFE521-810D-4CC3-BF92-295C4B3D28D1"
+        },
+        {
+            "name": "Phoenix",
+            "id": "ACB48D67-D9D5-448C-91D7-BCB9F0C05E1C"
+        },
+        {
+            "name": "Phoenix",
+            "id": "6512EB90-89EF-4685-87E1-BA6CCF9A1517"
+        },
+        {
+            "name": "Pierre",
+            "id": "77EE3E1E-E606-46AB-99DC-D985B5AEB498"
+        },
+        {
+            "name": "Pine Bluff",
+            "id": "34557746-C1A8-4C93-A32C-9EEC44FB4A54"
+        },
+        {
+            "name": "Pomona",
+            "id": "94239016-9A5D-418C-88B8-00F74900F2CB"
+        },
+        {
+            "name": "Port Hueneme",
+            "id": "8083F55C-2075-44BA-9559-711F204CD3ED"
+        },
+        {
+            "name": "Prescott",
+            "id": "DAC03009-1927-4446-976D-777A4248975E"
+        },
+        {
+            "name": "Prichard",
+            "id": "00530471-ECCF-4399-A7F1-728678B425E1"
+        },
+        {
+            "name": "Raleigh",
+            "id": "37D60A1B-B74E-435D-8301-0D9747EE81BA"
+        },
+        {
+            "name": "Rancho Cucamonga",
+            "id": "4BDC46A2-531B-461E-9690-49AA2118373D"
+        },
+        {
+            "name": "Red Bluff",
+            "id": "ADF22826-EC04-4F7B-BC07-47D2B158C788"
+        },
+        {
+            "name": "Redding",
+            "id": "697BA061-0F21-4A02-AAEA-3C5AC486369F"
+        },
+        {
+            "name": "Redlands",
+            "id": "03F932A5-D164-4FFA-A108-6E06C9F1F999"
+        },
+        {
+            "name": "Redondo Beach",
+            "id": "C2BA5EE2-8C09-4925-900C-AF9E0825A25B"
+        },
+        {
+            "name": "Redwood City",
+            "id": "9BF6CF75-2D8E-4F35-AE8A-1B9EFB4F3DD5"
+        },
+        {
+            "name": "Richmond",
+            "id": "C39BCCD6-7011-4B33-9C04-182D4E5E3669"
+        },
+        {
+            "name": "Richmond",
+            "id": "511C58E7-ED5C-4A7B-9AEB-A0567C385411"
+        },
+        {
+            "name": "Riverside",
+            "id": "6B54697B-72B2-4CB4-8747-240A1938840E"
+        },
+        {
+            "name": "Rogers",
+            "id": "D1CF3B87-74EE-48DE-B1DD-F5BED4AA0661"
+        },
+        {
+            "name": "Roseville",
+            "id": "5289F86F-8712-42C8-AE28-1AC2764C39E6"
+        },
+        {
+            "name": "Sacramento",
+            "id": "55CBCB78-9FF3-4455-8024-A4EF70B93AAA"
+        },
+        {
+            "name": "Sacramento",
+            "id": "037D67AD-043F-40F9-BB3C-9E2CB8805E43"
+        },
+        {
+            "name": "Saint Paul",
+            "id": "80EEA15A-EEC1-4FE4-94F5-75412FA158A7"
+        },
+        {
+            "name": "Salem",
+            "id": "3CAA74B2-57C8-4A8D-94D2-79E4D70F201B"
+        },
+        {
+            "name": "Salinas",
+            "id": "8F844095-1DAB-4D37-91E4-585F27CF448D"
+        },
+        {
+            "name": "Salt Lake City",
+            "id": "AF8B7218-E67C-42A7-9D9B-1A7CB1B469FF"
+        },
+        {
+            "name": "San Bernardino",
+            "id": "210AAF1D-F0D6-4837-B0F1-0208BED60112"
+        },
+        {
+            "name": "San Clemente",
+            "id": "BF63E4FE-FBE3-4CD8-8402-A9B9221DC5A5"
+        },
+        {
+            "name": "San Diego",
+            "id": "6CDB9878-D24B-4AA5-983B-93644DB777FE"
+        },
+        {
+            "name": "San Fernando",
+            "id": "A2D31FE4-8AE3-4BE8-B35F-B7957B55E9FC"
+        },
+        {
+            "name": "San Francisco",
+            "id": "48C92754-D1D0-41A8-BDD0-D74416E795C9"
+        },
+        {
+            "name": "San Gabriel",
+            "id": "B886790C-6007-464D-ACF0-BBC882AA3FC6"
+        },
+        {
+            "name": "San Jose",
+            "id": "81F22164-34DC-411F-AF0A-DC06B380071D"
+        },
+        {
+            "name": "San Juan Capistrano",
+            "id": "F0F28F6B-48FD-4C6C-89D1-B1DBA656A110"
+        },
+        {
+            "name": "San Leandro",
+            "id": "095029B1-DFD2-4976-AD1C-BFBBCBEF9E6B"
+        },
+        {
+            "name": "San Luis Obispo",
+            "id": "24018A46-1723-41AB-B1D0-4538F8CB93A6"
+        },
+        {
+            "name": "San Marino",
+            "id": "4D594563-D650-42C4-943F-4F1096BD78D0"
+        },
+        {
+            "name": "San Mateo",
+            "id": "5C229AA5-258E-489C-8F29-2F17FE155B77"
+        },
+        {
+            "name": "San Pedro",
+            "id": "63C75BEA-016B-4043-8DFB-DAC72ED8D4EC"
+        },
+        {
+            "name": "San Rafael",
+            "id": "198C646A-3D17-4E49-BB41-708CF8C4CE4F"
+        },
+        {
+            "name": "San Simeon",
+            "id": "B901969C-9BC5-44FA-98E3-9DD14163771C"
+        },
+        {
+            "name": "Santa Ana",
+            "id": "4129594E-1411-4177-A8CE-29466FED671A"
+        },
+        {
+            "name": "Santa Barbara",
+            "id": "73BEC144-7900-423E-8356-DF6617208172"
+        },
+        {
+            "name": "Santa Clara",
+            "id": "0AF69C59-B756-4D65-A4A0-BF5E97AE9B4F"
+        },
+        {
+            "name": "Santa Clarita",
+            "id": "A6335219-58E2-4F46-A078-44DC49200550"
+        },
+        {
+            "name": "Santa Cruz",
+            "id": "754FC3AB-A941-4B58-964E-401BE1FB8D6B"
+        },
+        {
+            "name": "Santa Fe",
+            "id": "EADDD3ED-02CE-4454-BF8B-99F76E137100"
+        },
+        {
+            "name": "Santa Monica",
+            "id": "ECD0F071-68D0-4030-A9F5-8A6AEE912D6E"
+        },
+        {
+            "name": "Santa Rosa",
+            "id": "67A4BF4C-1414-4608-B4EC-824A811F2D39"
+        },
+        {
+            "name": "Sausalito",
+            "id": "AB3A6BB1-E97A-44A0-9DE6-6E96878D28A3"
+        },
+        {
+            "name": "Scottsboro",
+            "id": "29FD7B7A-528D-45E5-BB98-8AB3F3F166BA"
+        },
+        {
+            "name": "Scottsdale",
+            "id": "A52904E7-F993-40B5-A6FF-364362C82763"
+        },
+        {
+            "name": "Searcy",
+            "id": "17DAC29D-E860-41EB-A9C3-E797147F8AA0"
+        },
+        {
+            "name": "Selma",
+            "id": "1D811419-385E-4CFB-A900-A362C33F96FC"
+        },
+        {
+            "name": "Seward",
+            "id": "A3F3CC6E-011F-4C7B-954C-9A6A88F566FA"
+        },
+        {
+            "name": "Sheffield",
+            "id": "12DAC8B8-282C-47A1-BA9F-F1519C99416E"
+        },
+        {
+            "name": "Sierra Vista",
+            "id": "F00FCC98-21BC-4594-B45D-19C3A9D3E0D8"
+        },
+        {
+            "name": "Simi Valley",
+            "id": "5D3A1B9B-7721-4AD7-9917-406462701C5E"
+        },
+        {
+            "name": "Sitka",
+            "id": "6E6559D4-B98D-435F-BB74-0FDF31E1E31C"
+        },
+        {
+            "name": "Skagway",
+            "id": "E125E792-1C63-4021-9F47-6773C82822C8"
+        },
+        {
+            "name": "Sonoma",
+            "id": "77054892-19D3-455F-888F-07178F701E0E"
+        },
+        {
+            "name": "South San Francisco",
+            "id": "E11BACF3-89E8-4AD6-8636-D4A9AD8EDFFB"
+        },
+        {
+            "name": "Springfield",
+            "id": "09E30A08-FFE7-4D47-8D2E-3C2BF632439F"
+        },
+        {
+            "name": "Stockton",
+            "id": "96E6900A-08BF-4C4B-8F8E-6D7286135E77"
+        },
+        {
+            "name": "Stuttgart",
+            "id": "0A155AC8-FB33-4E06-8AFB-26C134669233"
+        },
+        {
+            "name": "Sunnyvale",
+            "id": "F0DDAE05-8443-4BFC-913E-4EA2CC1857AD"
+        },
+        {
+            "name": "Susanville",
+            "id": "EB981F42-F14C-433B-8DB3-FE14EDB95F28"
+        },
+        {
+            "name": "Sylacauga",
+            "id": "82F9F21C-211E-4830-A8B6-AD2D15FDABB8"
+        },
+        {
+            "name": "Talladega",
+            "id": "43E936C0-6AEE-4064-97CD-4B608FDD1996"
+        },
+        {
+            "name": "Tallahassee",
+            "id": "F8C94DDD-5B59-4729-9C44-D652D8A6C206"
+        },
+        {
+            "name": "Tempe",
+            "id": "CEDBBD88-7120-4B0F-9B83-397EF009EBBD"
+        },
+        {
+            "name": "Thousand Oaks",
+            "id": "3D178D21-C7F0-4627-8C83-9500B8A44536"
+        },
+        {
+            "name": "Tombstone",
+            "id": "229D92D8-21D3-4FBC-B75E-B3ABF4EFD33E"
+        },
+        {
+            "name": "Topeka",
+            "id": "DE191556-F570-4BAB-9F0F-CC3BA9A77698"
+        },
+        {
+            "name": "Torrance",
+            "id": "E67AA0F1-8220-49FB-AE79-36259D924B55"
+        },
+        {
+            "name": "Trenton",
+            "id": "E717ABAC-38C5-4488-8918-3F035286049F"
+        },
+        {
+            "name": "Troy",
+            "id": "27D07657-C2CA-45EA-8A5A-AA4A34BD36CF"
+        },
+        {
+            "name": "Tucson",
+            "id": "A2B6E81A-DC9E-4FB4-B39B-8639734F5CE2"
+        },
+        {
+            "name": "Turlock",
+            "id": "18615CF9-A8AC-4395-9987-183B00BE6823"
+        },
+        {
+            "name": "Tuscaloosa",
+            "id": "0EDC1230-826A-488A-B8F1-3B2DD0A49855"
+        },
+        {
+            "name": "Tuscumbia",
+            "id": "95784475-F277-4552-9BF6-DED3C98DA684"
+        },
+        {
+            "name": "Tuskegee",
+            "id": "5BF6DF60-195D-4040-9F05-833E7F1278C3"
+        },
+        {
+            "name": "Ukiah",
+            "id": "3B1A4409-66FB-4E29-88B0-74DEC5FC5D15"
+        },
+        {
+            "name": "Valdez",
+            "id": "3668DFB5-CED3-46AD-9AF0-1CF5D3F2646E"
+        },
+        {
+            "name": "Vallejo",
+            "id": "F5BBAFE3-A10D-4F6E-87C1-EB9FD5B01F1A"
+        },
+        {
+            "name": "Van Buren",
+            "id": "1351DE1A-C957-47C9-96EC-C60BE339BD84"
+        },
+        {
+            "name": "Ventura",
+            "id": "BF08A90C-618B-4176-B17E-3A43ED95DCFB"
+        },
+        {
+            "name": "Victorville",
+            "id": "39601D89-18DC-47C7-AC03-43B9644BCB65"
+        },
+        {
+            "name": "Visalia",
+            "id": "264BB628-B4F6-445B-94C3-6B3235934248"
+        },
+        {
+            "name": "Walnut Creek",
+            "id": "F13181A6-4C3E-4024-83D6-AE23BD4DDBA4"
+        },
+        {
+            "name": "Walpi",
+            "id": "1AD75958-D03C-4FE2-B533-8A0582E888F5"
+        },
+        {
+            "name": "Watts",
+            "id": "17C00B0F-7E93-4ADD-AE01-2DB2220BBCE8"
+        },
+        {
+            "name": "West Covina",
+            "id": "15D81391-AA0D-48F3-A4F4-F5A23056575F"
+        },
+        {
+            "name": "West Memphis",
+            "id": "966E2B33-6541-4455-978F-59E574A5BE36"
+        },
+        {
+            "name": "Whittier",
+            "id": "80BF42E7-F217-4DDA-9EAB-163F2C68EDD5"
+        },
+        {
+            "name": "Window Rock",
+            "id": "FB20E6B7-1D3A-4399-B915-CBBA0207A60B"
+        },
+        {
+            "name": "Winslow",
+            "id": "9DB27A9C-E598-483B-A46F-01718594A6FD"
+        },
+        {
+            "name": "Wisconsin",
+            "id": "5079DF0C-ABB4-4A2D-92B1-A33669CDEDE7"
+        },
+        {
+            "name": "Woodland",
+            "id": "BD282D45-B762-44F8-AF4C-5F63FE546954"
+        },
+        {
+            "name": "Wyoming",
+            "id": "1D5A096E-A6D0-48F0-B006-8174A58D9E83"
+        },
+        {
+            "name": "Yorba Linda",
+            "id": "D0D6F074-95D9-49CD-AF57-98A3ADECC50F"
+        },
+        {
+            "name": "Yuba City",
+            "id": "D16B5D56-4BB4-4437-877A-11FB91C50F55"
+        },
+        {
+            "name": "Yuma",
+            "id": "4E753528-ABCA-4689-B76D-70DFEE219947"
+        }
+    ],
+    "states": [
+        {
+            "name": "Alabama",
+            "id": "12103054-9AA4-4C24-85F1-0F1BD597E4E5"
+        },
+        {
+            "name": "Alaska",
+            "id": "319CCD0C-55EE-4B9D-A094-F35FEB73C537"
+        },
+        {
+            "name": "Arizona",
+            "id": "09150E86-26FA-4F69-ADC9-8D555A6F46C1"
+        },
+        {
+            "name": "Arkansas",
+            "id": "06B7C583-000B-4BA1-9D09-BA53AA5E3AD1"
+        },
+        {
+            "name": "California",
+            "id": "C284D4C4-96F7-4D1B-A763-A8C83FEF5260"
+        },
+        {
+            "name": "Colorado",
+            "id": "59FE9C1E-DF7F-44A9-AB61-A6C8234C409E"
+        },
+        {
+            "name": "Connecticut",
+            "id": "DA3C804B-45B0-42D9-AD4D-6ED15F0CB29B"
+        },
+        {
+            "name": "Delaware",
+            "id": "9F8B0CD1-813B-4969-90AE-16BD68B074E3"
+        },
+        {
+            "name": "Florida",
+            "id": "69D5A5B8-3F73-4315-B38D-F1D5D53CC15D"
+        },
+        {
+            "name": "Georgia",
+            "id": "AF182179-3A78-46E4-A121-7359D59DC60B"
+        },
+        {
+            "name": "Hawaii",
+            "id": "72E66305-C779-4BE6-BFDE-325F8CB28574"
+        },
+        {
+            "name": "Idaho",
+            "id": "C45067E6-DB7A-4F14-AA9F-8DCC4855C288"
+        },
+        {
+            "name": "Illinois",
+            "id": "B1F2FAB1-1472-40AF-8D30-B6DD2FA40005"
+        },
+        {
+            "name": "Indiana",
+            "id": "A829638F-BF34-441C-AF7B-CC5B495354A7"
+        },
+        {
+            "name": "Iowa",
+            "id": "030D300C-1532-4FFA-9311-FF632B083241"
+        },
+        {
+            "name": "Kansas",
+            "id": "D151B5EC-653A-4EDD-A23F-4E7BB9A2658D"
+        },
+        {
+            "name": "Kentucky",
+            "id": "3E8A70FE-49BA-4F7E-9F9B-B3911432E074"
+        },
+        {
+            "name": "Louisiana",
+            "id": "D26E33B5-B962-41FA-BBE8-82BDD7CFAA68"
+        },
+        {
+            "name": "Maine",
+            "id": "325F5335-7E9D-4851-818B-EC2EE27BB9F2"
+        },
+        {
+            "name": "Maryland",
+            "id": "EC845BAA-8654-4472-928B-FC2B5170D6F4"
+        },
+        {
+            "name": "Massachusetts",
+            "id": "48174984-DC6F-46D8-BAFE-1923B5EB3B06"
+        },
+        {
+            "name": "Michigan",
+            "id": "56F4E8C3-95DC-48A1-9A11-23CBE8ACF882"
+        },
+        {
+            "name": "Minnesota",
+            "id": "7A9FE2C8-E2C6-49E6-89AB-7CA83EA7C39E"
+        },
+        {
+            "name": "Mississippi",
+            "id": "280B7C4C-7FF5-4D4A-8FBE-E1DE9DFA5BC0"
+        },
+        {
+            "name": "Missouri",
+            "id": "935638BE-53D0-467D-9D06-95CA6FB6A38E"
+        },
+        {
+            "name": "Montana",
+            "id": "C50458B7-FA53-41F4-9EF2-0127790797B3"
+        },
+        {
+            "name": "Nebraska",
+            "id": "94FC8B73-62BC-4A98-9F14-25F9FC090130"
+        },
+        {
+            "name": "Nevada",
+            "id": "EA3CB26A-5ABE-4AA6-9758-5B1E60547EAE"
+        },
+        {
+            "name": "New Hampshire",
+            "id": "8E3090E9-5AA1-4904-A870-9736D9E6526E"
+        },
+        {
+            "name": "New Jersey",
+            "id": "BFA0738E-867B-4E0A-8C95-54BA935AD099"
+        },
+        {
+            "name": "New Mexico",
+            "id": "EB1BAE85-2536-4573-BCEE-8440A2FCBF32"
+        },
+        {
+            "name": "New York",
+            "id": "5FE31512-097F-4A77-9F86-C20CEA563B20"
+        },
+        {
+            "name": "North Carolina",
+            "id": "1DB90590-989E-4BA0-8843-C2F4D64E9DD0"
+        },
+        {
+            "name": "North Dakota",
+            "id": "2BEA7D1F-EEB4-4B32-9A78-22C936C4AA0D"
+        },
+        {
+            "name": "Ohio",
+            "id": "9551B0C1-6664-4EB5-A64F-B945B9A703EA"
+        },
+        {
+            "name": "Oklahoma",
+            "id": "CCE80338-6CCB-41D3-ADDF-5BC277BAC88D"
+        },
+        {
+            "name": "Oregon",
+            "id": "FB244C96-852A-464E-86C7-96136B3D6281"
+        },
+        {
+            "name": "Pennsylvania",
+            "id": "06175367-1504-49F2-9CFD-CE5A33F0524D"
+        },
+        {
+            "name": "Rhode Island",
+            "id": "E8071F92-CC8F-418E-BD85-A881A14B23B0"
+        },
+        {
+            "name": "South Carolina",
+            "id": "5B158440-51DE-43E2-8B47-2E696DED06CD"
+        },
+        {
+            "name": "South Dakota",
+            "id": "1BE5700E-9AF5-454D-81E3-4AA616F7F292"
+        },
+        {
+            "name": "Tennessee",
+            "id": "9AC00F49-F6A2-440F-BBF8-DF3C4BA34DE7"
+        },
+        {
+            "name": "Texas",
+            "id": "368880FD-0DE7-4774-BA4A-0656B41226C0"
+        },
+        {
+            "name": "Utah",
+            "id": "39377398-FFD5-4F38-98C1-04B8B560E2A2"
+        },
+        {
+            "name": "Vermont",
+            "id": "4CDAC34B-BAAF-45BB-8929-F4B063EFD656"
+        },
+        {
+            "name": "Virginia",
+            "id": "5B6B0747-8FB0-4302-ACC4-607E0F215355"
+        },
+        {
+            "name": "Washington",
+            "id": "4CBBD274-3377-4544-8DA6-DB8051FB41C2"
+        },
+        {
+            "name": "West Virginia",
+            "id": "775B25C2-D8FE-4F75-BE87-F1113BFE26AC"
+        },
+        {
+            "name": "Wisconsin",
+            "id": "2DEEC44B-33FC-4F9D-A317-95599465E491"
+        },
+        {
+            "name": "Wyoming",
+            "id": "0D963D03-FF27-498F-BF34-227BCE294500"
+        }
+    ],
+    "countries": [
+        {
+            "flag": "us flag",
+            "name": "United States",
+            "id": "E343EB4D-4CAC-464F-A56F-CC15CC7FB67D"
+        }
+    ],
+    "orderStatuses": [
+        {
+            "id": "34009EB2-632C-449D-8485-EFB5FFC05BB7",
+            "label": "In-Progress",
+            "isDefault": true,
+            "colorCode": "#2e71e7",
+            "icon": "pixxel pixxel-circle"
+        },
+        {
+            "id": "5B2B9590-682D-481B-96E7-DDF91EE968FF",
+            "label": "Initialized",
+            "isDefault": false,
+            "colorCode": "#412828",
+            "icon": "pixxel pixxel-circle-o"
+        },
+        {
+            "id": "22AB892A-4EAE-4EB5-80FD-5E344FF5ED27",
+            "label": "Done",
+            "isDefault": false,
+            "colorCode": "#06b914",
+            "icon": "pixxel pixxel-ok-circle"
+        }
+    ],
+    "customers": [
+        {
+            "name": "Lekan Moses",
+            "id": "3716398b-14c6-4a23-b688-78d1f23a2107"
+        },
+        {
+            "name": "Dare Dare",
+            "id": "6b77b1d9-ab57-47eb-9e33-17257d9e41a0"
+        },
+        {
+            "name": "Ann John",
+            "id": "a4c4d022-89b9-4ebc-965e-bf9e21061e9e"
+        },
+        {
+            "name": "Jaivin Movaliya",
+            "id": "a34bb866-20ef-4fb4-a94e-ab2eb91454af"
+        },
+        {
+            "name": "Ebenezer Jesulolu",
+            "id": "302bf185-4e92-4760-928a-f70989e9b528"
+        },
+        {
+            "name": "Olufemi Ogunlolu",
+            "id": "b5361c92-ee23-46f5-9ca6-7f04eea713b0"
+        },
+        {
+            "name": "Jackson Gbadebo",
+            "id": "c0705963-1b88-4921-9ce5-dbaaf7703207"
+        }
+    ],
+    "orderStates": [
+        {
+            "name": "Open",
+            "id": ""
+        },
+        {
+            "name": "Closed",
+            "id": ""
+        }
+    ],
+    "leadTime": null,
+    "newOrderCount": 0,
+    "defNotification": {
+        "id": null,
+        "option": null,
+        "message": null
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "14bc75ce-092c-4883-b88d-a7848ca1caed",
+		"name": "Order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50044533",
+		"_collection_link": "https://dev-aninfolab-2542448.postman.co/workspace/AN-INFOLAB's-Workspace~bbcd4512-addf-4957-8303-ae0142d4994e/collection/50044533-14bc75ce-092c-4883-b88d-a7848ca1caed?action=share&source=collection_link&creator=50044533"
+	},
+	"item": [
+		{
+			"name": "InitNew",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"skip\": 0,\r\n  \"pageSize\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}Order/InitNew",
+					"host": [
+						"{{baseURL}}Order"
+					],
+					"path": [
+						"InitNew"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api.artpixxel", "api.artpixxel\api.artpixxel.csproj", "{23F1F61E-AB59-47CA-B62D-2A74436B44D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api.artpixxel.repo", "api.artpixxel.repo\api.artpixxel.repo.csproj", "{A2E075B2-2572-4316-ADA1-B393A0FC1FB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api.artpixxel.data", "api.artpixxel.data\api.artpixxel.data.csproj", "{AB59DF52-D14E-4EAA-BF01-DA3856042A29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api.artpixxel.service", "api.artpixxel.service\api.artpixxel.service.csproj", "{024E38CD-DD87-4F24-831D-CE1E12E26F53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23F1F61E-AB59-47CA-B62D-2A74436B44D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23F1F61E-AB59-47CA-B62D-2A74436B44D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23F1F61E-AB59-47CA-B62D-2A74436B44D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23F1F61E-AB59-47CA-B62D-2A74436B44D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2E075B2-2572-4316-ADA1-B393A0FC1FB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2E075B2-2572-4316-ADA1-B393A0FC1FB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2E075B2-2572-4316-ADA1-B393A0FC1FB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2E075B2-2572-4316-ADA1-B393A0FC1FB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB59DF52-D14E-4EAA-BF01-DA3856042A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB59DF52-D14E-4EAA-BF01-DA3856042A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB59DF52-D14E-4EAA-BF01-DA3856042A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB59DF52-D14E-4EAA-BF01-DA3856042A29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{024E38CD-DD87-4F24-831D-CE1E12E26F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{024E38CD-DD87-4F24-831D-CE1E12E26F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{024E38CD-DD87-4F24-831D-CE1E12E26F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{024E38CD-DD87-4F24-831D-CE1E12E26F53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {222987C0-9387-4D6A-AC3B-533F677E7536}
+	EndGlobalSection
+EndGlobal

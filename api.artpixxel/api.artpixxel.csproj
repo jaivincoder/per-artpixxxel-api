@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <UserSecretsId>aspnet-api.artpixxel-F8AB2297-8E23-406C-A7E8-E9D7BD142719</UserSecretsId>
+    <DisableBuildCompression>true</DisableBuildCompression>
+    <DisableStaticWebAssetFingerprinting>true</DisableStaticWebAssetFingerprinting>
+    <EnableDefaultContentItems>false</EnableDefaultContentItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="appsettings.production.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\api.artpixxel.data\api.artpixxel.data.csproj" />
+    <ProjectReference Include="..\api.artpixxel.repo\api.artpixxel.repo.csproj" />
+    <ProjectReference Include="..\api.artpixxel.service\api.artpixxel.service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\MixnMatch\" />
+    <Folder Include="wwwroot\images\Customer\" />
+    <Folder Include="wwwroot\images\Admins\" />
+    <Folder Include="wwwroot\images\Carousel\" />
+    <Folder Include="wwwroot\images\Mail\" />
+    <Folder Include="wwwroot\images\UploadedImage\" />
+    <Folder Include="wwwroot\images\WallArtCategory\" />
+    <Folder Include="wwwroot\images\WallArt\WallArtImages\" />
+  </ItemGroup>
+
+</Project>
