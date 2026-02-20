@@ -1,4 +1,4 @@
-﻿
+
 
 using api.artpixxel.data.Models;
 using api.artpixxel.data.Services;
@@ -173,6 +173,7 @@ namespace api.artpixxel.Infrastructure.Extensions
                    .AddTransient<IOrderStatusService, OrderStatusService>()
                    .AddTransient<ICheckoutService, CheckoutService>()
                    .AddTransient<ICheckOutNewService, CheckOutNewService>()
+                   .AddTransient<ICheckoutCombinedService, CheckoutCombinedService>()
                    .AddTransient<ISizeService, SizeService>()
                    .AddTransient<IPaymentService, PaymentService>()
                    .AddTransient<IContactService, ContactService>()

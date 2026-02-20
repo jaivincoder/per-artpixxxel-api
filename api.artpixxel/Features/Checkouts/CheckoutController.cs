@@ -1,4 +1,4 @@
-﻿using api.artpixxel.data.Features.Checkouts;
+using api.artpixxel.data.Features.Checkouts;
 using api.artpixxel.data.Features.Common;
 using api.artpixxel.service.Services;
 using Artpixxel.server.Features;
@@ -15,10 +15,13 @@ namespace api.artpixxel.Features.Checkouts
     {
         private readonly ICheckoutService _checkoutService;
         private readonly ICheckOutNewService _checkOutNewService;
-        public CheckoutController(ICheckoutService checkoutService, ICheckOutNewService checkOutNewService)
+        private readonly ICheckoutCombinedService _checkoutCombinedService;
+
+        public CheckoutController(ICheckoutService checkoutService, ICheckOutNewService checkOutNewService, ICheckoutCombinedService checkoutCombinedService)
         {
             _checkoutService = checkoutService;
             _checkOutNewService = checkOutNewService;
+            _checkoutCombinedService = checkoutCombinedService;
         }
 
         [AllowAnonymous]
@@ -26,6 +29,12 @@ namespace api.artpixxel.Features.Checkouts
         [Route(nameof(Checkout))]
         public async Task<CheckoutResponse> Checkout(Checkout checkout)
             => await _checkoutService.Checkout(checkout);
+
+        [AllowAnonymous]
+        [HttpPost]
+        [Route(nameof(CheckoutCombined))]
+        public async Task<CheckoutCombinedResponse> CheckoutCombined(CheckoutCombinedRequest request)
+            => await _checkoutCombinedService.CheckoutCombined(request);
 
 
         [AllowAnonymous]

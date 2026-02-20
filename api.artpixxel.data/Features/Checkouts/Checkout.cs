@@ -1,4 +1,4 @@
-﻿
+
 
 using api.artpixxel.data.Features.Common;
 using api.artpixxel.data.Features.LeadTimes;
@@ -191,6 +191,31 @@ namespace api.artpixxel.data.Features.Checkouts
     {
         public string CroppedImages { get; set; }
         public string OriginalImages { get; set; }
+    }
+
+    /// <summary>
+    /// Combined checkout request - can contain regular cart, custom-mix cart, or both.
+    /// Backend splits delivery/vat proportionally when both are present.
+    /// </summary>
+    public class CheckoutCombinedRequest
+    {
+        public DeliveryInformation DeliveryInformation { get; set; }
+        public PaymentInformation PaymentInformation { get; set; }
+        public ShippingInformation ShippingInformation { get; set; }
+        public LeadTimeBase LeadTime { get; set; }
+        public string UpperLimit { get; set; }
+        public string LowerLimit { get; set; }
+        public string PaymentIntentId { get; set; }
+        public decimal DeliveryFee { get; set; }
+        public decimal Vat { get; set; }
+        public Cart RegularCart { get; set; }
+        public CartNew CustomMixCart { get; set; }
+    }
+
+    public class CheckoutCombinedResponse
+    {
+        public BaseResponse Response { get; set; }
+        public List<string> TrackIds { get; set; } = new List<string>();
     }
    
 }
