@@ -25,7 +25,8 @@ namespace api.artpixxel
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        => services.AddDatabase(this.Configuration)
+        => services.AddCors()
+                  .AddDatabase(this.Configuration)
                   .AddIdentity() //registers the services
                   .AddJwtAuthentication(services.GetAppSettings(this.Configuration))
                   .AddApplicationServices()
@@ -45,15 +46,22 @@ namespace api.artpixxel
 
            
 
-            app.UseStaticFiles()
-             .UseSwaggerUI()
-             .UseRouting()
-             .UseCors(options => options
+            app.UseCors(options => options
              .AllowAnyOrigin()
              .AllowAnyHeader()
              .AllowAnyMethod()
-             
              )
+             .UseStaticFiles(new StaticFileOptions
+             {
+                 OnPrepareResponse = ctx =>
+                 {
+                     ctx.Context.Response.Headers["Access-Control-Allow-Origin"] = "*";
+                     ctx.Context.Response.Headers["Access-Control-Allow-Headers"] = "*";
+                     ctx.Context.Response.Headers["Access-Control-Allow-Methods"] = "*";
+                 }
+             })
+             .UseSwaggerUI()
+             .UseRouting()
              .UseAuthentication()
              .UseAuthorization()
 
