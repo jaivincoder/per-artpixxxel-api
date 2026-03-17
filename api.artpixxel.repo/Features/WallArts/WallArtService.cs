@@ -1,4 +1,4 @@
-﻿
+
 
 using api.artpixxel.data.Features.Common;
 using api.artpixxel.data.Features.WallArts;
@@ -105,7 +105,7 @@ namespace api.artpixxel.repo.Features.WallArts
 
 
 
-                            string outputPath = _hostingEnvironment.WebRootPath + "\\images\\WallArt\\" + wallart.WallartHeader;
+                            string outputPath = _hostingEnvironment.WebRootPath + "/images/WallArt/" + wallart.WallartHeader;
                             FileMeta fileMeta = await wallart.WallartImage.SaveBase64AsImage(outputPath);
 
                             if((!string.IsNullOrEmpty(fileMeta.Path)) && (fileMeta.ImageByte != null) && (!string.IsNullOrEmpty(fileMeta.FileName)))
@@ -133,7 +133,7 @@ namespace api.artpixxel.repo.Features.WallArts
 
 
 
-                                    string wallArtImageOutputPath = _hostingEnvironment.WebRootPath + "\\images\\WallArt\\WallArtImages\\" + wallimg.WallartImageName;
+                                    string wallArtImageOutputPath = _hostingEnvironment.WebRootPath + "/images/WallArt/WallArtImages/" + wallimg.WallartImageName;
                                     FileMeta wallArtImagFileMeta = await wallimg.WallartImageImage.SaveBase64AsImage(wallArtImageOutputPath);
                                     if ((!string.IsNullOrEmpty(wallArtImagFileMeta.Path)) && (wallArtImagFileMeta.ImageByte != null) && (!string.IsNullOrEmpty(wallArtImagFileMeta.FileName)))
                                     {
@@ -578,7 +578,7 @@ namespace api.artpixxel.repo.Features.WallArts
 
 
 
-                    string outputPath = _hostingEnvironment.WebRootPath + "\\images\\WallArt\\" + @request.WallArt.WallartHeader;
+                    string outputPath = _hostingEnvironment.WebRootPath + "/images/WallArt/" + @request.WallArt.WallartHeader;
                     FileMeta fileMeta = await @request.WallArt.WallartImage.SaveBase64AsImage(outputPath);
 
                     if ((!string.IsNullOrEmpty(fileMeta.Path)) && (fileMeta.ImageByte != null) && (!string.IsNullOrEmpty(fileMeta.FileName)))
@@ -611,7 +611,7 @@ namespace api.artpixxel.repo.Features.WallArts
                             List<WallArtImage> wallArtImages = new();
                             foreach (WallArtImageBase wallartImage in request.WallArt.WallartImages)
                             {
-                                string wallArtImageOutputPath = _hostingEnvironment.WebRootPath + "\\images\\WallArt\\WallArtImages\\" + wallartImage.WallartImageName;
+                                string wallArtImageOutputPath = _hostingEnvironment.WebRootPath + "/images/WallArt/WallArtImages/" + wallartImage.WallartImageName;
                                 FileMeta wallArtImagFileMeta = await wallartImage.WallartImageImage.SaveBase64AsImage(wallArtImageOutputPath);
                                 if((!string.IsNullOrEmpty(wallArtImagFileMeta.Path)) && (wallArtImagFileMeta.ImageByte != null) && (!string.IsNullOrEmpty(wallArtImagFileMeta.FileName)))
                                     {
@@ -734,7 +734,7 @@ namespace api.artpixxel.repo.Features.WallArts
                 SqlParameter[] myparm = new SqlParameter[1];
                 myparm[0] = new SqlParameter("@request", request);
 
-                string wallArtImageOutputPath = _hostingEnvironment.WebRootPath + "\\images\\WallArt\\WallArtImages\\" + @request.WallArtImage.WallartImageName;
+                string wallArtImageOutputPath = _hostingEnvironment.WebRootPath + "/images/WallArt/WallArtImages/" + @request.WallArtImage.WallartImageName;
                 FileMeta wallArtImagFileMeta = await @request.WallArtImage.WallartImageImage.SaveBase64AsImage(wallArtImageOutputPath);
 
                 if(wallArtImagFileMeta.ImageByte != null && (!string.IsNullOrEmpty(wallArtImagFileMeta.Path)) && (!string.IsNullOrEmpty(wallArtImagFileMeta.FileName)))
@@ -988,7 +988,7 @@ namespace api.artpixxel.repo.Features.WallArts
                        FixedSize = w.FixedSize,  // w.WallArtSize.IsDefault,
                        FrameClass = w.FixedSize ? string.Empty : FrameClass.ELEGANT,
                        Header = w.Header,
-                       Image = w.ImageAbsURL,
+                       Image = w.ImageRelURL ?? w.ImageAbsURL,
                        Key = string.Empty,
                        Rating = 5,
                        Size = w.WallArtSize.Id,
@@ -996,7 +996,7 @@ namespace api.artpixxel.repo.Features.WallArts
                        {
                            Id = i.Id,
                            Name = i.Name,
-                           Image = i.ImageAbsURL,
+                           Image = i.ImageRelURL ?? i.ImageAbsURL,
                            Price = 0m,
                            Description = i.Description,
                        }).ToList()
@@ -1027,7 +1027,7 @@ namespace api.artpixxel.repo.Features.WallArts
                        FixedSize = w.FixedSize, // w.WallArtSize.IsDefault,
                        FrameClass = w.FixedSize ? string.Empty : FrameClass.ELEGANT,
                        Header = w.Header,
-                       Image = w.ImageAbsURL,
+                       Image = w.ImageRelURL ?? w.ImageAbsURL,
                        Key = string.Empty,
                        Rating = 5,
                        Size = w.WallArtSize.Id,
@@ -1035,7 +1035,7 @@ namespace api.artpixxel.repo.Features.WallArts
                        {
                            Id = i.Id,
                            Name = i.Name,
-                           Image = i.ImageAbsURL,
+                           Image = i.ImageRelURL ?? i.ImageAbsURL,
                            Price = 0m,
                            Description = i.Description,
                        }).ToList()
@@ -1065,7 +1065,7 @@ namespace api.artpixxel.repo.Features.WallArts
                        FixedSize = w.FixedSize, // w.WallArtSize.IsDefault,
                        FrameClass = w.FixedSize ? string.Empty : FrameClass.ELEGANT,
                        Header = w.Header,
-                       Image = w.ImageAbsURL,
+                       Image = w.ImageRelURL ?? w.ImageAbsURL,
                        Key = string.Empty,
                        Rating = 5,
                        Size = w.WallArtSize.Id,
@@ -1073,7 +1073,7 @@ namespace api.artpixxel.repo.Features.WallArts
                        {
                            Id = i.Id,
                            Name = i.Name,
-                           Image = i.ImageAbsURL,
+                           Image = i.ImageRelURL ?? i.ImageAbsURL,
                            Price = 0m,
                            Description = i.Description,
                        }).ToList()
@@ -1103,7 +1103,7 @@ namespace api.artpixxel.repo.Features.WallArts
                       FixedSize = w.FixedSize, // w.WallArtSize.IsDefault,
                       FrameClass = w.FixedSize ? string.Empty : FrameClass.ELEGANT,
                       Header = w.Header,
-                      Image = w.ImageAbsURL,
+                      Image = w.ImageRelURL ?? w.ImageAbsURL,
                       Key = string.Empty,
                       Rating = 5,
                       Size = w.WallArtSize.Id,
@@ -1111,7 +1111,7 @@ namespace api.artpixxel.repo.Features.WallArts
                       {
                           Id = i.Id,
                           Name = i.Name,
-                          Image = i.ImageAbsURL,
+                          Image = i.ImageRelURL ?? i.ImageAbsURL,
                           Price = 0m,
                           Description = i.Description,
                       }).ToList()
@@ -1141,7 +1141,7 @@ namespace api.artpixxel.repo.Features.WallArts
                       FixedSize = w.FixedSize,  // w.WallArtSize.IsDefault,
                       FrameClass = w.FixedSize ? string.Empty : FrameClass.ELEGANT,
                       Header = w.Header,
-                      Image = w.ImageAbsURL,
+                      Image = w.ImageRelURL ?? w.ImageAbsURL,
                       Key = string.Empty,
                       Rating = 5,
                       Size = w.WallArtSize.Id,
@@ -1149,7 +1149,7 @@ namespace api.artpixxel.repo.Features.WallArts
                       {
                           Id = i.Id,
                           Name = i.Name,
-                          Image = i.ImageAbsURL,
+                          Image = i.ImageRelURL ?? i.ImageAbsURL,
                           Price = 0m,
                           Description = i.Description,
                       }).ToList()
@@ -1178,7 +1178,7 @@ namespace api.artpixxel.repo.Features.WallArts
                      FixedSize = w.FixedSize,  // w.WallArtSize.IsDefault,
                      FrameClass = w.FixedSize ? string.Empty : FrameClass.ELEGANT,
                      Header = w.Header,
-                     Image = w.ImageAbsURL,
+                     Image = w.ImageRelURL ?? w.ImageAbsURL,
                      Key = string.Empty,
                      Rating = 5,
                      Size = w.WallArtSize.Id,
@@ -1186,7 +1186,7 @@ namespace api.artpixxel.repo.Features.WallArts
                      {
                          Id = i.Id,
                          Name = i.Name,
-                         Image = i.ImageAbsURL,
+                         Image = i.ImageRelURL ?? i.ImageAbsURL,
                          Price = 0m,
                          Description = i.Description,
                      }).ToList()
@@ -1216,7 +1216,7 @@ namespace api.artpixxel.repo.Features.WallArts
                      FixedSize = w.FixedSize,  // w.WallArtSize.IsDefault,
                      FrameClass = w.FixedSize ? string.Empty : FrameClass.ELEGANT,
                      Header = w.Header,
-                     Image = w.ImageAbsURL,
+                     Image = w.ImageRelURL ?? w.ImageAbsURL,
                      Key = string.Empty,
                      Rating = 5,
                      Size = w.WallArtSize.Id,
@@ -1224,7 +1224,7 @@ namespace api.artpixxel.repo.Features.WallArts
                      {
                          Id = i.Id,
                          Name = i.Name,
-                         Image = i.ImageAbsURL,
+                         Image = i.ImageRelURL ?? i.ImageAbsURL,
                          Price = 0m,
                          Description = i.Description,
                      }).ToList()
@@ -1254,7 +1254,7 @@ namespace api.artpixxel.repo.Features.WallArts
                    FixedSize = w.FixedSize, // w.WallArtSize.IsDefault,
                    FrameClass = w.FixedSize ? string.Empty : FrameClass.ELEGANT,
                    Header = w.Header,
-                   Image = w.ImageAbsURL,
+                   Image = w.ImageRelURL ?? w.ImageAbsURL,
                    Key = string.Empty,
                    Rating = 5,
                    Size = w.WallArtSize.Id,
@@ -1262,7 +1262,7 @@ namespace api.artpixxel.repo.Features.WallArts
                    {
                        Id = i.Id,
                        Name = i.Name,
-                       Image = i.ImageAbsURL,
+                       Image = i.ImageRelURL ?? i.ImageAbsURL,
                        Price = 0m,
                        Description = i.Description,
                    }).ToList()
@@ -1272,6 +1272,8 @@ namespace api.artpixxel.repo.Features.WallArts
                }).ToListAsync();
                 }
 
+
+                ResolveWallArtImageUrls(wallArts);
 
                 return new PublicWallArtBase
                 {
@@ -1315,7 +1317,7 @@ namespace api.artpixxel.repo.Features.WallArts
                        FixedSize = w.FixedSize, // w.WallArtSize.IsDefault,
                        FrameClass = w.FixedSize ? string.Empty : FrameClass.ELEGANT,
                        Header = w.Header,
-                       Image = w.ImageAbsURL,
+                       Image = w.ImageRelURL ?? w.ImageAbsURL,
                        Key = string.Empty,
                        Rating = 5,
                        Size = w.WallArtSize.Id,
@@ -1323,7 +1325,7 @@ namespace api.artpixxel.repo.Features.WallArts
                        {
                            Id = i.Id,
                            Name = i.Name,
-                           Image = i.ImageAbsURL,
+                           Image = i.ImageRelURL ?? i.ImageAbsURL,
                            Price = 0m,
                            Description = i.Description,
                        }).ToList()
@@ -1354,7 +1356,7 @@ namespace api.artpixxel.repo.Features.WallArts
                        FixedSize = w.FixedSize, // w.WallArtSize.IsDefault,
                        FrameClass = w.FixedSize ? string.Empty : FrameClass.ELEGANT,
                        Header = w.Header,
-                       Image = w.ImageAbsURL,
+                       Image = w.ImageRelURL ?? w.ImageAbsURL,
                        Key = string.Empty,
                        Rating = 5,
                        Size = w.WallArtSize.Id,
@@ -1362,7 +1364,7 @@ namespace api.artpixxel.repo.Features.WallArts
                        {
                            Id = i.Id,
                            Name = i.Name,
-                           Image = i.ImageAbsURL,
+                           Image = i.ImageRelURL ?? i.ImageAbsURL,
                            Price = 0m,
                            Description = i.Description,
                        }).ToList()
@@ -1377,24 +1379,25 @@ namespace api.artpixxel.repo.Features.WallArts
 
               
 
+                ResolveWallArtImageUrls(wallArts);
+
+                var categories = await _context.WallArtCategories.Select(e => new PublicWallArtCategory
+                {
+                    Image = string.IsNullOrEmpty(e.ImageURL) ? AssetDefault.DefaultImage : (e.ImageRelURL ?? e.ImageAbsURL),
+                    Label = e.Name
+                }).ToListAsync();
+                categories.ForEach(c => c.Image = _currentUserService.ResolveImageUrl(c.Image));
+
                 return new PublicWallartInit
                 {
                     WallArts = wallArts,
-
                     Sizes = await _context.WallArtSizes.Select(s => new PublicWallArtSize
                     {
                         Id = s.Id,
                         Name = s.Name,
                         Amount = decimal.Round(s.Amount, 2, MidpointRounding.AwayFromZero)
-
-
                     }).ToListAsync(),
-                    Categories = await _context.WallArtCategories.Select(e => new PublicWallArtCategory
-                    {
-                        Image = string.IsNullOrEmpty(e.ImageURL) ? AssetDefault.DefaultImage : e.ImageAbsURL,
-                        Label = e.Name
-
-                    }).ToListAsync(),
+                    Categories = categories,
                 };
 
 
@@ -1414,19 +1417,18 @@ namespace api.artpixxel.repo.Features.WallArts
                 myparm[0] = new SqlParameter("@pagination", pagination);
 
 
-                return new PublicWallartInit
+                var initResult = new PublicWallartInit
                 {
                     Sizes = await _context.WallArtSizes.Select(s => new PublicWallArtSize
                     {
                         Id = s.Id,
                         Name = s.Name,
                         Amount = decimal.Round(s.Amount, 2 ,MidpointRounding.AwayFromZero)
-                       
 
                     }).ToListAsync(),
                     Categories = await _context.WallArtCategories.Select(e => new PublicWallArtCategory
                     {
-                        Image = string.IsNullOrEmpty(e.ImageURL)  ? AssetDefault.DefaultImage: e.ImageAbsURL,
+                        Image = string.IsNullOrEmpty(e.ImageURL)  ? AssetDefault.DefaultImage: (e.ImageRelURL ?? e.ImageAbsURL),
                         Label = e.Name
 
                     }).ToListAsync(),
@@ -1445,10 +1447,10 @@ namespace api.artpixxel.repo.Features.WallArts
                         Quantity = 1,
                         Description = w.Description,
                         Favourite = false,
-                        FixedSize = w.FixedSize, // w.WallArtSize.IsDefault,
+                        FixedSize = w.FixedSize,
                         FrameClass = w.FixedSize ? string.Empty : FrameClass.ELEGANT,
                         Header = w.Header,
-                        Image = w.ImageAbsURL,
+                        Image = w.ImageRelURL ?? w.ImageAbsURL,
                         Key = string.Empty,
                         Rating = 5,
                         Size = w.WallArtSize.Id,
@@ -1456,15 +1458,17 @@ namespace api.artpixxel.repo.Features.WallArts
                         {
                             Id = i.Id,
                             Name = i.Name,
-                            Image = i.ImageAbsURL,
+                            Image = i.ImageRelURL ?? i.ImageAbsURL,
                             Price = 0m,
                             Description = i.Description,
                         }).ToList()
-                        
-                     
 
                     }).ToListAsync()
                 };
+
+                ResolveWallArtImageUrls(initResult.WallArts);
+                initResult.Categories?.ForEach(c => c.Image = _currentUserService.ResolveImageUrl(c.Image));
+                return initResult;
             }
             catch (Exception)
             {
@@ -1482,7 +1486,7 @@ namespace api.artpixxel.repo.Features.WallArts
 
                 //search
 
-                return new PublicWallArtBase
+                var searchResult = new PublicWallArtBase
                 {
                     WallArts = string.IsNullOrEmpty(@request.Search) ?
 
@@ -1500,10 +1504,10 @@ namespace api.artpixxel.repo.Features.WallArts
                         Quantity = 1,
                         Description = w.Description,
                         Favourite = false,
-                        FixedSize = w.FixedSize, // w.WallArtSize.IsDefault,
+                        FixedSize = w.FixedSize,
                         FrameClass =  w.FixedSize ? string.Empty : FrameClass.ELEGANT,
                         Header = w.Header,
-                        Image = w.ImageAbsURL,
+                        Image = w.ImageRelURL ?? w.ImageAbsURL,
                         Key = string.Empty,
                         Rating = 5,
                         Size = w.WallArtSize.Id,
@@ -1511,12 +1515,10 @@ namespace api.artpixxel.repo.Features.WallArts
                         {
                             Id = i.Id,
                             Name = i.Name,
-                            Image = i.ImageAbsURL,
+                            Image = i.ImageRelURL ?? i.ImageAbsURL,
                             Price = 0m,
                             Description = i.Description,
                         }).ToList()
-
-
 
                     }).ToListAsync()
 
@@ -1537,10 +1539,10 @@ namespace api.artpixxel.repo.Features.WallArts
                       Quantity = 1,
                       Description = w.Description,
                       Favourite = false,
-                      FixedSize = w.FixedSize, // w.WallArtSize.IsDefault,
+                      FixedSize = w.FixedSize,
                       FrameClass = w.FixedSize ? string.Empty : FrameClass.ELEGANT,
                       Header = w.Header,
-                      Image = w.ImageAbsURL,
+                      Image = w.ImageRelURL ?? w.ImageAbsURL,
                       Key = string.Empty,
                       Rating = 5,
                       Size = w.WallArtSize.Id,
@@ -1548,21 +1550,16 @@ namespace api.artpixxel.repo.Features.WallArts
                       {
                           Id = i.Id,
                           Name = i.Name,
-                          Image = i.ImageAbsURL,
+                          Image = i.ImageRelURL ?? i.ImageAbsURL,
                           Price = 0m,
                           Description = i.Description,
                       }).ToList()
 
-
-
                      }).ToListAsync()
                 };
-                   
-                
 
-
-
-                
+                ResolveWallArtImageUrls(searchResult.WallArts);
+                return searchResult;
 
             }
             catch (Exception)
@@ -1648,7 +1645,7 @@ namespace api.artpixxel.repo.Features.WallArts
 
                                     if (old.WallartImageImage.IsBase64String())
                                     {
-                                        string outPath = _hostingEnvironment.WebRootPath + "\\images\\WallArt\\WallArtImages\\" + old.WallartImageName;
+                                        string outPath = _hostingEnvironment.WebRootPath + "/images/WallArt/WallArtImages/" + old.WallartImageName;
                                         fileMeta = await oldImage.ImageURL.RenameFile(old.WallartImageImage, outPath);
                                     }
 
@@ -1679,7 +1676,7 @@ namespace api.artpixxel.repo.Features.WallArts
                             List<WallArtImage> wArtImages = new();
                             foreach(var newWallImage in newWallImages)
                             {
-                                string wallArtImageOutputPath = _hostingEnvironment.WebRootPath + "\\images\\WallArt\\WallArtImages\\" + newWallImage.WallartImageName;
+                                string wallArtImageOutputPath = _hostingEnvironment.WebRootPath + "/images/WallArt/WallArtImages/" + newWallImage.WallartImageName;
                                 FileMeta wallArtImagFileMeta = await newWallImage.WallartImageImage.SaveBase64AsImage(wallArtImageOutputPath);
                                 if (!string.IsNullOrEmpty(wallArtImagFileMeta.Path) && (wallArtImagFileMeta.ImageByte != null))
                                 {
@@ -1773,7 +1770,7 @@ namespace api.artpixxel.repo.Features.WallArts
 
                         if (@request.WallArt.WallartImage.IsBase64String())
                         {
-                            string outputPath = _hostingEnvironment.WebRootPath + "\\images\\WallArt\\" + @request.WallArt.WallartHeader;
+                            string outputPath = _hostingEnvironment.WebRootPath + "/images/WallArt/" + @request.WallArt.WallartHeader;
                             wFileMeta = string.IsNullOrEmpty(wallArt.ImageURL) ? await @request.WallArt.WallartImage.SaveBase64AsImage(outputPath) : await wallArt.ImageURL.RenameFile(request.WallArt.WallartImage, outputPath);
                         }
 
@@ -1876,7 +1873,7 @@ namespace api.artpixxel.repo.Features.WallArts
 
                         if (@request.WallArtImage.WallartImageImage.IsBase64String())
                         {
-                            string outputPath = _hostingEnvironment.WebRootPath + "\\images\\WallArt\\WallArtImages\\" + @request.WallArtImage.WallartImageName;
+                            string outputPath = _hostingEnvironment.WebRootPath + "/images/WallArt/WallArtImages/" + @request.WallArtImage.WallartImageName;
                             fileMeta = await wallArtImage.ImageURL.RenameFile(@request.WallArtImage.WallartImageImage, outputPath);
                         }
                       
@@ -1953,52 +1950,12 @@ namespace api.artpixxel.repo.Features.WallArts
                 SqlParameter[] myparm = new SqlParameter[1];
                 myparm[0] = new SqlParameter("@Filter", Filter);
 
-                return string.IsNullOrEmpty(Filter.Category.Id) ?
-
-                    new WallArtResponse
+                WallArtResponse wallArtResponse;
+                if (string.IsNullOrEmpty(Filter.Category.Id))
+                {
+                    wallArtResponse = new WallArtResponse
                     {
                         WallArts = await _context.WallArts
-                          .Include(e => e.Images)
-                          .Include(s => s.WallArtSize)
-                          .OrderBy(e => e.Header)
-                          .Include(c => c.Category)
-                          .Skip(@Filter.Pagination.Skip)
-                          .Take(@Filter.Pagination.PageSize)
-                          .Select( w => new WallArtModel
-                          { 
-                              WallartAmount = string.IsNullOrEmpty(w.WallArtSizeId) ? 0m : w.WallArtSize.Amount,
-                              WallartCategoryCategoryId = w.CategoryId,
-                              WallartDescription = w.Description,
-                              WallartHeader = w.Header,
-                              WallartCategoryCategoryName = w.Category.Name,
-                              WallartFixedSize = w.FixedSize,
-                              WallartId = w.Id,
-                              WallartImage = w.ImageAbsURL,
-                              WallartImagesCount = w.Images.Count(),
-                              WallartImageURL = w.ImageURL,
-                              WallartRating = w.Rating,
-                              WallartSizeSizeId = w.WallArtSizeId,
-                              WallartSizeSizeName = w.WallArtSize.Name,
-                              WallartImages = w.Images.Select( i => new WallArtImageResponse
-                              {
-                                  WallartImageWallArtId = w.Id,
-                                  WallartImageDescription = i.Description,
-                                  WallartImageId = i.Id,
-                                  WallartImageImage = i.ImageAbsURL,
-                                  WallartImageImageURL = i.ImageAbsURL,
-                                  WallartImageName = i.Name
-                              }).ToList()
-
-                          }).ToListAsync(),
-                        TotalCount = decimal.Round(await _context.WallArts.CountAsync(), 0, MidpointRounding.AwayFromZero)
-                    }
-
-                    :
-
-                     new WallArtResponse
-                     {
-                         WallArts = await _context.WallArts
-                          .Where( ct => ct.CategoryId == @Filter.Category.Id)
                           .Include(e => e.Images)
                           .Include(s => s.WallArtSize)
                           .OrderBy(e => e.Header)
@@ -2014,9 +1971,9 @@ namespace api.artpixxel.repo.Features.WallArts
                               WallartCategoryCategoryName = w.Category.Name,
                               WallartFixedSize = w.FixedSize,
                               WallartId = w.Id,
-                              WallartImage = w.ImageAbsURL,
+                              WallartImage = w.ImageRelURL ?? w.ImageAbsURL,
                               WallartImagesCount = w.Images.Count(),
-                              WallartImageURL = w.ImageAbsURL,
+                              WallartImageURL = w.ImageRelURL ?? w.ImageAbsURL,
                               WallartRating = w.Rating,
                               WallartSizeSizeId = w.WallArtSizeId,
                               WallartSizeSizeName = w.WallArtSize.Name,
@@ -2025,15 +1982,57 @@ namespace api.artpixxel.repo.Features.WallArts
                                   WallartImageWallArtId = w.Id,
                                   WallartImageDescription = i.Description,
                                   WallartImageId = i.Id,
-                                  WallartImageImage = i.ImageAbsURL,
-                                  WallartImageImageURL = i.ImageAbsURL,
+                                  WallartImageImage = i.ImageRelURL ?? i.ImageAbsURL,
+                                  WallartImageImageURL = i.ImageRelURL ?? i.ImageAbsURL,
                                   WallartImageName = i.Name
                               }).ToList()
-
                           }).ToListAsync(),
-                         TotalCount = decimal.Round(await _context.WallArts.Where(ct => ct.CategoryId == @Filter.Category.Id).CountAsync(), 0, MidpointRounding.AwayFromZero)
+                        TotalCount = decimal.Round(await _context.WallArts.CountAsync(), 0, MidpointRounding.AwayFromZero)
+                    };
+                }
+                else
+                {
+                    wallArtResponse = new WallArtResponse
+                    {
+                        WallArts = await _context.WallArts
+                          .Where(ct => ct.CategoryId == @Filter.Category.Id)
+                          .Include(e => e.Images)
+                          .Include(s => s.WallArtSize)
+                          .OrderBy(e => e.Header)
+                          .Include(c => c.Category)
+                          .Skip(@Filter.Pagination.Skip)
+                          .Take(@Filter.Pagination.PageSize)
+                          .Select(w => new WallArtModel
+                          {
+                              WallartAmount = string.IsNullOrEmpty(w.WallArtSizeId) ? 0m : w.WallArtSize.Amount,
+                              WallartCategoryCategoryId = w.CategoryId,
+                              WallartDescription = w.Description,
+                              WallartHeader = w.Header,
+                              WallartCategoryCategoryName = w.Category.Name,
+                              WallartFixedSize = w.FixedSize,
+                              WallartId = w.Id,
+                              WallartImage = w.ImageRelURL ?? w.ImageAbsURL,
+                              WallartImagesCount = w.Images.Count(),
+                              WallartImageURL = w.ImageRelURL ?? w.ImageAbsURL,
+                              WallartRating = w.Rating,
+                              WallartSizeSizeId = w.WallArtSizeId,
+                              WallartSizeSizeName = w.WallArtSize.Name,
+                              WallartImages = w.Images.Select(i => new WallArtImageResponse
+                              {
+                                  WallartImageWallArtId = w.Id,
+                                  WallartImageDescription = i.Description,
+                                  WallartImageId = i.Id,
+                                  WallartImageImage = i.ImageRelURL ?? i.ImageAbsURL,
+                                  WallartImageImageURL = i.ImageRelURL ?? i.ImageAbsURL,
+                                  WallartImageName = i.Name
+                              }).ToList()
+                          }).ToListAsync(),
+                        TotalCount = decimal.Round(await _context.WallArts.Where(ct => ct.CategoryId == @Filter.Category.Id).CountAsync(), 0, MidpointRounding.AwayFromZero)
+                    };
+                }
 
-                     };
+                ResolveWallArtUrls(wallArtResponse.WallArts);
+                return wallArtResponse;
             }
             catch (Exception)
             {
@@ -2041,6 +2040,32 @@ namespace api.artpixxel.repo.Features.WallArts
                 throw;
             }
            
+        }
+
+        private void ResolveWallArtImageUrls(List<PublicWallArt> wallArts)
+        {
+            if (wallArts == null) return;
+            foreach (var w in wallArts)
+            {
+                w.Image = _currentUserService.ResolveImageUrl(w.Image);
+                w.Images?.ForEach(i => i.Image = _currentUserService.ResolveImageUrl(i.Image));
+            }
+        }
+
+        private void ResolveWallArtUrls(List<WallArtModel> wallArts)
+        {
+            if (wallArts == null) return;
+            foreach (var w in wallArts)
+            {
+                w.WallartImage = _currentUserService.ResolveImageUrl(w.WallartImage);
+                if (!string.IsNullOrEmpty(w.WallartImageURL) && !w.WallartImageURL.Contains("\\"))
+                    w.WallartImageURL = _currentUserService.ResolveImageUrl(w.WallartImageURL);
+                w.WallartImages?.ForEach(i =>
+                {
+                    i.WallartImageImage = _currentUserService.ResolveImageUrl(i.WallartImageImage);
+                    i.WallartImageImageURL = _currentUserService.ResolveImageUrl(i.WallartImageImageURL);
+                });
+            }
         }
     }
 }

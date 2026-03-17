@@ -1,4 +1,4 @@
-﻿
+
 
 using api.artpixxel.data.Features.Accounts;
 using api.artpixxel.data.Features.Admin;
@@ -455,7 +455,7 @@ namespace api.artpixxel.repo.Features.Admin
                             {
                                 if (@request.Photo.IsBase64String())
                                 {
-                                    outputPath = _hostingEnvironment.WebRootPath + "\\images\\Admins\\" + @request.Username;
+                                    outputPath = _hostingEnvironment.WebRootPath + "/images/Admins/" + @request.Username;
                                     fileMeta = await @request.Photo.SaveBase64AsImage(outputPath);
                                     user.PassportURL = string.IsNullOrEmpty(fileMeta.Path) ? user.PassportURL : fileMeta.Path;
                                     user.PassportAbsURL = string.IsNullOrEmpty(fileMeta.Path) ? user.PassportAbsURL : _currentUserService.WebRoot() + "/images/Admins/" + fileMeta.FileName;
@@ -469,7 +469,7 @@ namespace api.artpixxel.repo.Features.Admin
 
                                 if (@request.Photo.IsBase64String())
                                 {
-                                    outputPath = _hostingEnvironment.WebRootPath + "\\images\\Admins\\" + @request.Username;
+                                    outputPath = _hostingEnvironment.WebRootPath + "/images/Admins/" + @request.Username;
                                     fileMeta = await user.PassportURL.RenameFile(@request.Photo, outputPath);
                                     user.PassportURL = string.IsNullOrEmpty(fileMeta.Path) ? user.PassportURL : fileMeta.Path;
                                     user.PassportAbsURL = string.IsNullOrEmpty(fileMeta.Path) ? user.PassportAbsURL : _currentUserService.WebRoot() + "/images/Admins/" + fileMeta.FileName;

@@ -1,4 +1,4 @@
-﻿
+
 
 using api.artpixxel.data.Features.Common;
 using api.artpixxel.data.Features.Messages;
@@ -7,6 +7,7 @@ using api.artpixxel.data.Features.OrderStatuses;
 using api.artpixxel.data.Features.SMTPs;
 using api.artpixxel.data.Models;
 using api.artpixxel.Data;
+using api.artpixxel.data.Services;
 using api.artpixxel.service.Services;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -23,11 +24,13 @@ namespace api.artpixxel.repo.Features.OrderStatuses
         private readonly ArtPixxelContext _context;
         private readonly ISMTPService _sMTPService;
         private readonly IMessageService _messageService;
-        public OrderStatusService(ArtPixxelContext context, ISMTPService sMTPService, IMessageService messageService)
+        private readonly ICurrentUserService _currentUserService;
+        public OrderStatusService(ArtPixxelContext context, ISMTPService sMTPService, IMessageService messageService, ICurrentUserService currentUserService)
         {
             _context = context;
             _sMTPService = sMTPService;
             _messageService = messageService;
+            _currentUserService = currentUserService;
         }
 
         public async Task<OrderStatusHistoryResponse> History(OrderStatusHistoryRequest request)
@@ -607,7 +610,7 @@ namespace api.artpixxel.repo.Features.OrderStatuses
                         {
                             Attachment = request.Order.Items.Any() ? new ChatBodyAttachment
                             {
-                                AttachmentAbsPath = request.Order.Items.First().ImageAbsURL,
+                                AttachmentAbsPath = _currentUserService.ResolveImageUrl(request.Order.Items.First().ImageRelURL ?? request.Order.Items.First().ImageAbsURL),
                                 AttachmentFileType = FileType.Image,
                                 AttachmentPath = request.Order.Items.First().ImageURL,
                                 AttachmentRelPath = request.Order.Items.First().ImageRelURL,
@@ -675,7 +678,7 @@ namespace api.artpixxel.repo.Features.OrderStatuses
                             {
                                 Attachment = request.Order.Items.Any() ? new ChatBodyAttachment
                                 {
-                                    AttachmentAbsPath = request.Order.Items.First().ImageAbsURL,
+                                    AttachmentAbsPath = _currentUserService.ResolveImageUrl(request.Order.Items.First().ImageRelURL ?? request.Order.Items.First().ImageAbsURL),
                                     AttachmentFileType = FileType.Image,
                                     AttachmentPath = request.Order.Items.First().ImageURL,
                                     AttachmentRelPath = request.Order.Items.First().ImageRelURL,

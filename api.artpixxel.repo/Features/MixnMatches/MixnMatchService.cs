@@ -1,4 +1,4 @@
-﻿
+
 using api.artpixxel.data.Features.MixnMatches;
 using api.artpixxel.Data;
 using api.artpixxel.service.Services;
@@ -216,7 +216,7 @@ namespace api.artpixxel.repo.Features.MixnMatches
 
 
                    
-                    outputPath = _hostingEnvironment.WebRootPath + "\\images\\MixnMatch\\" + @request.MixNMatch.MixnmatchName;
+                    outputPath = _hostingEnvironment.WebRootPath + "/images/MixnMatch/" + @request.MixNMatch.MixnmatchName;
                     FileMeta fileMeta = await @request.MixNMatch.MixnmatchImage.SaveBase64AsImage(outputPath);
 
                     MixnMatch mixnMatch = new()
@@ -327,7 +327,7 @@ namespace api.artpixxel.repo.Features.MixnMatches
 
                         if (!string.IsNullOrEmpty(mix.MixnmatchImage))
                         {
-                            outputPath = _hostingEnvironment.WebRootPath + "\\images\\MixnMatch\\" + mix.MixnmatchName;
+                            outputPath = _hostingEnvironment.WebRootPath + "/images/MixnMatch/" + mix.MixnmatchName;
                             FileMeta fileMeta = await mix.MixnmatchImage.SaveBase64AsImage(outputPath);
 
                             MixnMatch mixnMatch = new()
@@ -490,55 +490,68 @@ namespace api.artpixxel.repo.Features.MixnMatches
                 SqlParameter[] myparm = new SqlParameter[1];
                 myparm[0] = new SqlParameter("@Filter", Filter);
 
-                return   string.IsNullOrEmpty(@Filter.Category.Id) ?
-                    
-                    new MixnMatchResponse
+                MixnMatchResponse response;
+                if (string.IsNullOrEmpty(@Filter.Category.Id))
                 {
-                    MixNMatchData = await _context.MixnMatches.Include(c => c.Category)
-                    .OrderBy(n => n.Name)
-                    .Skip(@Filter.Pagination.Skip)
-                    .Take(@Filter.Pagination.PageSize)
-                    .Select(m => new MixnMatchData
+                    var data = await _context.MixnMatches.Include(c => c.Category)
+                        .OrderBy(n => n.Name)
+                        .Skip(@Filter.Pagination.Skip)
+                        .Take(@Filter.Pagination.PageSize)
+                        .Select(m => new MixnMatchData
+                        {
+                            MixnmatchId = m.Id,
+                            MixnmatchCategoryCategoryId = m.CategoryId,
+                            MixnmatchCategoryCategoryName = m.Category.Name,
+                            MixnmatchDescription = m.Description,
+                            MixnmatchName = m.Name,
+                            MixnmatchImageURL = m.ImageRelURL ?? m.ImageAbsURL,
+                            MixnmatchImage = m.ImageRelURL ?? m.ImageAbsURL
+
+                        }).ToListAsync();
+
+                    data.ForEach(x =>
                     {
-                        MixnmatchId = m.Id,
-                        MixnmatchCategoryCategoryId = m.CategoryId,
-                        MixnmatchCategoryCategoryName = m.Category.Name,
-                        MixnmatchDescription = m.Description,
-                        MixnmatchName = m.Name,
-                        MixnmatchImageURL = m.ImageURL,
-                        MixnmatchImage =   m.ImageAbsURL
-                        // Image = m.Image == null ? "" : "data:image/png;base64," + Convert.ToBase64String(m.Image, 0, m.Image.Length)
+                        x.MixnmatchImage = _currentUserService.ResolveImageUrl(x.MixnmatchImage);
+                        x.MixnmatchImageURL = _currentUserService.ResolveImageUrl(x.MixnmatchImageURL);
+                    });
 
-                    }).ToListAsync(),
-                    TotalCount = decimal.Round(await _context.MixnMatches.CountAsync(), 0 ,MidpointRounding.AwayFromZero)
-
+                    response = new MixnMatchResponse
+                    {
+                        MixNMatchData = data,
+                        TotalCount = decimal.Round(await _context.MixnMatches.CountAsync(), 0, MidpointRounding.AwayFromZero)
+                    };
                 }
-                    :
-
-
-                new MixnMatchResponse
+                else
                 {
-                    MixNMatchData = await _context.MixnMatches.Where(c => c.CategoryId == @Filter.Category.Id).Include(c => c.Category)
-                    .OrderBy(n => n.Name)
-                    .Skip(@Filter.Pagination.Skip)
-                    .Take(@Filter.Pagination.PageSize)
-                    .Select(m => new MixnMatchData
+                    var data = await _context.MixnMatches.Where(c => c.CategoryId == @Filter.Category.Id).Include(c => c.Category)
+                        .OrderBy(n => n.Name)
+                        .Skip(@Filter.Pagination.Skip)
+                        .Take(@Filter.Pagination.PageSize)
+                        .Select(m => new MixnMatchData
+                        {
+                            MixnmatchId = m.Id,
+                            MixnmatchCategoryCategoryId = m.CategoryId,
+                            MixnmatchCategoryCategoryName = m.Category.Name,
+                            MixnmatchDescription = m.Description,
+                            MixnmatchImageURL = m.ImageRelURL ?? m.ImageAbsURL,
+                            MixnmatchName = m.Name,
+                            MixnmatchImage = m.ImageURL.Base64FromImage().Result
+
+                        }).ToListAsync();
+
+                    data.ForEach(x =>
                     {
-                        MixnmatchId = m.Id,
-                        MixnmatchCategoryCategoryId = m.CategoryId,
-                        MixnmatchCategoryCategoryName = m.Category.Name,
-                        MixnmatchDescription = m.Description,
-                        MixnmatchImageURL = m.ImageAbsURL,
-                        MixnmatchName = m.Name,
-                        MixnmatchImage = m.ImageURL.Base64FromImage().Result
+                        x.MixnmatchImageURL = _currentUserService.ResolveImageUrl(x.MixnmatchImageURL);
+                    });
 
-                    }).ToListAsync(),
-                    TotalCount = decimal.Round( await _context.MixnMatches.Where(c => c.CategoryId == @Filter.Category.Id).CountAsync(), 0, MidpointRounding.AwayFromZero)
-
+                    response = new MixnMatchResponse
+                    {
+                        MixNMatchData = data,
+                        TotalCount = decimal.Round(await _context.MixnMatches.Where(c => c.CategoryId == @Filter.Category.Id).CountAsync(), 0, MidpointRounding.AwayFromZero)
+                    };
                 }
 
-
-                ;
+                return response;
                 
             }
             catch (Exception)
@@ -565,7 +578,7 @@ namespace api.artpixxel.repo.Features.MixnMatches
                           Name = i.Name,
                           Price = i.Price,
                           Description = i.Description,
-                          Image = i.ImageAbsURL
+                          Image = i.ImageRelURL ?? i.ImageAbsURL
                       }).ToList()
                     
                     }).ToListAsync();
@@ -575,6 +588,9 @@ namespace api.artpixxel.repo.Features.MixnMatches
                         Category = "All",
                         Images = contents.SelectMany(e => e.Images).ToList()
                      };
+
+                    foreach (var content in contents)
+                        content.Images?.ForEach(img => img.Image = _currentUserService.ResolveImageUrl(img.Image));
 
                     mixnMatchModel.MixnMatches.Add(all);
                     mixnMatchModel.MixnMatches.AddRange(contents);
@@ -613,7 +629,7 @@ namespace api.artpixxel.repo.Features.MixnMatches
 
                         if (request.MixNMatch.MixnmatchImage.IsBase64String())
                         {
-                            string outputPath = _hostingEnvironment.WebRootPath + "\\images\\MixnMatch\\" + @request.MixNMatch.MixnmatchName;
+                            string outputPath = _hostingEnvironment.WebRootPath + "/images/MixnMatch/" + @request.MixNMatch.MixnmatchName;
                             fileMeta = await mixnMatch.ImageURL.RenameFile(request.MixNMatch.MixnmatchImage, outputPath);
                         }
 

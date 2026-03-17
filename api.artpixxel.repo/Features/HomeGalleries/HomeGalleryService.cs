@@ -1,4 +1,4 @@
-﻿
+
 using api.artpixxel.data.Features.Common;
 using api.artpixxel.data.Features.HomeGalleries;
 using api.artpixxel.data.Models;
@@ -40,7 +40,7 @@ namespace api.artpixxel.repo.Features.HomeGalleries
                 if (requests.Any())
                 {
 
-                    string outputPath = _hostingEnvironment.WebRootPath + "\\images\\homeGallery";
+                    string outputPath = _hostingEnvironment.WebRootPath + "/images/homeGallery";
                     if (!(await outputPath.DirectoryExistAsync()))
                     {
                         await Task.Run(() => Directory.CreateDirectory(outputPath));
@@ -52,7 +52,7 @@ namespace api.artpixxel.repo.Features.HomeGalleries
                     {
                         if (Enum.TryParse(request.Type, out HomeGalleryImageType type))
                         {
-                            string filePath = outputPath + "\\" + request.Name;
+                            string filePath = outputPath + "/" + request.Name;
                             FileMeta fileMeta = await @request.Image.SaveBase64AsImage(filePath);
 
                             if (fileMeta.Path != null)
@@ -96,7 +96,7 @@ namespace api.artpixxel.repo.Features.HomeGalleries
                                     Type = e.Type.ToString(),
                                     Active = e.Active,
                                     Id = e.Id,
-                                    Image = e.ImageAbsURL,
+                                    Image = _currentUserService.ResolveImageUrl(e.ImageRelURL ?? e.ImageAbsURL),
                                     Selected = false
                                 }).ToList(),
                                 Response = new BaseResponse
@@ -273,13 +273,13 @@ namespace api.artpixxel.repo.Features.HomeGalleries
 
                 if (Enum.TryParse(request.Type, out HomeGalleryImageType type))
                 {
-                    string outputPath = _hostingEnvironment.WebRootPath + "\\images\\homeGallery";
+                    string outputPath = _hostingEnvironment.WebRootPath + "/images/homeGallery";
                     if (!(await outputPath.DirectoryExistAsync()))
                     {
                         await Task.Run(() => Directory.CreateDirectory(outputPath));
                     }
 
-                    string filePath = outputPath + "\\" + request.Name;
+                    string filePath = outputPath + "/" + request.Name;
                     FileMeta fileMeta = await @request.Image.SaveBase64AsImage(filePath);
 
 
@@ -312,7 +312,7 @@ namespace api.artpixxel.repo.Features.HomeGalleries
                                 {
                                     Id = galleryImage.Id,
                                     Description = galleryImage.Description,
-                                    Image = galleryImage.ImageAbsURL,
+                                    Image = _currentUserService.ResolveImageUrl(galleryImage.ImageRelURL ?? galleryImage.ImageAbsURL),
                                     Name = galleryImage.Name,
                                     Active = galleryImage.Active, 
                                     Type = galleryImage.Type.ToString(),
@@ -474,12 +474,14 @@ namespace api.artpixxel.repo.Features.HomeGalleries
                         Id = x.Id,
                         Active = x.Active,
                         Type  = x.Type.ToString(),
-                        Image = x.ImageAbsURL,
+                        Image = x.ImageRelURL ?? x.ImageAbsURL,
                         Selected = false
 
                     })
                    .OrderBy(e => e.Name)
                    .ToListAsync();
+
+                    images.ForEach(x => x.Image = _currentUserService.ResolveImageUrl(x.Image));
 
                     if (images.Any())
                     {
@@ -551,7 +553,7 @@ namespace api.artpixxel.repo.Features.HomeGalleries
                             if (request.Image.IsBase64String())
                             {
 
-                                string outputPath = _hostingEnvironment.WebRootPath + "\\images\\homeGallery\\" + @request.Name;
+                                string outputPath = _hostingEnvironment.WebRootPath + "/images/homeGallery/" + @request.Name;
                                 fileMeta = await homeGalleryImage.ImageURL.RenameFile(request.Image, outputPath);
                             }
 
@@ -577,7 +579,7 @@ namespace api.artpixxel.repo.Features.HomeGalleries
                                 {
                                     Id = homeGalleryImage.Id,
                                     Description = homeGalleryImage.Description,
-                                    Image = homeGalleryImage.ImageAbsURL,
+                                    Image = _currentUserService.ResolveImageUrl(homeGalleryImage.ImageRelURL ?? homeGalleryImage.ImageAbsURL),
                                     Name = homeGalleryImage.Name,
                                     Active = homeGalleryImage.Active,
                                     Type = homeGalleryImage.Type.ToString(),

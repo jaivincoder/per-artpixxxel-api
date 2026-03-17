@@ -1,4 +1,4 @@
-﻿
+
 
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Options;
@@ -25,7 +25,7 @@ namespace api.artpixxel.Infrastructure.Extensions
             }
             return FallbackPolicyProvider.GetPolicyAsync(policyName);
         }
-        public Task<AuthorizationPolicy> GetFallbackPolicyAsync() => FallbackPolicyProvider.GetDefaultPolicyAsync();
+        public Task<AuthorizationPolicy> GetFallbackPolicyAsync() => FallbackPolicyProvider.GetFallbackPolicyAsync();
     }
 
 }

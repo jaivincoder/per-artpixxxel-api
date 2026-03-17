@@ -1,4 +1,4 @@
-﻿
+
 using System;
 
 using api.artpixxel.Data;
@@ -41,7 +41,7 @@ namespace api.artpixxel.repo.Features.KidsGalleries
 
                 if (@requests.Any())
                 {
-                    string outputPath = _hostingEnvironment.WebRootPath + "\\images\\kidsGallery";
+                    string outputPath = _hostingEnvironment.WebRootPath + "/images/kidsGallery";
                     if (!(await outputPath.DirectoryExistAsync()))
                     {
                         await Task.Run(() => Directory.CreateDirectory(outputPath));
@@ -51,7 +51,7 @@ namespace api.artpixxel.repo.Features.KidsGalleries
 
                     foreach (var request in @requests)
                     {
-                        string filePath = outputPath + "\\" + request.Name;
+                        string filePath = outputPath + "/" + request.Name;
                         FileMeta fileMeta = await @request.Image.SaveBase64AsImage(filePath);
                         if (fileMeta.Path != null)
                         {
@@ -85,7 +85,7 @@ namespace api.artpixxel.repo.Features.KidsGalleries
                                     Name = e.Name,
                                     Description = e.Description,
                                     Id = e.Id,
-                                    Image = e.ImageAbsURL,
+                                    Image = _currentUserService.ResolveImageUrl(e.ImageRelURL ?? e.ImageAbsURL),
                                     Selected = false
                                 }).ToList(), 
                                 Response = new BaseResponse
@@ -237,7 +237,7 @@ namespace api.artpixxel.repo.Features.KidsGalleries
                 {
                     List<PublicKidsGalleryImage> characters = await _context.KidsGalleryImages.Select( e => new PublicKidsGalleryImage
                     {
-                        Image = e.ImageAbsURL,
+                        Image = e.ImageRelURL ?? e.ImageAbsURL,
                         Id = e.Id,
                         Name = e.Name,
                         ImageString = e.ImageURL
@@ -249,6 +249,7 @@ namespace api.artpixxel.repo.Features.KidsGalleries
                     {
                         foreach (PublicKidsGalleryImage character in characters)
                         {
+                            character.Image = _currentUserService.ResolveImageUrl(character.Image);
                             character.ImageString = await character.ImageString.GetImageFileBase64();
                         }
 
@@ -306,13 +307,13 @@ namespace api.artpixxel.repo.Features.KidsGalleries
             {
                 SqlParameter[] myparm = new SqlParameter[1];
                 myparm[0] = new SqlParameter("@request", request);
-                string outputPath = _hostingEnvironment.WebRootPath + "\\images\\kidsGallery";
+                string outputPath = _hostingEnvironment.WebRootPath + "/images/kidsGallery";
                 if(! (await outputPath.DirectoryExistAsync()))
                 {
                     await Task.Run(() => Directory.CreateDirectory(outputPath));
                 }
 
-                outputPath += "\\" + @request.Name;
+                outputPath += "/" + @request.Name;
                 FileMeta fileMeta = await @request.Image.SaveBase64AsImage(outputPath);
                 if(fileMeta.Path != null)
                 {
@@ -340,7 +341,7 @@ namespace api.artpixxel.repo.Features.KidsGalleries
                                 {
                                     Id = galleryImage.Id,
                                     Description = galleryImage.Description,
-                                    Image = galleryImage.ImageAbsURL,
+                                    Image = _currentUserService.ResolveImageUrl(galleryImage.ImageRelURL ?? galleryImage.ImageAbsURL),
                                     Name = galleryImage.Name,
                                     Selected = false,
                                 }
@@ -476,12 +477,14 @@ namespace api.artpixxel.repo.Features.KidsGalleries
                         Name = x.Name,
                         Description = x.Description,
                         Id = x.Id,
-                        Image = x.ImageAbsURL,
+                        Image = x.ImageRelURL ?? x.ImageAbsURL,
                         Selected = false
                     
                     })
                     .OrderBy(e => e.Name)
                     .ToListAsync();
+
+                    images.ForEach(x => x.Image = _currentUserService.ResolveImageUrl(x.Image));
 
                     if (images.Any())
                     {
@@ -546,7 +549,7 @@ namespace api.artpixxel.repo.Features.KidsGalleries
 
                         if (request.Image.IsBase64String())
                         {
-                            string outputPath = _hostingEnvironment.WebRootPath + "\\images\\kidsGallery\\" + @request.Name;
+                            string outputPath = _hostingEnvironment.WebRootPath + "/images/kidsGallery/" + @request.Name;
                             fileMeta = await kidsGalleryImage.ImageURL.RenameFile(request.Image, outputPath);
                         }
 
@@ -570,7 +573,7 @@ namespace api.artpixxel.repo.Features.KidsGalleries
                                 {
                                     Id = kidsGalleryImage.Id,
                                     Description = kidsGalleryImage.Description,
-                                    Image = kidsGalleryImage.ImageAbsURL,
+                                    Image = _currentUserService.ResolveImageUrl(kidsGalleryImage.ImageRelURL ?? kidsGalleryImage.ImageAbsURL),
                                     Name = kidsGalleryImage.Name,
                                     Selected = false
                                 }

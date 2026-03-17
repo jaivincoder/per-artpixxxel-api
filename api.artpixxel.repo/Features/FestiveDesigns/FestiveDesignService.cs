@@ -1,4 +1,4 @@
-﻿using api.artpixxel.data.Features.Common;
+using api.artpixxel.data.Features.Common;
 using api.artpixxel.data.Features.FestiveDesigns;
 using api.artpixxel.data.Models;
 using api.artpixxel.data.Models.Base;
@@ -46,7 +46,7 @@ namespace api.artpixxel.repo.Features.FestiveDesigns
                 if (requests.Any())
                 {
 
-                    string outputPath = $"{_hostingEnvironment.WebRootPath}\\{folderName}\\{subFolderName}";
+                    string outputPath = $"{_hostingEnvironment.WebRootPath}/{folderName}/{subFolderName}";
                     if (!(await outputPath.DirectoryExistAsync()))
                     {
                         await Task.Run(() => Directory.CreateDirectory(outputPath));
@@ -58,7 +58,7 @@ namespace api.artpixxel.repo.Features.FestiveDesigns
                     {
                         if (Enum.TryParse(request.Category, out FestiveDesignCategory category))
                         {
-                            string filePath = outputPath + "\\" + request.Name;
+                            string filePath = outputPath + "/" + request.Name;
                             FileMeta fileMeta = await @request.Image.SaveBase64AsImage(filePath);
 
                             if (fileMeta.Path != null)
@@ -102,7 +102,7 @@ namespace api.artpixxel.repo.Features.FestiveDesigns
                                     Category = e.Category.ToString(),
                                     Active = e.Active,
                                     Id = e.Id,
-                                    Image = e.ImageAbsURL,
+                                    Image = _currentUserService.ResolveImageUrl(e.ImageRelURL ?? e.ImageAbsURL),
                                     Selected = false
                                 }).ToList(),
                                 Response = new BaseResponse
@@ -280,13 +280,13 @@ namespace api.artpixxel.repo.Features.FestiveDesigns
 
                 if (Enum.TryParse(request.Category, out FestiveDesignCategory category))
                 {
-                    string outputPath = $"{_hostingEnvironment.WebRootPath}\\{folderName}\\{subFolderName}";
+                    string outputPath = $"{_hostingEnvironment.WebRootPath}/{folderName}/{subFolderName}";
                     if (!(await outputPath.DirectoryExistAsync()))
                     {
                         await Task.Run(() => Directory.CreateDirectory(outputPath));
                     }
 
-                    string filePath = outputPath + "\\" + request.Name;
+                    string filePath = outputPath + "/" + request.Name;
                     FileMeta fileMeta = await @request.Image.SaveBase64AsImage(filePath);
 
 
@@ -319,7 +319,7 @@ namespace api.artpixxel.repo.Features.FestiveDesigns
                                 {
                                     Id = design.Id,
                                     Description = design.Description,
-                                    Image = design.ImageAbsURL,
+                                    Image = _currentUserService.ResolveImageUrl(design.ImageRelURL ?? design.ImageAbsURL),
                                     Name = design.Name,
                                     Active = design.Active,
                                     Category = design.Category.ToString(),
@@ -481,12 +481,14 @@ namespace api.artpixxel.repo.Features.FestiveDesigns
                         Id = x.Id,
                         Active = x.Active,
                         Category = x.Category.ToString(),
-                        Image = x.ImageAbsURL,
+                        Image = x.ImageRelURL ?? x.ImageAbsURL,
                         Selected = false
 
                     })
                    .OrderBy(e => e.Name)
                    .ToListAsync();
+
+                    designs.ForEach(x => x.Image = _currentUserService.ResolveImageUrl(x.Image));
 
                     if (designs.Any())
                     {
@@ -558,7 +560,7 @@ namespace api.artpixxel.repo.Features.FestiveDesigns
                             if (request.Image.IsBase64String())
                             {
 
-                                string outputPath = $"{_hostingEnvironment.WebRootPath}\\{folderName}\\{subFolderName}\\{@request.Name}";
+                                string outputPath = $"{_hostingEnvironment.WebRootPath}/{folderName}/{subFolderName}/{@request.Name}";
                                 fileMeta = await design.ImageURL.RenameFile(request.Image, outputPath);
                             }
 
@@ -584,7 +586,7 @@ namespace api.artpixxel.repo.Features.FestiveDesigns
                                 {
                                     Id = design.Id,
                                     Description = design.Description,
-                                    Image = design.ImageAbsURL,
+                                    Image = _currentUserService.ResolveImageUrl(design.ImageRelURL ?? design.ImageAbsURL),
                                     Name = design.Name,
                                     Active = design.Active,
                                     Category = design.Category.ToString(),
@@ -682,7 +684,7 @@ namespace api.artpixxel.repo.Features.FestiveDesigns
                     {
 
                         Id = e.Id,
-                        Image = e.ImageAbsURL,
+                        Image = e.ImageRelURL ?? e.ImageAbsURL,
                         Category = e.Category.ToString(),
                         ImageString = e.ImageURL,
                         Name = e.Name,
@@ -694,6 +696,7 @@ namespace api.artpixxel.repo.Features.FestiveDesigns
                     {
                         foreach (PublicFestiveDesignModel design in designs)
                         {
+                            design.Image = _currentUserService.ResolveImageUrl(design.Image);
                             design.ImageString = await design.ImageString.GetImageFileBase64();
                         }
 

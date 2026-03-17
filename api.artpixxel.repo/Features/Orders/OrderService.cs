@@ -1,4 +1,4 @@
-﻿using api.artpixxel.data.Features.Common;
+using api.artpixxel.data.Features.Common;
 using api.artpixxel.data.Features.Orders;
 using api.artpixxel.Data;
 using api.artpixxel.service.Services;
@@ -206,26 +206,18 @@ namespace api.artpixxel.repo.Features.Orders
             if (string.IsNullOrWhiteSpace(path))
                 return AssetDefault.DefaultImage;
 
-            // Normalize slashes first
             path = path.Replace("\\", "/");
 
-            // If already relative
-            if (path.StartsWith("/images/", StringComparison.OrdinalIgnoreCase))
-                return path;
-
-            // If full URL
             if (Uri.TryCreate(path, UriKind.Absolute, out var uri) &&
                 (uri.Scheme == Uri.UriSchemeHttp || uri.Scheme == Uri.UriSchemeHttps))
-            {
-                return uri.AbsolutePath;
-            }
+                path = uri.AbsolutePath;
 
-            // Find /wwwroot/images
-            var marker = "/wwwroot/images/";
-            var idx = path.IndexOf(marker, StringComparison.OrdinalIgnoreCase);
+            var wwwrootIdx = path.IndexOf("wwwroot/images/", StringComparison.OrdinalIgnoreCase);
+            if (wwwrootIdx >= 0)
+                return path.Substring(wwwrootIdx + "wwwroot".Length);
 
-            if (idx >= 0)
-                return path.Substring(idx + "/wwwroot".Length);
+            if (path.StartsWith("/images/", StringComparison.OrdinalIgnoreCase))
+                return path;
 
             return AssetDefault.DefaultImage;
         }

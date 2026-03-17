@@ -1,4 +1,4 @@
-﻿
+
 
 
 using System;
@@ -45,7 +45,7 @@ namespace api.artpixxel.repo.Features.HomeSliders
 
                     foreach (var carousel in request.Request)
                     {
-                        string carouselOutputPath = _hostingEnvironment.WebRootPath + "\\images\\Carousel\\" + (string.IsNullOrEmpty(carousel.LinkLabel) ? DateTime.Today.Ticks.ToString() + "_" + Guid.NewGuid().ToString("N") : carousel.LinkLabel);
+                        string carouselOutputPath = _hostingEnvironment.WebRootPath + "/images/Carousel/" + (string.IsNullOrEmpty(carousel.LinkLabel) ? DateTime.Today.Ticks.ToString() + "_" + Guid.NewGuid().ToString("N") : carousel.LinkLabel);
                         FileMeta fileMeta = await carousel.Image.SaveBase64AsImage(carouselOutputPath);
                         if (fileMeta.ImageByte != null && fileMeta.Path != null)
                         {
@@ -140,7 +140,7 @@ namespace api.artpixxel.repo.Features.HomeSliders
 
                
                 string fileName = string.IsNullOrEmpty(@request.Request.LinkLabel) ? DateTime.Today.Ticks.ToString() + "_" + Guid.NewGuid().ToString("N") : @request.Request.LinkLabel;
-                string carouselOutputPath = _hostingEnvironment.WebRootPath + "\\images\\Carousel\\" + fileName;
+                string carouselOutputPath = _hostingEnvironment.WebRootPath + "/images/Carousel/" + fileName;
                 FileMeta fileMeta = await @request.Request.Image.SaveBase64AsImage(carouselOutputPath);
 
                
@@ -248,7 +248,7 @@ namespace api.artpixxel.repo.Features.HomeSliders
             try
             {
                 
-                return await _context.Carousels
+                var results = await _context.Carousels
                     .OrderBy(e => e.CreatedOn)
                     .Skip(pagination.Skip)
                     .Take(pagination.PageSize).Select(c => new CarouselModel 
@@ -258,15 +258,16 @@ namespace api.artpixxel.repo.Features.HomeSliders
                       Heading = c.Heading,
                       Active = c.Active,
                       Type = c.Type.ToString(),
-                      Image = c.ImageAbsURL,
+                      Image = c.ImageRelURL ?? c.ImageAbsURL,
                       BackgroundColour = c.BackgroundColour,
                       LinkLabelColour = c.LinkLabelColour,
                       BodyTextColour = c.BodyTextColour,
                       HeadingColour = c.HeadingColour,
-                     // Image = c.ImageURL.Base64FromImage().Result,
                       Link = c.Link,
                       LinkLabel = c.LinkLabel
                     }).ToListAsync();
+                results.ForEach(x => x.Image = _currentUserService.ResolveImageUrl(x.Image));
+                return results;
 
             }
             catch (Exception)
@@ -282,9 +283,7 @@ namespace api.artpixxel.repo.Features.HomeSliders
             {
 
                 
-                return new CarouselResponse
-                {
-                    Carousels =  await _context.Carousels
+                var publicCarousels = await _context.Carousels
                     .Where(e => e.Active == true)
                     .OrderBy(e => e.CreatedOn)
                     .Select(c => new CarouselModel
@@ -293,7 +292,7 @@ namespace api.artpixxel.repo.Features.HomeSliders
                         BodyText = c.BodyText,
                         Heading = c.Heading,
                         Active = c.Active,
-                        Image = c.ImageAbsURL,
+                        Image = c.ImageRelURL ?? c.ImageAbsURL,
                         Type = c.Type.ToString(),
                         BackgroundColour = c.BackgroundColour,
                         LinkLabelColour = c.LinkLabelColour,
@@ -301,7 +300,11 @@ namespace api.artpixxel.repo.Features.HomeSliders
                         HeadingColour = c.HeadingColour,
                         Link = string.IsNullOrEmpty(c.Link) ? "/" : c.Link,
                         LinkLabel = c.LinkLabel
-                    }).ToListAsync()
+                    }).ToListAsync();
+                publicCarousels.ForEach(x => x.Image = _currentUserService.ResolveImageUrl(x.Image));
+                return new CarouselResponse
+                {
+                    Carousels = publicCarousels
                 };
             }
             catch (Exception)
@@ -332,7 +335,7 @@ namespace api.artpixxel.repo.Features.HomeSliders
 
                         if (@request.Request.Image.IsBase64String())
                         {
-                            string carouselOutputPath = _hostingEnvironment.WebRootPath + "\\images\\Carousel\\" + (string.IsNullOrEmpty(carousel.LinkLabel) ? string.IsNullOrEmpty(@request.Request.LinkLabel) ? DateTime.Today.Ticks.ToString() + "_" + Guid.NewGuid().ToString("N") : @request.Request.LinkLabel : carousel.LinkLabel);
+                            string carouselOutputPath = _hostingEnvironment.WebRootPath + "/images/Carousel/" + (string.IsNullOrEmpty(carousel.LinkLabel) ? string.IsNullOrEmpty(@request.Request.LinkLabel) ? DateTime.Today.Ticks.ToString() + "_" + Guid.NewGuid().ToString("N") : @request.Request.LinkLabel : carousel.LinkLabel);
                             fileMeta = await carousel.ImageURL.RenameFile(@request.Request.Image, carouselOutputPath);
                         }
 
@@ -509,7 +512,7 @@ namespace api.artpixxel.repo.Features.HomeSliders
                     BodyText = c.BodyText,
                     Active = c.Active,
                     Heading = c.Heading,
-                    Image = c.ImageAbsURL,
+                    Image = _currentUserService.ResolveImageUrl(c.ImageRelURL ?? c.ImageAbsURL),
                     Type = c.Type.ToString(),
                     BackgroundColour = c.BackgroundColour,
                     LinkLabelColour = c.LinkLabelColour,

@@ -1,4 +1,4 @@
-﻿
+
 
 using api.artpixxel.data.Features.Accounts;
 using api.artpixxel.data.Features.AddressBooks;
@@ -651,7 +651,7 @@ namespace api.artpixxel.repo.Features.Accounts
 
                             if (@request.Photo.IsBase64String())
                             {
-                                outputPath = _hostingEnvironment.WebRootPath + "\\images\\Customer\\" + @request.Username;
+                                outputPath = _hostingEnvironment.WebRootPath + "/images/Customer/" + @request.Username;
                                 fileMeta = await @request.Photo.SaveBase64AsImage(outputPath);
                             }
 
@@ -663,7 +663,7 @@ namespace api.artpixxel.repo.Features.Accounts
 
                             if (@request.Photo.IsBase64String())
                             {
-                                outputPath = _hostingEnvironment.WebRootPath + "\\images\\Customer\\" + @request.Username;
+                                outputPath = _hostingEnvironment.WebRootPath + "/images/Customer/" + @request.Username;
                                 fileMeta = await customer.User.PassportURL.RenameFile(@request.Photo, outputPath);
                             }
 

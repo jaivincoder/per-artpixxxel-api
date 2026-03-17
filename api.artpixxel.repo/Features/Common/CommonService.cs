@@ -1,4 +1,4 @@
-﻿
+
 
 using api.artpixxel.data.Features.Common;
 using api.artpixxel.Data;
@@ -15,15 +15,18 @@ using api.artpixxel.data.Features.Sizes;
 using api.artpixxel.data.Features.WallArtSizes;
 using api.artpixxel.data.Features.HomeGalleries;
 using api.artpixxel.data.Features.Metas;
+using api.artpixxel.data.Services;
 
 namespace api.artpixxel.repo.Features.Common
 {
     public class CommonService : ICommonService
     {
         private readonly ArtPixxelContext _context;
-        public CommonService(ArtPixxelContext context)
+        private readonly ICurrentUserService _currentUserService;
+        public CommonService(ArtPixxelContext context, ICurrentUserService currentUserService)
         {
             _context = context;
+            _currentUserService = currentUserService;
         }
         public async Task<List<BaseOption>> Cities(BaseId request)
         {
@@ -170,12 +173,14 @@ namespace api.artpixxel.repo.Features.Common
                         .Select(e => new PublicHomeGalleryModel 
                         { 
                           Id = e.Id,
-                          Image = e.ImageAbsURL,
+                          Image = e.ImageRelURL ?? e.ImageAbsURL,
                           Name = e.Name,   
                           Type = e.Type.ToString()
                         
                         })
                         .ToListAsync();
+
+                    galleries.ForEach(g => g.Image = _currentUserService.ResolveImageUrl(g.Image));
                 }
 
                 if (await _context.Metas.AnyAsync(e => e.MetaType == MetaType.UploadedImage))

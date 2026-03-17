@@ -45,7 +45,8 @@ namespace api.artpixxel
 
            
 
-            app.UseSwaggerUI()
+            app.UseStaticFiles()
+             .UseSwaggerUI()
              .UseRouting()
              .UseCors(options => options
              .AllowAnyOrigin()
@@ -53,7 +54,6 @@ namespace api.artpixxel
              .AllowAnyMethod()
              
              )
-             .UseStaticFiles()
              .UseAuthentication()
              .UseAuthorization()
 

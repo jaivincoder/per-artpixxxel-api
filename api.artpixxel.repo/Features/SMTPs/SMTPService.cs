@@ -1,4 +1,4 @@
-﻿
+
 using api.artpixxel.data.Features.Common;
 using api.artpixxel.data.Features.SMTPs;
 using api.artpixxel.data.Models;
@@ -558,31 +558,31 @@ namespace api.artpixxel.repo.Features.SMTPs
         {
 
            
-            string LogoImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\logo.png";
+            string LogoImg = _hostingEnvironment.WebRootPath + "/images/Mail/logo.png";
             FileContentInfo logoContent = await LogoImg.FileContent();
             MimeEntity logoThumb = builder.LinkedResources.Add(logoContent.FileName, logoContent.Bytes, logoContent.ContentType);
             logoThumb.ContentId = "artpixxelLogo";
 
             MimeEntity artworkThumb = null;
 
-            string InstagramImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\instagram.png";
+            string InstagramImg = _hostingEnvironment.WebRootPath + "/images/Mail/instagram.png";
             FileContentInfo InstagramImgContent = await InstagramImg.FileContent();
             MimeEntity InstagramThumb = builder.LinkedResources.Add(InstagramImgContent.FileName, InstagramImgContent.Bytes, InstagramImgContent.ContentType);
             InstagramThumb.ContentId = "Instagram";
 
-            string TwitterImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\twitter.png";
+            string TwitterImg = _hostingEnvironment.WebRootPath + "/images/Mail/twitter.png";
             FileContentInfo TwitterImgContent = await TwitterImg.FileContent();
             MimeEntity TwitterThumb = builder.LinkedResources.Add(TwitterImgContent.FileName, TwitterImgContent.Bytes, TwitterImgContent.ContentType);
             TwitterThumb.ContentId = "Twitter";
 
 
-            string FacebookImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\facebook.png";
+            string FacebookImg = _hostingEnvironment.WebRootPath + "/images/Mail/facebook.png";
             FileContentInfo FacebookImgContent = await FacebookImg.FileContent();
             MimeEntity FacebookThumb = builder.LinkedResources.Add(FacebookImgContent.FileName, FacebookImgContent.Bytes, FacebookImgContent.ContentType);
             FacebookThumb.ContentId = "Facebook";
 
 
-            string LinkedInImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\linkedin.png";
+            string LinkedInImg = _hostingEnvironment.WebRootPath + "/images/Mail/linkedin.png";
             FileContentInfo LinkedInImgContent = await LinkedInImg.FileContent();
             MimeEntity LinkedInThumb = builder.LinkedResources.Add(LinkedInImgContent.FileName, LinkedInImgContent.Bytes, LinkedInImgContent.ContentType);
             LinkedInThumb.ContentId = "LinkedIn";
@@ -592,7 +592,7 @@ namespace api.artpixxel.repo.Features.SMTPs
             {
                 if (emailTemplate.EmailType == EmailType.Notification)
                 {
-                    string ArtworkImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\notification.png";
+                    string ArtworkImg = _hostingEnvironment.WebRootPath + "/images/Mail/notification.png";
                     FileContentInfo ArtworkImgContent = await ArtworkImg.FileContent();
                     artworkThumb = builder.LinkedResources.Add(ArtworkImgContent.FileName, ArtworkImgContent.Bytes, ArtworkImgContent.ContentType);
                     artworkThumb.ContentId = "Notification";
@@ -600,7 +600,7 @@ namespace api.artpixxel.repo.Features.SMTPs
 
                 else if (emailTemplate.EmailType == EmailType.PasswordChange)
                 {
-                    string ArtworkImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\password.png";
+                    string ArtworkImg = _hostingEnvironment.WebRootPath + "/images/Mail/password.png";
                     FileContentInfo ArtworkImgContent = await ArtworkImg.FileContent();
                     artworkThumb = builder.LinkedResources.Add(ArtworkImgContent.FileName, ArtworkImgContent.Bytes, ArtworkImgContent.ContentType);
                     artworkThumb.ContentId = "Password";
@@ -609,7 +609,7 @@ namespace api.artpixxel.repo.Features.SMTPs
 
                 else if (emailTemplate.EmailType == EmailType.SMTPTest)
                 {
-                    string ArtworkImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\smtptest.png";
+                    string ArtworkImg = _hostingEnvironment.WebRootPath + "/images/Mail/smtptest.png";
                     FileContentInfo ArtworkImgContent = await ArtworkImg.FileContent();
                     artworkThumb = builder.LinkedResources.Add(ArtworkImgContent.FileName, ArtworkImgContent.Bytes, ArtworkImgContent.ContentType);
                     artworkThumb.ContentId = "SMTP";
@@ -617,7 +617,7 @@ namespace api.artpixxel.repo.Features.SMTPs
 
                 else if (emailTemplate.EmailType == EmailType.Error)
                 {
-                    string ArtworkImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\error.png";
+                    string ArtworkImg = _hostingEnvironment.WebRootPath + "/images/Mail/error.png";
                     FileContentInfo ArtworkImgContent = await ArtworkImg.FileContent();
                     artworkThumb = builder.LinkedResources.Add(ArtworkImgContent.FileName, ArtworkImgContent.Bytes, ArtworkImgContent.ContentType);
                     artworkThumb.ContentId = "Error";
@@ -625,7 +625,7 @@ namespace api.artpixxel.repo.Features.SMTPs
 
                 else if (emailTemplate.EmailType == EmailType.Welcome)
                 {
-                    string ArtworkImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\welcome.png";
+                    string ArtworkImg = _hostingEnvironment.WebRootPath + "/images/Mail/welcome.png";
                     FileContentInfo ArtworkImgContent = await ArtworkImg.FileContent();
                     artworkThumb = builder.LinkedResources.Add(ArtworkImgContent.FileName, ArtworkImgContent.Bytes, ArtworkImgContent.ContentType);
                     artworkThumb.ContentId = "Welcome";
@@ -697,7 +697,7 @@ namespace api.artpixxel.repo.Features.SMTPs
         private string Compose(BodyBuilder builder, EmailTemplate emailTemplate)
         {
 
-            string LogoImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\logo.png";
+            string LogoImg = _hostingEnvironment.WebRootPath + "/images/Mail/logo.png";
             var logoThumb = builder.LinkedResources.Add("logo.png", File.ReadAllBytes(LogoImg), new ContentType("image/png", "png"));
             logoThumb.ContentId = "aslLogo";
 
@@ -705,14 +705,14 @@ namespace api.artpixxel.repo.Features.SMTPs
 
             if (emailTemplate.EmailType == EmailType.Notification)
             {
-                string ArtworkImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\notification.png";
+                string ArtworkImg = _hostingEnvironment.WebRootPath + "/images/Mail/notification.png";
                 artworkThumb = builder.LinkedResources.Add("notification.png", File.ReadAllBytes(ArtworkImg), new ContentType("image/png", "png"));
                 artworkThumb.ContentId = "Notification";
             }
          
             else if (emailTemplate.EmailType == EmailType.PasswordChange)
             {
-                string ArtworkImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\password.png";
+                string ArtworkImg = _hostingEnvironment.WebRootPath + "/images/Mail/password.png";
                 artworkThumb = builder.LinkedResources.Add("password.png", File.ReadAllBytes(ArtworkImg), new ContentType("image/png", "png"));
                 artworkThumb.ContentId = "Password";
             }
@@ -720,28 +720,28 @@ namespace api.artpixxel.repo.Features.SMTPs
 
             else if (emailTemplate.EmailType == EmailType.SMTPTest)
             {
-                string ArtworkImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\smtptest.png";
+                string ArtworkImg = _hostingEnvironment.WebRootPath + "/images/Mail/smtptest.png";
                 artworkThumb = builder.LinkedResources.Add("smtp.png", File.ReadAllBytes(ArtworkImg), new ContentType("image/png", "png"));
                 artworkThumb.ContentId = "SMTP";
             }
         
             else if (emailTemplate.EmailType == EmailType.Error)
             {
-                string ArtworkImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\error.png";
+                string ArtworkImg = _hostingEnvironment.WebRootPath + "/images/Mail/error.png";
                 artworkThumb = builder.LinkedResources.Add("error.png", File.ReadAllBytes(ArtworkImg), new ContentType("image/png", "png"));
                 artworkThumb.ContentId = "Error";
             }
 
             else if (emailTemplate.EmailType == EmailType.Welcome)
             {
-                string ArtworkImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\welcome.png";
+                string ArtworkImg = _hostingEnvironment.WebRootPath + "/images/Mail/welcome.png";
                 artworkThumb = builder.LinkedResources.Add("welcome.png", File.ReadAllBytes(ArtworkImg), new ContentType("image/png", "png"));
                 artworkThumb.ContentId = "Welcome";
             }
 
             else
             {
-                string ArtworkImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\notification.png";
+                string ArtworkImg = _hostingEnvironment.WebRootPath + "/images/Mail/notification.png";
                 artworkThumb = builder.LinkedResources.Add("notification.png", File.ReadAllBytes(ArtworkImg), new ContentType("image/png", "png"));
                 artworkThumb.ContentId = "Notification";
             }
@@ -857,21 +857,21 @@ namespace api.artpixxel.repo.Features.SMTPs
         private string EmailFooter(BodyBuilder builder)
         {
 
-            string InstagramImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\instagram.png";
+            string InstagramImg = _hostingEnvironment.WebRootPath + "/images/Mail/instagram.png";
             var InstagramThumb = builder.LinkedResources.Add("instagram.png", File.ReadAllBytes(InstagramImg), new ContentType("image/png", "png"));
             InstagramThumb.ContentId = "Instagram";
 
-            string TwitterImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\twitter.png";
+            string TwitterImg = _hostingEnvironment.WebRootPath + "/images/Mail/twitter.png";
             var TwitterThumb = builder.LinkedResources.Add("twitter.png", File.ReadAllBytes(TwitterImg), new ContentType("image/png", "png"));
             TwitterThumb.ContentId = "Twitter";
 
 
-            string FacebookImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\facebook.png";
+            string FacebookImg = _hostingEnvironment.WebRootPath + "/images/Mail/facebook.png";
             var FacebookThumb = builder.LinkedResources.Add("facebook.png", File.ReadAllBytes(FacebookImg), new ContentType("image/png", "png"));
             FacebookThumb.ContentId = "Facebook";
 
 
-            string LinkedInImg = _hostingEnvironment.WebRootPath + "\\images\\Mail\\linkedin.png";
+            string LinkedInImg = _hostingEnvironment.WebRootPath + "/images/Mail/linkedin.png";
             var LinkedInThumb = builder.LinkedResources.Add("facebook.png", File.ReadAllBytes(LinkedInImg), new ContentType("image/png", "png"));
             LinkedInThumb.ContentId = "LinkedIn";
 

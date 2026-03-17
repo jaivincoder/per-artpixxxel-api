@@ -1,4 +1,4 @@
-﻿using api.artpixxel.data.Features.Accounts;
+using api.artpixxel.data.Features.Accounts;
 using api.artpixxel.data.Features.Checkouts;
 using api.artpixxel.data.Features.Common;
 using api.artpixxel.data.Features.Emails;
@@ -531,7 +531,7 @@ namespace api.artpixxel.repo.Features.Checkouts
                                 //TODO: get christmas template sizes
 
 
-                                string rootPath = _hostingEnvironment.WebRootPath + "\\images\\UploadedImage";
+                                string rootPath = _hostingEnvironment.WebRootPath + "/images/UploadedImage";
                                 if (!await rootPath.DirectoryExistAsync())
                                 {
                                     await rootPath.CreateDirectoryAsync();
@@ -577,7 +577,7 @@ namespace api.artpixxel.repo.Features.Checkouts
 
                                             if (!(string.IsNullOrEmpty(uploadedImageOrder.PreviewImage)))
                                             {
-                                                //string previewOutputPath = rootPath + "\\" + order.Id + "_preview_" + uploadedImageOrder.Id;
+                                                //string previewOutputPath = rootPath + "/" + order.Id + "_preview_" + uploadedImageOrder.Id;
                                                 //previewFileMeta = await uploadedImageOrder.PreviewImage.SaveBase64AsImage(previewOutputPath);
 
                                                 if (!string.IsNullOrEmpty(uploadedImageOrder.PreviewImage))
@@ -614,7 +614,7 @@ namespace api.artpixxel.repo.Features.Checkouts
 
                                             if (!(string.IsNullOrEmpty(uploadedImageOrder.PreviewImage)))
                                             {
-                                                string previewOutputPath = rootPath + "\\" + order.Id + "_preview_" + uploadedImageOrder.Id;
+                                                string previewOutputPath = rootPath + "/" + order.Id + "_preview_" + uploadedImageOrder.Id;
                                                 previewFileMeta = await uploadedImageOrder.PreviewImage.SaveBase64AsImage(previewOutputPath);
                                             }
                                         }

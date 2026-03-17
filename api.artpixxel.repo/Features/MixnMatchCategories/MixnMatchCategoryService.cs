@@ -1,4 +1,4 @@
-﻿
+
 
 using api.artpixxel.data.Features.Common;
 using api.artpixxel.data.Features.MixnMatchCategories;
@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using api.artpixxel.data.Models;
 using api.artpixxel.data.Features.MixnMatches;
+using api.artpixxel.data.Services;
 using api.artpixxel.repo.Extensions;
 
 namespace api.artpixxel.repo.Features.MixnMatchCategories
@@ -20,9 +21,11 @@ namespace api.artpixxel.repo.Features.MixnMatchCategories
     {
 
         private readonly ArtPixxelContext _context;
-        public MixnMatchCategoryService(ArtPixxelContext context)
+        private readonly ICurrentUserService _currentUserService;
+        public MixnMatchCategoryService(ArtPixxelContext context, ICurrentUserService currentUserService)
         {
             _context = context;
+            _currentUserService = currentUserService;
         }
 
         public async Task<List<BaseOption>> Categories()
@@ -50,9 +53,7 @@ namespace api.artpixxel.repo.Features.MixnMatchCategories
                 SqlParameter[] myparm = new SqlParameter[1];
                 myparm[0] = new SqlParameter("@paginationFilter", paginationFilter);
 
-                return new MixnMatchResponse
-                {
-                    MixNMatchData = await _context.MixnMatches.Where(c => c.CategoryId == @paginationFilter.Category.Id).Include(c => c.Category)
+                var data = await _context.MixnMatches.Where(c => c.CategoryId == @paginationFilter.Category.Id).Include(c => c.Category)
                     .OrderBy(n => n.Name)
                     .Skip(@paginationFilter.Pagination.Skip)
                     .Take(@paginationFilter.Pagination.PageSize)
@@ -62,13 +63,21 @@ namespace api.artpixxel.repo.Features.MixnMatchCategories
                         MixnmatchCategoryCategoryId = m.CategoryId,
                         MixnmatchCategoryCategoryName = m.Category.Name,
                         MixnmatchDescription = m.Description,
-                        MixnmatchImageURL = m.ImageURL,
+                        MixnmatchImageURL = m.ImageRelURL ?? m.ImageAbsURL,
                         MixnmatchName = m.Name,
                         MixnmatchImage = m.ImageURL.Base64FromImage().Result
 
-                    }).ToListAsync(),
-                    TotalCount = decimal.Round(await _context.MixnMatches.Where(c => c.CategoryId == @paginationFilter.Category.Id).CountAsync(), 0, MidpointRounding.AwayFromZero)
+                    }).ToListAsync();
 
+                data.ForEach(x =>
+                {
+                    x.MixnmatchImageURL = _currentUserService.ResolveImageUrl(x.MixnmatchImageURL);
+                });
+
+                return new MixnMatchResponse
+                {
+                    MixNMatchData = data,
+                    TotalCount = decimal.Round(await _context.MixnMatches.Where(c => c.CategoryId == @paginationFilter.Category.Id).CountAsync(), 0, MidpointRounding.AwayFromZero)
                 };
             }
             catch (Exception)

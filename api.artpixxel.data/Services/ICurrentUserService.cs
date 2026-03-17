@@ -1,4 +1,4 @@
-﻿
+
 
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
@@ -12,5 +12,6 @@ namespace api.artpixxel.data.Services
         ClaimsPrincipal GetUser();
         string GetBaseURl();
         string WebRoot();
+        string ResolveImageUrl(string storedUrl);
     }
 }

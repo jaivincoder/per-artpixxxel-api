@@ -1,4 +1,4 @@
-﻿
+
 
 using api.artpixxel.data.Features.WallartCategories;
 using api.artpixxel.Data;
@@ -51,7 +51,7 @@ namespace api.artpixxel.repo.Features.WallArtCategories
 
                             if (!string.IsNullOrEmpty(request.WallartCategoryImage))
                             {
-                                string outputPath = _hostingEnvironment.WebRootPath + "\\images\\WallArtCategory\\" + request.WallartCategoryName;
+                                string outputPath = _hostingEnvironment.WebRootPath + "/images/WallArtCategory/" + request.WallartCategoryName;
                                 fileMeta = await request.WallartCategoryImage.SaveBase64AsImage(outputPath);
                                 
                             }
@@ -153,7 +153,7 @@ namespace api.artpixxel.repo.Features.WallArtCategories
 
                     if (!string.IsNullOrEmpty(@request.WallartCategoryImage))
                     {
-                        string outputPath = _hostingEnvironment.WebRootPath + "\\images\\WallArtCategory\\" + @request.WallartCategoryName;
+                        string outputPath = _hostingEnvironment.WebRootPath + "/images/WallArtCategory/" + @request.WallartCategoryName;
                         fileMeta = await request.WallartCategoryImage.SaveBase64AsImage(outputPath);
                        
                     }
@@ -396,7 +396,7 @@ namespace api.artpixxel.repo.Features.WallArtCategories
                             {
                                 if (@request.WallartCategoryImage.IsBase64String())
                                 {
-                                    string outputPath = _hostingEnvironment.WebRootPath + "\\images\\WallArtCategory\\" + @request.WallartCategoryName;
+                                    string outputPath = _hostingEnvironment.WebRootPath + "/images/WallArtCategory/" + @request.WallartCategoryName;
                                     fileMeta = await request.WallartCategoryImage.SaveBase64AsImage(outputPath);
                                 }
                                   
@@ -407,7 +407,7 @@ namespace api.artpixxel.repo.Features.WallArtCategories
                             {
                                 if (@request.WallartCategoryImage.IsBase64String())
                                 {
-                                    string outputPath = _hostingEnvironment.WebRootPath + "\\images\\WallArtCategory\\" + @request.WallartCategoryName;
+                                    string outputPath = _hostingEnvironment.WebRootPath + "/images/WallArtCategory/" + @request.WallartCategoryName;
                                     fileMeta = await wallArtCategory.ImageURL.RenameFile(@request.WallartCategoryImage, outputPath);
                                 }
                                
@@ -495,15 +495,19 @@ namespace api.artpixxel.repo.Features.WallArtCategories
         {
             try
             {
-                return await _context.WallArtCategories.OrderBy(cn => cn.Name).Select(e => new WallArtCategoryResponse
+                var categories = await _context.WallArtCategories.OrderBy(cn => cn.Name).Select(e => new WallArtCategoryResponse
                 {
                     WallartCategoryId = e.Id,
                     WallartCategoryName = e.Name,
-                    WallartCategoryImage = string.IsNullOrEmpty(e.ImageURL) ? AssetDefault.DefaultImage :  e.ImageAbsURL,
+                    WallartCategoryImage = string.IsNullOrEmpty(e.ImageURL) ? AssetDefault.DefaultImage : (e.ImageRelURL ?? e.ImageAbsURL),
                     WallartCategoryDescription = e.Description,
                     WallartCategoryWallartCount = decimal.Round(e.WallArts.Count(), 0, MidpointRounding.AwayFromZero)
 
                 }).ToListAsync();
+
+                categories.ForEach(c => c.WallartCategoryImage = _currentUserService.ResolveImageUrl(c.WallartCategoryImage));
+
+                return categories;
             }
             catch (Exception)
             {
